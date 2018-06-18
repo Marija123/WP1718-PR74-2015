@@ -1,0 +1,44 @@
+﻿<br />
+<br />
+<br />
+<div class="container">
+    <div>
+        <!--class="podforumi-header">-->
+        <h1>Welcome <span ng-show="loggedin">{{user.username}}</span> <!--<span ng-show="korisnik.uloga.includes('Administrator')">(Admin)</span>--></h1>
+        <h4 ng-show="loggedin">Your drives</h4>
+        <h4 ng-show="!loggedin">Please login if you want to use our services.</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-12">
+        <div class="praceneTeme">
+            <!--ng-show="Drives"-->
+            <div class="teme-repeat" ng-repeat="drive in Drives">
+                
+                <div class="tema">
+                    <p>  {{drive.DatumIVremePorudzbine}} </p>
+                    <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
+                    <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
+                    <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+                </div>
+                <div class="nemaTema" ng-show="Drives.length == 0">
+                    <h4>No drives.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br /><!--VOZNJE-->
+    <br />
+    <br />
+    <br />
+    <div class="container">
+        <div  class="topright">
+            <a href="#!/DriveGet/{{user.username}}">Add Drive</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="topright" ng-show="user.role==1">
+            <a href="#!/DriverGet/{{user.username}}">Add Driver</a>
+        </div>
+    </div>

@@ -1,0 +1,41 @@
+﻿<br />
+<br />
+<br />
+<div class="registerWindow">
+    <div class="header">
+        <h2>Registration Form: </h2>
+    </div>
+    <div class="body">
+        <div class="form-group">
+            <input type="text" class="t" id="username" ng-model="user.username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <input type="text" class="t" id="ime" ng-model="user.ime" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="t" id="prezime" ng-model="user.prezime" placeholder="Surname">
+        </div>
+        <div class="form-group">
+            <select class="t" id="pol" ng-model="user.pol" placeholder="Gender">
+                <option value="" disabled>Choose gender</option>
+                <option value="Male"> Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <!--<input type="text" class="t" id="pol" ng-model="user.pol" placeholder="Pol">-->
+        </div>
+        <div class="form-group">
+            <input type="text" class="t" id="jmbg" ng-model="user.jmbg" placeholder="JMBG">
+        </div>
+        <div class="form-group">
+            <input type="text" class="t" id="kontaktTelefon" ng-model="user.kontaktTelefon" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+            <input type="text" class="t" id="email" ng-model="user.email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="t" id="pwd" ng-model="user.pwd" placeholder="Password">
+        </div>
+        <br>
+        <button type="submit" class="btn button-success" ng-click="RegisterUser(user)">Register</button>
+    </div>
+</div>
