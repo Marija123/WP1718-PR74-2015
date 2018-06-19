@@ -7,5 +7,9 @@ namespace WebAPI.Models
 {
     public class Dispecer : Korisnik
     {
+        public Dispecer()
+        {
+            Uloga = Enums.UlogaKorisnika.Dispecer;
+        }
     }
 }

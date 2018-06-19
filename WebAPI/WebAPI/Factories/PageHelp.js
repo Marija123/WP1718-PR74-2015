@@ -41,16 +41,32 @@ WebAPI.config(function ($routeProvider) {
             activetab: 'none'
         }).when('/DriverGet/:username',
         {
-            controller: 'ProfileController',
+            controller: 'JSRegILogController',
             templateUrl: 'HTMLovi/DriverGet.html',
             activetab: 'none'
 
+        }).when('/Edit/:username',
+        {
+            controller: 'ProfileController',
+            templateUrl: 'HTMLovi/Edit.html',
+            activeTab: 'Edit'
+        }).when('/HomeAll/:username',
+        {
+            controller: 'HomeDrivesAll',
+            templateUrl: 'HTMLovi/MyHome.html',
+            activetab: 'none'
         })
-    //       .when('Edit/:username',
-    //{
-    //    controller: 'ProfileController',
-    //    templateUrl: 'MyHtmls/Edit.html',
-    //    activeTab: 'Edit'
-    //})
+        .when('/HomeWaiting/:username',
+        {
+            controller: 'HomeDrivesWaiting',
+            templateUrl: 'HTMLovi/MyHome.html',
+            activetab: 'none'
+        }).when('/Filter/:Status',
+        {
+            controller: 'FilterController',
+            templateUrl: 'HTMLovi/MyHome.html',
+            activetab: 'none'
+        })
+    
 
 });

@@ -5,16 +5,60 @@
     <div>
         <!--class="podforumi-header">-->
         <h1>Welcome <span ng-show="loggedin">{{user.username}}</span> <!--<span ng-show="korisnik.uloga.includes('Administrator')">(Admin)</span>--></h1>
-        <h4 ng-show="loggedin">Your drives</h4>
+
         <h4 ng-show="!loggedin">Please login if you want to use our services.</h4>
     </div>
 </div>
+<div class="container">
+    <div class="topright" ng-show="user.role==2">
+        <a href="#!/HomeWaiting/{{user.username}}">Izlistaj Voznje na cekanju</a>
+    </div>
+</div>
+<div class="container">
+    <div class="topright" ng-show="user.role==1">
+        <a href="#!/HomeAll/{{user.username}}">Izlistaj sve voznje</a>
+    </div>
+</div>
+
+<div class="form-group">
+    <select class="t" id="fil" ng-model="fu.status">
+        <option value="" disabled>Odaberi status</option>
+        <option value="0"> Kreirana_NaCekanju</option>
+        <option value="1">Formirana</option>
+        <option value="2">Obradjena</option>
+        <option value="3">Prihvacena</option>
+        <option value="4">Otkazana</option>
+        <option value="5">Neuspesna</option>
+        <option value="6">Uspesna</option>
+
+    </select>
+    <br>
+    <!--<button  type="submit" class="btn button-success" ng-click="Filter(fu)">Filter</button>-->
+    <a ng-href="#!/Filter/{{fu.status}}" > Filtriraj</a>
+</div>
+
+
+
+<div class="container-fluid">
+    <h4 ng-show="FilterRez">Voznje koji zadovoljavaju kriterijume</h4>
+    <div class="rezultati" ng-repeat="drive in FilterRez">
+        <!--ng repeat-->
+        <div class="tema">
+            <p>  {{drive.DatumIVremePorudzbine}} </p>
+            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+        </div>
+    </div>
+</div>
+    
+<h4 ng-show="Drives.length == 0">{{RegisterSuccessF}}</h4>
 <div class="container">
     <div class="col-md-12">
         <div class="praceneTeme">
             <!--ng-show="Drives"-->
             <div class="teme-repeat" ng-repeat="drive in Drives">
-                
+
                 <div class="tema">
                     <p>  {{drive.DatumIVremePorudzbine}} </p>
                     <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
@@ -27,18 +71,18 @@
             </div>
         </div>
     </div>
+</div>
+<br /><!--VOZNJE-->
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="topright" ng-show="user.role!=2">
+        <a href="#!/DriveGet/{{user.username}}">Add Drive</a>
     </div>
-    <br /><!--VOZNJE-->
-    <br />
-    <br />
-    <br />
-    <div class="container">
-        <div  class="topright">
-            <a href="#!/DriveGet/{{user.username}}">Add Drive</a>
-        </div>
+</div>
+<div class="container">
+    <div class="topright" ng-show="user.role==1">
+        <a href="#!/DriverGet/{{user.username}}">Add Driver</a>
     </div>
-    <div class="container">
-        <div class="topright" ng-show="user.role==1">
-            <a href="#!/DriverGet/{{user.username}}">Add Driver</a>
-        </div>
-    </div>
+</div>

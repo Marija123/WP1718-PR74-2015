@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVozac xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Vozac>
+    <KorisnickoIme>suza</KorisnickoIme>
+    <Lozinka>suza</Lozinka>
+    <Ime>Suzana</Ime>
+    <Prezime>Jovic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>1234567890123</JMBG>
+    <KontaktTelefon>04823875</KontaktTelefon>
+    <Email>barbi@barbi</Email>
+    <Uloga>Vozac</Uloga>
+    <Lok />
+    <Auto>
+      <UsernameVozaca>suza</UsernameVozaca>
+      <GodisteAutomobila>1998</GodisteAutomobila>
+      <BrojRegistarskeOzn>ST98900</BrojRegistarskeOzn>
+      <BrojTaksiVozila>1</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>true</Zauzet>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>rina</KorisnickoIme>
+    <Lozinka>rina</Lozinka>
+    <Ime>Irina</Ime>
+    <Prezime>Jovanovic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>1234567890123</JMBG>
+    <KontaktTelefon>04823875</KontaktTelefon>
+    <Email>barbi@barbi</Email>
+    <Uloga>Vozac</Uloga>
+    <Lok />
+    <Auto>
+      <UsernameVozaca>rina</UsernameVozaca>
+      <GodisteAutomobila>2001</GodisteAutomobila>
+      <BrojRegistarskeOzn>ST9850</BrojRegistarskeOzn>
+      <BrojTaksiVozila>2</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>true</Zauzet>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>Joca</KorisnickoIme>
+    <Lozinka>joca</Lozinka>
+    <Ime>Jovan</Ime>
+    <Prezime>Gajin</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>1234567890123</JMBG>
+    <KontaktTelefon>04823875</KontaktTelefon>
+    <Email>barbi@barbi</Email>
+    <Uloga>Vozac</Uloga>
+    <Lok />
+    <Auto>
+      <GodisteAutomobila>2003</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns10</BrojRegistarskeOzn>
+      <BrojTaksiVozila>3</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>true</Zauzet>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>luka</KorisnickoIme>
+    <Lozinka>luka</Lozinka>
+    <Ime>Luka</Ime>
+    <Prezime>Crnomarkovic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>1234567890123</JMBG>
+    <KontaktTelefon>04823875</KontaktTelefon>
+    <Email>luka@luka</Email>
+    <Uloga>Vozac</Uloga>
+    <Lok />
+    <Auto>
+      <GodisteAutomobila>2011</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns1000</BrojRegistarskeOzn>
+      <BrojTaksiVozila>4</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>true</Zauzet>
+  </Vozac>
+</ArrayOfVozac>

@@ -109,6 +109,83 @@
         });
     }
 
+    $scope.RegisterDriver = function (user) {
+
+        if (user.username == null || user.username == "") {
+            alert('Username field cant be empty!');
+            return;
+        }
+        else if (user.ime == null || user.ime == "") {
+            alert('Name field cant be empty!');
+            return;
+        }
+        else if (user.prezime == null || user.prezime == "") {
+            alert('Surname field cant be empty !');
+            return;
+        }
+        else if (user.pol == null || user.pol == "") {
+            alert('You must choose a gender!');
+            return;
+        }
+        else if (user.jmbg == null || user.jmbg == "") {
+            alert('Jmbg field cant be empty!');
+            return;
+        }
+        else if (user.jmbg.match(/[a-z]/i)) {
+            alert('Jmbg cant contain characters: a-z');
+            return;
+        }
+        else if (user.jmbg.length != 13) {
+            alert('Jmbg must contain 13 numbers');
+            return;
+        }
+        else if (user.kontaktTelefon == null || user.kontaktTelefon == "") {
+            alert('Phone number cant be empty!');
+            return;
+        }
+
+        else if (user.kontaktTelefon.match(/[a-z]/i)) {
+            alert('Phone number cant contain characterse a-z');
+            return;
+        }
+        else if (user.email == null || user.email == "") {
+            alert('Email field cant be empty!');
+            return;
+        }
+        else if (!user.email.includes('@')) {
+            alert('Email is not valid!');
+            return;
+        }
+        else if (user.pwd == null || user.pwd == "") {
+            alert('Password cant be empty!');
+            return;
+        }
+        else if (user.godina == null || user.godina == "") {
+            alert('Godina field cant be empty!');
+            return;
+        }
+        
+        else if (user.registarskaOznaka == null || user.registarskaOznaka == "") {
+            alert('Registarska oznaka field cant be empty!');
+            return;
+        }
+        else if (user.tipVozila == null || user.tipVozila == "") {
+            alert('You must choose a type!');
+            return;
+        }
+
+        RegILogFactory.RegisterDriver(user).then(function (response) {
+            if (response.data == true) {
+                console.log(response.data);
+                $rootScope.RegisterSuccess = "Registration was successful. You can login now.";
+                $window.location.href = "#!/MyHome";
+            }
+            else {
+                alert("Username already exists, try again.");
+            }
+        });
+    };
+
 
 
 });

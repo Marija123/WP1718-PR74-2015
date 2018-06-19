@@ -9,5 +9,11 @@ namespace WebAPI.Models
     {
         public Lokacija Lok { get; set; }
         public Automobil Auto { get; set; }
+        public bool Zauzet { get; set; }
+
+        public Vozac()
+        {
+            Uloga = Enums.UlogaKorisnika.Vozac;
+        }
     }
 }

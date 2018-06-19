@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAutomobil xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Automobil>
+    <UsernameVozaca>suza</UsernameVozaca>
+    <GodisteAutomobila>1998</GodisteAutomobila>
+    <BrojRegistarskeOzn>ST98900</BrojRegistarskeOzn>
+    <BrojTaksiVozila>1</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>rina</UsernameVozaca>
+    <GodisteAutomobila>2001</GodisteAutomobila>
+    <BrojRegistarskeOzn>ST9850</BrojRegistarskeOzn>
+    <BrojTaksiVozila>2</BrojTaksiVozila>
+    <TA>kombi</TA>
+  </Automobil>
+  <Automobil>
+	<UsernameVozaca>joca</UsernameVozaca>
+    <GodisteAutomobila>2003</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns10</BrojRegistarskeOzn>
+    <BrojTaksiVozila>3</BrojTaksiVozila>
+    <TA>kombi</TA>
+  </Automobil>
+  <Automobil>
+	<UsernameVozaca>luka</UsernameVozaca>
+    <GodisteAutomobila>2011</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns1000</BrojRegistarskeOzn>
+    <BrojTaksiVozila>4</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
+</ArrayOfAutomobil>
