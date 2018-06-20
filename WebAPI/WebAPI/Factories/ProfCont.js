@@ -68,14 +68,14 @@
     //}
 
 
-    factory.Sorting = function (Drives) {
+    factory.Sorting = function (Drives,fu) {
         return $http.post('/api/Prof/SortingUser',
             {
                 Username: sessionStorage.getItem("username"),
                 Uloga: sessionStorage.getItem("role"),
                 Status: "none",
-                Drivess: Drives
-
+                Drivess: Drives,
+                PoCemu: fu
             });
     }
 

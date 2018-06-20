@@ -175,6 +175,7 @@
     <Compile Include="Models\Korisnik.cs" />
     <Compile Include="Models\KorisnikFilter.cs" />
     <Compile Include="Models\KorisnikPomocna.cs" />
+    <Compile Include="Models\KorisnikSort.cs" />
     <Compile Include="Models\KorisnikZaLogovanje.cs" />
     <Compile Include="Models\LogovaniKorisnik.cs" />
     <Compile Include="Models\Lokacija.cs" />

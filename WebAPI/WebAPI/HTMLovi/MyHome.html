@@ -19,13 +19,16 @@
         <button type="submit" ng-click="getWaitingDrives()">Prikazi voznje na cekanju</button>
     </div>
 </div>
-<button ng-show="!CD && !SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(MyDrives)">Sortiraj</button>
-<button  ng-show="SVE && FILT1" type="submit" ng-click="Sorting(FilteredDrives)">Sortiraj</button>
-<button ng-show="!SVE && FILT2" type="submit" ng-click="Sorting(FilteredDrives)">Sortiraj</button>
-<button ng-show="SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(AllDrives)">Sortiraj</button>
-<button ng-show="CD && !SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(WaitingDrives)">Sortiraj</button>
 
-
+<div class="form-group">
+    <input ng-model="fu.PoCemu" type="radio" name="gender" value="0"> Po oceni<br>
+    <input ng-model="fu.PoCemu" type="radio" name="gender" value="1"> Po datumu<br>
+</div>
+<button ng-show="!CD && !SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(MyDrives,fu.PoCemu)">Sortiraj</button>
+<button ng-show="SVE && FILT1" type="submit" ng-click="Sorting(FilteredDrives,fu.PoCemu)">Sortiraj</button>
+<button ng-show="!SVE && FILT2" type="submit" ng-click="Sorting(FilteredDrives,fu.PoCemu)">Sortiraj</button>
+<button ng-show="SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(AllDrives,fu.PoCemu)">Sortiraj</button>
+<button ng-show="CD && !SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(WaitingDrives,fu.PoCemu)">Sortiraj</button>
 
 
 
@@ -58,6 +61,7 @@
             <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
             <p> {{drive.Kom.Ocena}}</p>
             <p> {{drive.Stat}}</p>
+
         </div>
     </div>
 </div>
@@ -71,6 +75,7 @@
             <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
             <p> {{drive.Kom.Ocena}}</p>
             <p> {{drive.Stat}}</p>
+
         </div>
     </div>
 </div>
@@ -84,6 +89,7 @@
             <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
             <p> {{drive.Kom.Ocena}}</p>
             <p> {{drive.Stat}}</p>
+
         </div>
     </div>
 </div>
@@ -99,6 +105,7 @@
             <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
             <p> {{drive.Kom.Ocena}}</p>
             <p> {{drive.Stat}}</p>
+
         </div>
     </div>
 </div>
@@ -114,6 +121,7 @@
             <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
             <p> {{drive.Kom.Ocena}}</p>
             <p> {{drive.Stat}}</p>
+
         </div>
     </div>
 </div>

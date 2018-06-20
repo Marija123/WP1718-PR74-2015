@@ -113,7 +113,7 @@ namespace WebAPI.Controllers
                     }
                     drive.Iznos = 0;
                     drive.Kom = new Komentar();
-                    drive.DatumIVremePorudzbine = DateTime.Now;
+                    drive.DatumIVremePorudzbine = DateTime.Now.ToUniversalTime();
                     drive.Odrediste = new Lokacija();
                     drive.Disp = new Dispecer();
                     drive.Voz = new Vozac();
@@ -161,7 +161,7 @@ namespace WebAPI.Controllers
                     }
                     drive.Iznos = 0;
                     drive.Kom = new Komentar();
-                    drive.DatumIVremePorudzbine = DateTime.Now;
+                    drive.DatumIVremePorudzbine = DateTime.Now.ToUniversalTime();
                     drive.Odrediste = new Lokacija();
                     drive.Disp = (Dispecer)c;
                     
@@ -426,15 +426,22 @@ namespace WebAPI.Controllers
 
         [HttpPost]
         [ActionName("SortingUser")]
-        public List<Voznja> SortingUser([FromBody]KorisnikFilter k)
+        public List<Voznja> SortingUser([FromBody]KorisnikSort k)
         {
             // string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
-
-            //List<Voznja> listaDrives = xml.ReadDrives(ss);
             List<Voznja> listaDrives = k.Drivess;
-            List<Voznja> listaDrives1 = new List<Voznja>();
+            List<Voznja> sortiranaVoznja = new List<Voznja>();
+            if (k.PoCemu == 0)
+            {
+                sortiranaVoznja = listaDrives.OrderByDescending(o => o.Kom.Ocena).ToList();
+            }
+           else if(k.PoCemu == 1)
+            {
+                sortiranaVoznja = listaDrives.OrderByDescending(o => o.DatumIVremePorudzbine).ToList();
+            }
            
-            List<Voznja> sortiranaVoznja = listaDrives.OrderByDescending(o => o.Kom.Ocena).ToList();
+           
+           
 
             return sortiranaVoznja;
         }

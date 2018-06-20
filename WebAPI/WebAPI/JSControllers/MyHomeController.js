@@ -23,8 +23,8 @@
     }
 
     init();
-    $scope.Sorting = function (Drives) {
-        ProfCont.Sorting(Drives).then(function (response) {
+    $scope.Sorting = function (Drives, broj) {
+        ProfCont.Sorting(Drives,broj).then(function (response) {
 
             console.log(response.data);
             $scope.MD = false;
