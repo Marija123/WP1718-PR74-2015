@@ -10,5 +10,7 @@ namespace WebAPI.Models
         public string Username { get; set; }
         public string Uloga { get; set; }
         public string Status { get; set; }
+
+        public List<Voznja> Drivess { get; set; }
     }
 }

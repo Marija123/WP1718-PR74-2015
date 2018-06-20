@@ -6,7 +6,7 @@
       <Xkoordinate>45</Xkoordinate>
       <Ykoordinate>aa</Ykoordinate>
       <Adr>
-        <Ulica>ss</Ulica>
+        <Ulica>SPenezica</Ulica>
         <Broj>2</Broj>
         <NaseljenoMesto>ds</NaseljenoMesto>
         <PozivniBroj>21</PozivniBroj>
@@ -35,6 +35,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Kreirana_NaCekanju</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>9</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-18T22:37:26.326088+02:00</DatumIVremePorudzbine>
@@ -71,6 +75,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Kreirana_NaCekanju</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>2</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T10:47:26.6138142+02:00</DatumIVremePorudzbine>
@@ -122,6 +130,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Formirana</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>7</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T11:38:06.101124+02:00</DatumIVremePorudzbine>
@@ -172,6 +184,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Formirana</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>9</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T11:38:37.4455133+02:00</DatumIVremePorudzbine>
@@ -208,6 +224,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Kreirana_NaCekanju</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>10</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T11:50:26.8621769+02:00</DatumIVremePorudzbine>
@@ -244,6 +264,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Kreirana_NaCekanju</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>1</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T11:51:32.4702447+02:00</DatumIVremePorudzbine>
@@ -294,6 +318,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Formirana</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>7</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T12:20:58.205309+02:00</DatumIVremePorudzbine>
@@ -330,6 +358,10 @@
     </Voz>
     <Iznos>0</Iznos>
     <Stat>Kreirana_NaCekanju</Stat>
+	<Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>3</Ocena>
+    </Kom>
   </Voznja>
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T18:20:31.7732418+02:00</DatumIVremePorudzbine>
@@ -369,7 +401,7 @@
     <Stat>Kreirana_NaCekanju</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>0</Ocena>
+      <Ocena>5</Ocena>
     </Kom>
   </Voznja>
 </ArrayOfVoznja>

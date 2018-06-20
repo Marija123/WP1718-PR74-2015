@@ -315,28 +315,128 @@ namespace WebAPI.Controllers
 
         }
 
-        
+
 
         [HttpPost]
         [ActionName("GetFilterUser")]
         public List<Voznja> GetFilterUser([FromBody]KorisnikFilter k)
         {
-            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
-
-            List<Voznja> listaDrives = xml.ReadDrives(ss);
+            //string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            if(k.Drivess == null)
+            {
+                return new List<Voznja>();
+            }
+            //List<Voznja> listaDrives = xml.ReadDrives(ss);
+            List<Voznja> listaDrives = k.Drivess;
             List<Voznja> listaDrives1 = new List<Voznja>();
-            if((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Musterija)
+            if(k.Status == null || k.Status == "")
+            {
+                return listaDrives1;
+            }
+
+            foreach (Voznja d in listaDrives)
+            {
+                if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status))
                 {
+                    listaDrives1.Add(d);
+                }
+            }
+            //if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Musterija)
+            //{
+            //    foreach (Voznja d in listaDrives)
+            //    {
+            //        if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status) && d.Mus.KorisnickoIme == k.Username)
+            //        {
+            //            listaDrives1.Add(d);
+            //        }
+            //    }
+            //}
+            //else if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Vozac)
+            //{
+            //    foreach (Voznja d in listaDrives)
+            //    {
+            //        if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status) && d.Voz.KorisnickoIme == k.Username)
+            //        {
+            //            listaDrives1.Add(d);
+            //        }
+            //    }
+            //}
+            //else if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Dispecer)
+            //{
+            //    foreach (Voznja d in listaDrives)
+            //    {
+            //        if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status) && d.Disp.KorisnickoIme == k.Username)
+            //        {
+            //            listaDrives1.Add(d);
+            //        }
+            //    }
+            //}
+            return listaDrives1;
+        }
+
+        [HttpPost]
+        [ActionName("GetFilterUserAll")]
+        public List<Voznja> GetFilterUserAll([FromBody]KorisnikFilter k)
+        {
+            //string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            if (k.Drivess == null)
+            {
+                return new List<Voznja>();
+            }
+            //List<Voznja> listaDrives = xml.ReadDrives(ss);
+            List<Voznja> listaDrives = k.Drivess;
+            List<Voznja> listaDrives1 = new List<Voznja>();
+
+            if (k.Status == null || k.Status == "")
+            {
+                return listaDrives;
+            }
+            if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Dispecer)
+            {
                 foreach (Voznja d in listaDrives)
                 {
-                    if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status) && d.Mus.KorisnickoIme == k.Username)
+                    if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status))
                     {
                         listaDrives1.Add(d);
                     }
                 }
             }
-           
             return listaDrives1;
+        }
+
+        //[HttpGet]
+        //[ActionName("SortingUser")]
+        //public List<Voznja> SortingUser(string k)
+        //{
+        //    string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+
+        //    List<Voznja> listaDrives = xml.ReadDrives(ss);
+        //    List<Voznja> listaDrives1 = new List<Voznja>();
+        //     foreach (Voznja d in listaDrives)
+        //     {
+        //            if (d.Mus.KorisnickoIme == k || d.Voz.KorisnickoIme == k || d.Disp.KorisnickoIme== k)
+        //            {
+        //                listaDrives1.Add(d);
+        //            }
+        //     }
+        //    List<Voznja> sortiranaVoznja = listaDrives1.OrderByDescending(o => o.Kom.Ocena).ToList();
+
+        //    return sortiranaVoznja;
+        //}
+
+        [HttpPost]
+        [ActionName("SortingUser")]
+        public List<Voznja> SortingUser([FromBody]KorisnikFilter k)
+        {
+            // string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+
+            //List<Voznja> listaDrives = xml.ReadDrives(ss);
+            List<Voznja> listaDrives = k.Drivess;
+            List<Voznja> listaDrives1 = new List<Voznja>();
+           
+            List<Voznja> sortiranaVoznja = listaDrives.OrderByDescending(o => o.Kom.Ocena).ToList();
+
+            return sortiranaVoznja;
         }
 
     }

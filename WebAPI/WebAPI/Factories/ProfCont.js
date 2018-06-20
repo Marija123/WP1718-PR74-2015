@@ -46,12 +46,35 @@
         return $http.get('/api/Prof/GetWaitingDrives?username=' + username);
     }
 
-    factory.Filter = function (fu) {
+    factory.Filter = function (Drives,fu) {
         return $http.post('/api/Prof/GetFilterUser',
             {
                 Username: sessionStorage.getItem("username"),
                 Uloga: sessionStorage.getItem("role"),
-                Status: fu
+                Status: fu,
+                Drivess: Drives
+
+            });
+    }
+
+    //factory.Filter2 = function (Drives,fu) {
+    //    return $http.post('/api/Prof/GetFilterUserAll',
+    //        {
+    //            Username: sessionStorage.getItem("username"),
+    //            Uloga: sessionStorage.getItem("role"),
+    //            Status: fu,
+    //            Drivess: Drives
+    //        });
+    //}
+
+
+    factory.Sorting = function (Drives) {
+        return $http.post('/api/Prof/SortingUser',
+            {
+                Username: sessionStorage.getItem("username"),
+                Uloga: sessionStorage.getItem("role"),
+                Status: "none",
+                Drivess: Drives
 
             });
     }

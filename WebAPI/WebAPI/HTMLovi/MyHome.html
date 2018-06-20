@@ -10,18 +10,27 @@
     </div>
 </div>
 <div class="container">
-    <div class="topright" ng-show="user.role==2">
-        <a href="#!/HomeWaiting/{{user.username}}">Izlistaj Voznje na cekanju</a>
+    <div class="topright" ng-show="user.role==1">
+        <button type="submit" ng-click="getAllDrives()">Prikazi sve voznje</button>
     </div>
 </div>
 <div class="container">
-    <div class="topright" ng-show="user.role==1">
-        <a href="#!/HomeAll/{{user.username}}">Izlistaj sve voznje</a>
+    <div class="topright" ng-show="user.role==2">
+        <button type="submit" ng-click="getWaitingDrives()">Prikazi voznje na cekanju</button>
     </div>
 </div>
+<button ng-show="!CD && !SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(MyDrives)">Sortiraj</button>
+<button  ng-show="SVE && FILT1" type="submit" ng-click="Sorting(FilteredDrives)">Sortiraj</button>
+<button ng-show="!SVE && FILT2" type="submit" ng-click="Sorting(FilteredDrives)">Sortiraj</button>
+<button ng-show="SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(AllDrives)">Sortiraj</button>
+<button ng-show="CD && !SVE && !FILT1 && !FILT2" type="submit" ng-click="Sorting(WaitingDrives)">Sortiraj</button>
+
+
+
+
 
 <div class="form-group">
-    <select class="t" id="fil" ng-model="fu.status">
+    <select class="t" id="fil" ng-model="fu.Status">
         <option value="" disabled>Odaberi status</option>
         <option value="0"> Kreirana_NaCekanju</option>
         <option value="1">Formirana</option>
@@ -33,45 +42,83 @@
 
     </select>
     <br>
-    <!--<button  type="submit" class="btn button-success" ng-click="Filter(fu)">Filter</button>-->
-    <a ng-href="#!/Filter/{{fu.status}}" > Filtriraj</a>
+
 </div>
 
 
 
-<div class="container-fluid">
-    <h4 ng-show="FilterRez">Voznje koji zadovoljavaju kriterijume</h4>
-    <div class="rezultati" ng-repeat="drive in FilterRez">
-        <!--ng repeat-->
+<h4>Voznje koji zadovoljavaju kriterijume</h4>
+<div class="container-fluid" ng-show="MD">
+    <button type="submit" ng-click="Filter(MyDrives,fu.Status)">Filtriraj</button>
+    <div ng-show="MD" class="rezultati" ng-repeat="drive in MyDrives">
         <div class="tema">
             <p>  {{drive.DatumIVremePorudzbine}} </p>
             <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
             <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
             <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.Kom.Ocena}}</p>
+            <p> {{drive.Stat}}</p>
         </div>
     </div>
 </div>
-    
-<h4 ng-show="Drives.length == 0">{{RegisterSuccessF}}</h4>
-<div class="container">
-    <div class="col-md-12">
-        <div class="praceneTeme">
-            <!--ng-show="Drives"-->
-            <div class="teme-repeat" ng-repeat="drive in Drives">
+<div class="container-fluid" ng-show="CD">
 
-                <div class="tema">
-                    <p>  {{drive.DatumIVremePorudzbine}} </p>
-                    <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
-                    <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
-                    <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
-                </div>
-                <div class="nemaTema" ng-show="Drives.length == 0">
-                    <h4>No drives.</h4>
-                </div>
-            </div>
+    <div ng-show="CD" class="rezultati" ng-repeat="drive in WaitingDrives">
+        <div class="tema">
+            <p>  {{drive.DatumIVremePorudzbine}} </p>
+            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.Kom.Ocena}}</p>
+            <p> {{drive.Stat}}</p>
         </div>
     </div>
 </div>
+<div class="container-fluid" ng-show="AD">
+    <button type="submit" ng-click="Filter(AllDrives,fu.Status)">Filtriraj</button>
+    <div ng-show="AD" class="rezultati" ng-repeat="drive in AllDrives">
+        <div class="tema">
+            <p>  {{drive.DatumIVremePorudzbine}} </p>
+            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.Kom.Ocena}}</p>
+            <p> {{drive.Stat}}</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" ng-show="SD">
+    <button ng-show="SVE" type="submit" ng-click="Filter(AllDrives,fu.Status)">Filtriraj</button>
+    <button ng-show="!SVE" type="submit" ng-click="Filter(MyDrives,fu.Status)">Filtriraj</button>
+
+    <div ng-show="SD" class="rezultati" ng-repeat="drive in SortedDrives">
+        <div class="tema">
+            <p>  {{drive.DatumIVremePorudzbine}} </p>
+            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.Kom.Ocena}}</p>
+            <p> {{drive.Stat}}</p>
+        </div>
+    </div>
+</div>
+
+<div ng-show="FD">
+    <button ng-show="!SVE" type="submit" ng-click="Filter(MyDrives,fu.Status)">Filtriraj</button>
+    <button ng-show="SVE" type="submit" ng-click="Filter(AllDrives,fu.Status)">Filtriraj</button>
+    <div ng-show="FD" class="rezultati" ng-repeat="drive in FilteredDrives">
+        <div class="tema">
+            <p>  {{drive.DatumIVremePorudzbine}} </p>
+            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.Kom.Ocena}}</p>
+            <p> {{drive.Stat}}</p>
+        </div>
+    </div>
+</div>
+
+
 <br /><!--VOZNJE-->
 <br />
 <br />

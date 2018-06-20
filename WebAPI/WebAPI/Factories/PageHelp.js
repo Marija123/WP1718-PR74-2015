@@ -50,20 +50,25 @@ WebAPI.config(function ($routeProvider) {
             controller: 'ProfileController',
             templateUrl: 'HTMLovi/Edit.html',
             activeTab: 'Edit'
-        }).when('/HomeAll/:username',
-        {
-            controller: 'HomeDrivesAll',
-            templateUrl: 'HTMLovi/MyHome.html',
-            activetab: 'none'
-        })
-        .when('/HomeWaiting/:username',
-        {
-            controller: 'HomeDrivesWaiting',
-            templateUrl: 'HTMLovi/MyHome.html',
-            activetab: 'none'
         }).when('/Filter/:Status',
         {
             controller: 'FilterController',
+            templateUrl: 'HTMLovi/MyHome.html',
+            activetab: 'none'
+        }).when('/Filter2/:Status',
+        {
+            controller: 'Filter2Controller',
+            templateUrl: 'HTMLovi/MyHome.html',
+            activetab: 'none'
+        
+        }).when('/Filter',
+        {
+            controller: 'MyHomeController',
+            templateUrl: 'HTMLovi/MyHome.html',
+            activetab: 'none'
+        }).when('/Filter2',
+        {
+            controller: 'MyHomeController',
             templateUrl: 'HTMLovi/MyHome.html',
             activetab: 'none'
         })

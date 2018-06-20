@@ -43,7 +43,7 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li ng-show="loggedin" ng-class="checkActive('/MyHome')"><a href="#!/MyHome"><i class="ion ion-android-home"></i> Home</a></li>
+                        <li ng-show="loggedin" ng-class="checkActive('/MyHome')"><a href="#!/"><i class="ion ion-android-home"></i> Home</a></li>
                         <li ng-show="loggedin" ng-class="checkActive('/Edit')"><a href="#!/Edit/{{user.username}}"><i class="ion ion-person"></i>Edit Profile</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -68,9 +68,13 @@
     <script src="../../Factories/PageHelp.js"></script>
     <script src="../../JSControllers/MainController.js"></script>
     <script src="../../JSControllers/MyHomeController.js"></script>
-    <script src="../../JSControllers/HomeDrivesAll.js"></script>
-    <script src="../../JSControllers/HomeDrivesWaiting.js"></script>
+   
+    <script src="../../JSControllers/Filter2Controller.js"></script>
+    
     <script src="../../JSControllers/FilterController.js"></script>
+    
+
+
 
     <script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
     <script src="../../JSControllers/ProfileController.js"></script>
