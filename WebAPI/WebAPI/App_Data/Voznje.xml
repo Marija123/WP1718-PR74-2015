@@ -41,10 +41,10 @@
       <Zauzet>false</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Otkazana</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>9</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -91,7 +91,7 @@
     <Stat>Kreirana_NaCekanju</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>2</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -151,7 +151,7 @@
     <Stat>Formirana</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>7</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -210,7 +210,7 @@
     <Stat>Formirana</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>9</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -257,7 +257,7 @@
     <Stat>Kreirana_NaCekanju</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>10</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -304,7 +304,7 @@
     <Stat>Kreirana_NaCekanju</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>1</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -363,7 +363,7 @@
     <Stat>Formirana</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>7</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -407,10 +407,10 @@
       <Zauzet>false</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Otkazana</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>3</Ocena>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -455,10 +455,11 @@
       <Zauzet>false</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Otkazana</Stat>
     <Kom>
-      <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>5</Ocena>
+      <Opis>aaa</Opis>
+      <Datum>2018-06-21T22:59:36</Datum>
+      <Ocena>3</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -503,10 +504,11 @@
       <Zauzet>false</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Otkazana</Stat>
     <Kom>
-      <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>0</Ocena>
+      <Opis>shitttt</Opis>
+      <Datum>2018-06-21T23:00:36</Datum>
+      <Ocena>1</Ocena>
     </Kom>
   </Voznja>
   <Voznja>
@@ -554,7 +556,55 @@
     <Stat>Kreirana_NaCekanju</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
-      <Ocena>-1</Ocena>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Thursday, 21 June, 2018 23:20:12</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>888</Xkoordinate>
+      <Ykoordinate>ppp</Ykoordinate>
+      <Adr>
+        <Ulica>Slovacka</Ulica>
+        <Broj>4</Broj>
+        <NaseljenoMesto>NS</NaseljenoMesto>
+        <PozivniBroj>21</PozivniBroj>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>barbi</KorisnickoIme>
+      <Lozinka>barbi</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste />
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
     </Kom>
   </Voznja>
 </ArrayOfVoznja>

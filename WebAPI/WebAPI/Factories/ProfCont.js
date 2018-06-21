@@ -113,5 +113,20 @@
         });
     }
 
+    factory.OtkaziVoznju = function (drive) {
+        return $http.post('/api/Prof/OtkaziVoznju', {
+            Voznj: drive
+        });
+    }
+
+    factory.DodajKomentar = function (ko,voz) {
+        return $http.post('/api/Prof/Komentarisanje',
+            {
+                KomOpis: ko.Opis,
+                KomOcena: ko.Ocena,
+                Voz: voz
+            });
+    }
+
     return factory;
 });

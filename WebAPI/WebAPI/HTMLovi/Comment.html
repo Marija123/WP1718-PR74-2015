@@ -1,0 +1,27 @@
+﻿<br/>
+<br/>
+<br/>
+<h1>Ostavite komentar</h1>
+<div class="form-group">
+    <table>
+        <tr>
+            <td>Opis:</td>
+            <td>
+                <textarea class="form-control" placeholder="Ostavi komentar.." ng-model="ko.Opis"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ocena voznje:
+            </td>
+            <td>
+                <input type="number" min="1" max="5" ng-model="ko.Ocena" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" ng-click="DodajKomentar(ko)">Dodaj komentar</button>
+            </td>
+        </tr>
+    </table>
+</div>

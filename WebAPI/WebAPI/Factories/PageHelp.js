@@ -50,6 +50,11 @@ WebAPI.config(function ($routeProvider) {
             controller: 'ProfileController',
             templateUrl: 'HTMLovi/Edit.html',
             activeTab: 'Edit'
+        }).when('/DodajKomentar',
+        {
+            controller: 'CommentController',
+            templateUrl: 'HTMLovi/Comment.html',
+            activeTab: 'Edit'
         })
     
 

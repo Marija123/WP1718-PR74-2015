@@ -209,7 +209,22 @@
                 //$scope.Drives = response.data;
             });
         }
-    
+
+        $scope.OtkaziVoznju = function (drive) {
+            //if (Status == null || Status == "") {
+            //    alert('Morate uneti po cemu zelite da sortirate!')
+            //    return;
+            //}
+            ProfCont.OtkaziVoznju(drive).then(function (response) {
+
+                console.log(response.data);
+                $rootScope.VoznjaZaKomentar = response.data;
+
+                $window.location.href = "#!/DodajKomentar";
+
+               
+            });
+        }
     
 
 });

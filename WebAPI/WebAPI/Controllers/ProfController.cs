@@ -27,7 +27,8 @@ namespace WebAPI.Controllers
             List<Vozac> vozaci = xml.ReadDrivers(ss1);
             List<Dispecer> dispeceri = xml.ReadDispecer(ss2);
 
-            foreach (Musterija us in users) { 
+            foreach (Musterija us in users)
+            {
                 if (us.KorisnickoIme == username)
                 {
                     Musterija kor = new Musterija();
@@ -37,11 +38,11 @@ namespace WebAPI.Controllers
                     kor.Uloga = us.Uloga;
                     kor.Email = us.Email;
                     kor.KontaktTelefon = us.KontaktTelefon;
-                    kor.Pol =us.Pol;
+                    kor.Pol = us.Pol;
                     kor.Lozinka = null;
                     kor.JMBG = us.JMBG;
-                   
-                    
+
+
                     return kor;
                 }
             }
@@ -114,7 +115,7 @@ namespace WebAPI.Controllers
                     }
                     drive.Iznos = 0;
                     drive.Kom = new Komentar();
-                    
+
                     drive.DatumIVremePorudzbine = String.Format("{0:F}", DateTime.Now);
                     drive.Odrediste = new Lokacija();
                     drive.Disp = new Dispecer();
@@ -155,7 +156,7 @@ namespace WebAPI.Controllers
                     c = u;
                     Adresa a = new Adresa(k.Street, k.Number, k.Town, Int32.Parse(k.PostalCode));
                     Lokacija l = new Lokacija(k.XCoord, k.YCoord, a);
-                    drive.Mus = new Musterija() ;
+                    drive.Mus = new Musterija();
                     drive.LokacijaZaDolazak = l;
                     if (k.tipAuta != "")
                     {
@@ -166,15 +167,15 @@ namespace WebAPI.Controllers
                     drive.DatumIVremePorudzbine = String.Format("{0:F}", DateTime.Now); ;
                     drive.Odrediste = new Lokacija();
                     drive.Disp = (Dispecer)c;
-                    
+
                     drive.Stat = Enums.StatusVoznje.Formirana;
-                   
+
                 }
             }
             bool imaSlobodan = false;
-            foreach(Vozac v in vozaci)
+            foreach (Vozac v in vozaci)
             {
-                if(!v.Zauzet && v.Auto.TA == (Enums.TipAutomobila)int.Parse(k.tipAuta))
+                if (!v.Zauzet && v.Auto.TA == (Enums.TipAutomobila)int.Parse(k.tipAuta))
                 {
                     v.Zauzet = true;
                     drive.Voz = v;
@@ -183,8 +184,8 @@ namespace WebAPI.Controllers
                 }
 
             }
-            
-            if(!imaSlobodan)
+
+            if (!imaSlobodan)
             {
                 drive.Voz = new Vozac();
                 drive.Stat = Enums.StatusVoznje.Kreirana_NaCekanju;
@@ -225,7 +226,7 @@ namespace WebAPI.Controllers
             string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
 
             List<Voznja> listaDrives = xml.ReadDrives(ss);
-     
+
             return listaDrives;
         }
 
@@ -247,7 +248,7 @@ namespace WebAPI.Controllers
             return listaDrives1;
         }
 
-        
+
 
         [HttpPost]
         [ActionName("Pretraga")]
@@ -262,16 +263,16 @@ namespace WebAPI.Controllers
             List<Voznja> listaDrives = k.Drivess;
             List<Voznja> listaDrives1 = k.Drivess;
 
-            if(k.DatumOd != null)
+            if (k.DatumOd != null)
             {
-                    listaDrives1 = listaDrives1.Where(o => DateTime.Parse(o.DatumIVremePorudzbine) >= DateTime.Parse(k.DatumOd)).ToList();
+                listaDrives1 = listaDrives1.Where(o => DateTime.Parse(o.DatumIVremePorudzbine) >= DateTime.Parse(k.DatumOd)).ToList();
 
             }
-            if(k.DatumDo != null)
+            if (k.DatumDo != null)
             {
                 listaDrives1 = listaDrives1.Where(o => DateTime.Parse(o.DatumIVremePorudzbine) <= DateTime.Parse(k.DatumDo)).ToList();
             }
-            if(k.CenaOd != null)
+            if (k.CenaOd != null)
             {
                 listaDrives1 = listaDrives1.Where(o => o.Iznos >= Double.Parse(k.CenaOd)).ToList();
             }
@@ -288,13 +289,13 @@ namespace WebAPI.Controllers
                 listaDrives1 = listaDrives1.Where(o => o.Kom.Ocena <= Double.Parse(k.OcenaDo)).ToList();
             }
 
-            if((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Dispecer)
+            if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Dispecer)
             {
-                if(k.MustIme != null)
+                if (k.MustIme != null)
                 {
                     listaDrives1 = listaDrives1.Where(o => o.Mus.Ime.Contains(k.MustIme)).ToList();
                 }
-                if(k.MustPrezime != null)
+                if (k.MustPrezime != null)
                 {
                     listaDrives1 = listaDrives1.Where(o => o.Mus.Prezime.Contains(k.MustPrezime)).ToList();
                 }
@@ -329,14 +330,14 @@ namespace WebAPI.Controllers
             bool imaGaUMus = false;
             foreach (Musterija u in users)
             {
-                if (u.KorisnickoIme == k.Username )
+                if (u.KorisnickoIme == k.Username)
                 {
                     imaGaUMus = true;
                 }
             }
             foreach (Vozac u in vozaci)
             {
-                if (u.KorisnickoIme == k.Username )
+                if (u.KorisnickoIme == k.Username)
                 {
 
                     g = false;
@@ -392,14 +393,14 @@ namespace WebAPI.Controllers
         public List<Voznja> GetFilterUser([FromBody]KorisnikFilter k)
         {
             //string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
-            if(k.Drivess == null)
+            if (k.Drivess == null)
             {
                 return new List<Voznja>();
             }
             //List<Voznja> listaDrives = xml.ReadDrives(ss);
             List<Voznja> listaDrives = k.Drivess;
             List<Voznja> listaDrives1 = new List<Voznja>();
-            if(k.Status == null || k.Status == "")
+            if (k.Status == null || k.Status == "")
             {
                 return listaDrives1;
             }
@@ -505,16 +506,58 @@ namespace WebAPI.Controllers
             {
                 sortiranaVoznja = listaDrives.OrderByDescending(o => o.Kom.Ocena).ToList();
             }
-           else if(k.PoCemu == 1)
+            else if (k.PoCemu == 1)
             {
                 sortiranaVoznja = listaDrives.OrderByDescending(o => DateTime.Parse(o.DatumIVremePorudzbine)).ToList();
             }
-           
-           
-           
+
+
+
 
             return sortiranaVoznja;
         }
 
+        [HttpPost]
+        [ActionName("OtkaziVoznju")]
+        public Voznja OtkaziVoznju([FromBody]PomocnaVoznja k)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            List<Voznja> lista = xml.ReadDrives(ss);
+            Voznja ret = new Voznja();
+            foreach(Voznja v in lista)
+            {
+                if(v.Mus.KorisnickoIme == k.Voznj.Mus.KorisnickoIme && DateTime.Parse(v.DatumIVremePorudzbine) == DateTime.Parse(k.Voznj.DatumIVremePorudzbine))
+                {
+                    v.Stat = Enums.StatusVoznje.Otkazana;
+                    ret = v;
+                    break;
+                }
+            }
+            xml.WriteDrives(lista, ss);
+            return ret;
+        }
+
+        [HttpPost]
+        [ActionName("Komentarisanje")]
+        public bool Komentarisanje([FromBody]PomocniKomentar k)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            List<Voznja> lista = xml.ReadDrives(ss);
+            bool ret = false;
+            foreach (Voznja v in lista)
+            {
+                if (v.Mus.KorisnickoIme == k.Voz.Mus.KorisnickoIme && DateTime.Parse(v.DatumIVremePorudzbine) == DateTime.Parse(k.Voz.DatumIVremePorudzbine))
+                {
+                    v.Kom.Datum = DateTime.Parse(String.Format("{0:F}", DateTime.Now));
+                    v.Kom.Opis = k.KomOpis;
+                    v.Kom.Ocena = int.Parse(k.KomOcena);
+                    v.Kom.KorKomUsername = k.Voz.Kom.KorKomUsername;
+                    ret = true;
+                    break;
+                }
+            }
+            xml.WriteDrives(lista, ss);
+            return ret;
+        }
     }
 }
