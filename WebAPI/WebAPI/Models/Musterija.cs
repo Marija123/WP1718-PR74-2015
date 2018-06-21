@@ -10,6 +10,9 @@ namespace WebAPI.Models
        public Musterija ()
         {
             Uloga = Enums.UlogaKorisnika.Musterija;
+            KorisnikVoznje = new List<Voznja>();
+            Ime = "";
+            Prezime = "";
         }
     }
 }

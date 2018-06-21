@@ -57,6 +57,26 @@
             });
     }
 
+    factory.Pretrazi = function (Drives, su) {
+        return $http.post('/api/Prof/Pretraga',
+            {
+                Username: sessionStorage.getItem("username"),
+                Uloga: sessionStorage.getItem("role"),
+                Drivess: Drives,
+                DatumOd: su.DatumOd,
+                DatumDo: su.DatumDo,
+                OcenaOd: su.OcenaOd,
+                OcenaDo: su.OcenaDo,
+                CenaOd: su.CenaOd,
+                CenaDo: su.CenaDo,
+                VozIme: su.VozIme,
+                VozPrezime: su.VozPrezime,
+                MustIme: su.MustIme,
+                MustPrezime: su.MustPrezime
+
+            });
+    }
+
     //factory.Filter2 = function (Drives,fu) {
     //    return $http.post('/api/Prof/GetFilterUserAll',
     //        {

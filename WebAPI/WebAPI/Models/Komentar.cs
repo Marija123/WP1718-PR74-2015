@@ -13,5 +13,10 @@ namespace WebAPI.Models
 
         public String VozKomUsername { get; set; }
         public int Ocena { get; set; }
+
+        public Komentar()
+        {
+            Ocena = -1;
+        }
     }
 }

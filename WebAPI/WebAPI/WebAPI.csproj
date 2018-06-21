@@ -181,6 +181,7 @@
     <Compile Include="Models\Lokacija.cs" />
     <Compile Include="Models\Musterija.cs" />
     <Compile Include="Models\MusterijaPomocni.cs" />
+    <Compile Include="Models\PomocniModeli\PretraziModel.cs" />
     <Compile Include="Models\Vozac.cs" />
     <Compile Include="Models\VozacPomocna.cs" />
     <Compile Include="Models\Voznja.cs" />
@@ -216,8 +217,6 @@
     <Content Include="HTMLovi\MyHome.html" />
     <Content Include="HTMLovi\Profile.html" />
     <Content Include="HTMLovi\Register.html" />
-    <Content Include="JSControllers\Filter2Controller.js" />
-    <Content Include="JSControllers\FilterController.js" />
     <Content Include="JSControllers\JSRegILogController.js" />
     <Content Include="JSControllers\MainController.js" />
     <Content Include="JSControllers\MyHomeController.js" />

@@ -8,6 +8,7 @@ using System.Web.Http;
 using WebAPI.DataIO;
 
 using WebAPI.Models;
+using WebAPI.Models.PomocniModeli;
 
 namespace WebAPI.Controllers
 {
@@ -113,7 +114,8 @@ namespace WebAPI.Controllers
                     }
                     drive.Iznos = 0;
                     drive.Kom = new Komentar();
-                    drive.DatumIVremePorudzbine = DateTime.Now.ToUniversalTime();
+                    
+                    drive.DatumIVremePorudzbine = String.Format("{0:F}", DateTime.Now);
                     drive.Odrediste = new Lokacija();
                     drive.Disp = new Dispecer();
                     drive.Voz = new Vozac();
@@ -161,7 +163,7 @@ namespace WebAPI.Controllers
                     }
                     drive.Iznos = 0;
                     drive.Kom = new Komentar();
-                    drive.DatumIVremePorudzbine = DateTime.Now.ToUniversalTime();
+                    drive.DatumIVremePorudzbine = String.Format("{0:F}", DateTime.Now); ;
                     drive.Odrediste = new Lokacija();
                     drive.Disp = (Dispecer)c;
                     
@@ -244,6 +246,74 @@ namespace WebAPI.Controllers
             }
             return listaDrives1;
         }
+
+        
+
+        [HttpPost]
+        [ActionName("Pretraga")]
+        public List<Voznja> Pretraga([FromBody]PretraziModel k)
+        {
+            //string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            if (k.Drivess == null)
+            {
+                return new List<Voznja>();
+            }
+            //List<Voznja> listaDrives = xml.ReadDrives(ss);
+            List<Voznja> listaDrives = k.Drivess;
+            List<Voznja> listaDrives1 = k.Drivess;
+
+            if(k.DatumOd != null)
+            {
+                    listaDrives1 = listaDrives1.Where(o => DateTime.Parse(o.DatumIVremePorudzbine) >= DateTime.Parse(k.DatumOd)).ToList();
+
+            }
+            if(k.DatumDo != null)
+            {
+                listaDrives1 = listaDrives1.Where(o => DateTime.Parse(o.DatumIVremePorudzbine) <= DateTime.Parse(k.DatumDo)).ToList();
+            }
+            if(k.CenaOd != null)
+            {
+                listaDrives1 = listaDrives1.Where(o => o.Iznos >= Double.Parse(k.CenaOd)).ToList();
+            }
+            if (k.CenaDo != null)
+            {
+                listaDrives1 = listaDrives1.Where(o => o.Iznos <= Double.Parse(k.CenaDo)).ToList();
+            }
+            if (k.OcenaOd != null)
+            {
+                listaDrives1 = listaDrives1.Where(o => o.Kom.Ocena >= Double.Parse(k.OcenaOd)).ToList();
+            }
+            if (k.OcenaDo != null)
+            {
+                listaDrives1 = listaDrives1.Where(o => o.Kom.Ocena <= Double.Parse(k.OcenaDo)).ToList();
+            }
+
+            if((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Dispecer)
+            {
+                if(k.MustIme != null)
+                {
+                    listaDrives1 = listaDrives1.Where(o => o.Mus.Ime.Contains(k.MustIme)).ToList();
+                }
+                if(k.MustPrezime != null)
+                {
+                    listaDrives1 = listaDrives1.Where(o => o.Mus.Prezime.Contains(k.MustPrezime)).ToList();
+                }
+                if (k.VozIme != null)
+                {
+                    listaDrives1 = listaDrives1.Where(o => o.Voz.Ime.Contains(k.VozIme)).ToList();
+                }
+                if (k.VozPrezime != null)
+                {
+                    listaDrives1 = listaDrives1.Where(o => o.Voz.Prezime.Contains(k.VozPrezime)).ToList();
+                }
+
+            }
+
+
+
+            return listaDrives1;
+        }
+
 
         [HttpPost]
         [ActionName("Edit")]
@@ -437,7 +507,7 @@ namespace WebAPI.Controllers
             }
            else if(k.PoCemu == 1)
             {
-                sortiranaVoznja = listaDrives.OrderByDescending(o => o.DatumIVremePorudzbine).ToList();
+                sortiranaVoznja = listaDrives.OrderByDescending(o => DateTime.Parse(o.DatumIVremePorudzbine)).ToList();
             }
            
            

@@ -17,7 +17,6 @@ namespace WebAPI.Models
         public String KontaktTelefon { get; set; }
         public String Email { get; set; }
         public UlogaKorisnika Uloga { get; set; }
-
-        //public List<Voznja> Voznje { get; set; }
+        public List<Voznja> KorisnikVoznje { get; set; }
     }
 }

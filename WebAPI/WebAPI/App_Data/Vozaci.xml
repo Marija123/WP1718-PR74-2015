@@ -10,6 +10,7 @@
     <KontaktTelefon>04823875</KontaktTelefon>
     <Email>barbi@barbi</Email>
     <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
     <Lok />
     <Auto>
       <UsernameVozaca>suza</UsernameVozaca>
@@ -30,6 +31,7 @@
     <KontaktTelefon>04823875</KontaktTelefon>
     <Email>barbi@barbi</Email>
     <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
     <Lok />
     <Auto>
       <UsernameVozaca>rina</UsernameVozaca>
@@ -50,6 +52,7 @@
     <KontaktTelefon>04823875</KontaktTelefon>
     <Email>barbi@barbi</Email>
     <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
     <Lok />
     <Auto>
       <GodisteAutomobila>2003</GodisteAutomobila>
@@ -69,6 +72,7 @@
     <KontaktTelefon>04823875</KontaktTelefon>
     <Email>luka@luka</Email>
     <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
     <Lok />
     <Auto>
       <GodisteAutomobila>2011</GodisteAutomobila>

@@ -8,7 +8,7 @@ namespace WebAPI.Models
 {
     public class Voznja
     {
-        public DateTime DatumIVremePorudzbine { get; set; }
+        public string DatumIVremePorudzbine { get; set; }
         public Lokacija LokacijaZaDolazak { get; set; }
         public TipAutomobila TipAuta { get; set; }
 
@@ -19,5 +19,11 @@ namespace WebAPI.Models
         public Double Iznos { get; set; }
         public StatusVoznje Stat { get; set; }
         public Komentar Kom { get; set; }
+
+        public Voznja ()
+        {
+            Iznos = -1;
+        }
+           
     }
 }

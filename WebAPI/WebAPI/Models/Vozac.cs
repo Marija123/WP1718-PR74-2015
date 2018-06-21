@@ -14,6 +14,9 @@ namespace WebAPI.Models
         public Vozac()
         {
             Uloga = Enums.UlogaKorisnika.Vozac;
+            KorisnikVoznje = new List<Voznja>();
+            Ime = "";
+            Prezime = "";
         }
     }
 }

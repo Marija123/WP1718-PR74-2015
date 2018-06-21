@@ -10,5 +10,6 @@
     <KontaktTelefon>04823875</KontaktTelefon>
     <Email>barbi@barbi</Email>
     <Uloga>Musterija</Uloga>
+    <KorisnikVoznje />
   </Musterija>
 </ArrayOfMusterija>
