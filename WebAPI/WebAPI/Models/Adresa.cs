@@ -12,7 +12,13 @@ namespace WebAPI.Models
         public String NaseljenoMesto { get; set; }
         public Double PozivniBroj { get; set; }
 
-        public Adresa() { }
+        public Adresa()
+        {
+            Ulica = "";
+            Broj = "";
+            NaseljenoMesto = "";
+            PozivniBroj = 0;
+        }
         public Adresa(String u, String b, String nm, Double pb)
         {
             Ulica = u;

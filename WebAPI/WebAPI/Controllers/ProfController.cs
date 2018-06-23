@@ -167,7 +167,6 @@ namespace WebAPI.Controllers
                     drive.DatumIVremePorudzbine = String.Format("{0:F}", DateTime.Now); ;
                     drive.Odrediste = new Lokacija();
                     drive.Disp = (Dispecer)c;
-
                     drive.Stat = Enums.StatusVoznje.Formirana;
 
                 }
@@ -412,36 +411,7 @@ namespace WebAPI.Controllers
                     listaDrives1.Add(d);
                 }
             }
-            //if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Musterija)
-            //{
-            //    foreach (Voznja d in listaDrives)
-            //    {
-            //        if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status) && d.Mus.KorisnickoIme == k.Username)
-            //        {
-            //            listaDrives1.Add(d);
-            //        }
-            //    }
-            //}
-            //else if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Vozac)
-            //{
-            //    foreach (Voznja d in listaDrives)
-            //    {
-            //        if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status) && d.Voz.KorisnickoIme == k.Username)
-            //        {
-            //            listaDrives1.Add(d);
-            //        }
-            //    }
-            //}
-            //else if ((Enums.UlogaKorisnika)int.Parse(k.Uloga) == Enums.UlogaKorisnika.Dispecer)
-            //{
-            //    foreach (Voznja d in listaDrives)
-            //    {
-            //        if (d.Stat == (Enums.StatusVoznje)int.Parse(k.Status) && d.Disp.KorisnickoIme == k.Username)
-            //        {
-            //            listaDrives1.Add(d);
-            //        }
-            //    }
-            //}
+
             return listaDrives1;
         }
 
@@ -475,25 +445,7 @@ namespace WebAPI.Controllers
             return listaDrives1;
         }
 
-        //[HttpGet]
-        //[ActionName("SortingUser")]
-        //public List<Voznja> SortingUser(string k)
-        //{
-        //    string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
-
-        //    List<Voznja> listaDrives = xml.ReadDrives(ss);
-        //    List<Voznja> listaDrives1 = new List<Voznja>();
-        //     foreach (Voznja d in listaDrives)
-        //     {
-        //            if (d.Mus.KorisnickoIme == k || d.Voz.KorisnickoIme == k || d.Disp.KorisnickoIme== k)
-        //            {
-        //                listaDrives1.Add(d);
-        //            }
-        //     }
-        //    List<Voznja> sortiranaVoznja = listaDrives1.OrderByDescending(o => o.Kom.Ocena).ToList();
-
-        //    return sortiranaVoznja;
-        //}
+     
 
         [HttpPost]
         [ActionName("SortingUser")]
@@ -557,6 +509,253 @@ namespace WebAPI.Controllers
                 }
             }
             xml.WriteDrives(lista, ss);
+            return ret;
+        }
+
+        [HttpPost]
+        [ActionName("ObradiVoznju")]
+        public List<Voznja> ObradiVoznju([FromBody]ModelZaObradiVoznju k)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            string ss2 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Dispeceri.xml");
+            List<Voznja> lista = xml.ReadDrives(ss);
+            List<Vozac> lv = xml.ReadDrivers(ss1);
+            List<Dispecer> dispi = xml.ReadDispecer(ss2);
+
+            Vozac vozacsl = new Vozac();
+            Voznja voznja = new Voznja();
+            bool nasao = false;
+            foreach (Vozac vv in lv)
+            {
+                if (!vv.Zauzet && vv.Auto.TA == k.Voznj.TipAuta)
+                {
+
+                    nasao = true;
+                    vv.Zauzet = true;
+                    vozacsl = vv;
+                    break;
+                }
+            }
+
+            List<Voznja> retL = k.ListaVoznji;
+
+            Dispecer dispe = new Dispecer();
+
+            foreach (Dispecer d in dispi)
+            {
+                if (d.KorisnickoIme == k.Username)
+                {
+                    dispe = d;
+                }
+            }
+
+
+            if (nasao)
+            {
+                foreach (Voznja v in lista)
+                {
+                    if ((v.Mus.KorisnickoIme == k.Voznj.Mus.KorisnickoIme || v.Disp.KorisnickoIme == k.Voznj.Disp.KorisnickoIme) && DateTime.Parse(v.DatumIVremePorudzbine) == DateTime.Parse(k.Voznj.DatumIVremePorudzbine))
+                    {
+
+                        v.Stat = Enums.StatusVoznje.Obradjena;
+
+                        v.Voz = vozacsl;
+                        v.Disp = dispe;
+
+                        break;
+
+                    }
+                }
+
+                foreach (Voznja vvv in retL)
+                {
+                    if ((vvv.Mus.KorisnickoIme == k.Voznj.Mus.KorisnickoIme || vvv.Disp.KorisnickoIme == k.Voznj.Disp.KorisnickoIme) && DateTime.Parse(vvv.DatumIVremePorudzbine) == DateTime.Parse(k.Voznj.DatumIVremePorudzbine))
+                    {
+                        vvv.Stat = Enums.StatusVoznje.Obradjena;
+                        vvv.Disp = dispe;
+                        vvv.Voz = vozacsl;
+                    }
+                }
+                xml.WriteDrives(lista, ss);
+                xml.WriteDrivers(lv, ss1);
+
+            }
+            return retL;
+
+        }
+        [HttpPost]
+        [ActionName("PreuzmiVoznju")]
+        public List<Voznja> PreuzmiVoznju([FromBody]ModelZaObradiVoznju k)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+          
+            List<Voznja> lista = xml.ReadDrives(ss);
+            List<Vozac> lv = xml.ReadDrivers(ss1);
+       
+
+            Vozac vozacsl = new Vozac();
+            Voznja voznja = new Voznja();
+            bool nasao = false;
+            foreach (Vozac vv in lv)
+            {
+                if (vv.KorisnickoIme == k.Username)
+                {
+                    nasao = true;
+                    vv.Zauzet = true;
+                    vozacsl = vv;
+                    break;
+                }
+            }
+
+            List<Voznja> retL = k.ListaVoznji;
+            if (nasao)
+            {
+                foreach (Voznja v in lista)
+                {
+                    if ((v.Mus.KorisnickoIme == k.Voznj.Mus.KorisnickoIme || v.Disp.KorisnickoIme == k.Voznj.Disp.KorisnickoIme) && DateTime.Parse(v.DatumIVremePorudzbine) == DateTime.Parse(k.Voznj.DatumIVremePorudzbine))
+                    {
+
+                        v.Stat = Enums.StatusVoznje.Prihvacena;
+                        v.Voz = vozacsl;
+                        break;
+
+                    }
+                }
+
+                foreach (Voznja vvv in retL)
+                {
+                    if ((vvv.Mus.KorisnickoIme == k.Voznj.Mus.KorisnickoIme || vvv.Disp.KorisnickoIme == k.Voznj.Disp.KorisnickoIme) && DateTime.Parse(vvv.DatumIVremePorudzbine) == DateTime.Parse(k.Voznj.DatumIVremePorudzbine))
+                    {
+                        retL.Remove(vvv);
+                        break;
+                    }
+                }
+                xml.WriteDrives(lista, ss);
+                xml.WriteDrivers(lv, ss1);
+            }
+
+
+            return retL;
+        }
+
+        [HttpGet]
+        [ActionName("getDriverData")]
+        public PodaciOVozacu getDriverData(string username)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            PodaciOVozacu po = new PodaciOVozacu();
+            List<Vozac> listaDrives = xml.ReadDrivers(ss);
+            bool nasao = false;
+            foreach (Vozac d in listaDrives)
+            {
+                if (d.KorisnickoIme == username)
+                {
+                    po.Zauzet = d.Zauzet;
+                    po.TipA = d.Auto.TA;
+                    nasao = true;
+                    break;
+
+                }
+            }
+
+            if(!nasao)
+            {
+                po.Zauzet = true;
+                po.TipA = Enums.TipAutomobila.nemaTip;
+            }
+            return po ;
+        }
+
+
+        
+
+        [HttpPost]
+        [ActionName("KomentarisanjeVozac")]
+        public bool KomentarisanjeVozac([FromBody]VozacevKomentar k)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            List<Voznja> lista = xml.ReadDrives(ss);
+            List<Vozac> lv = xml.ReadDrivers(ss1);
+            bool ret = false;
+            foreach (Voznja v in lista)
+            {
+                if (v.Voz.KorisnickoIme == k.Voz.Voz.KorisnickoIme && DateTime.Parse(v.DatumIVremePorudzbine) == DateTime.Parse(k.Voz.DatumIVremePorudzbine))
+                {
+                    v.Kom.Datum = DateTime.Parse(String.Format("{0:F}", DateTime.Now));
+                    v.Kom.Opis = k.Kometar;
+                    v.Kom.Ocena = 0;
+                    v.Kom.VozKomUsername = k.Voz.Voz.KorisnickoIme;
+
+                    v.Voz.Zauzet = false;
+                    v.Stat = Enums.StatusVoznje.Neuspesna;
+
+                    ret = true;
+                    break;
+                }
+            }
+
+            if(ret)
+            {
+                foreach(Vozac vo in lv)
+                {
+                    if(vo.KorisnickoIme == k.Voz.Voz.KorisnickoIme)
+                    {
+                        vo.Zauzet = false;
+                        break;
+                    }
+                }
+            }
+            xml.WriteDrives(lista, ss);
+            xml.WriteDrivers(lv, ss1);
+            return ret;
+        }
+        
+        
+        [HttpPost]
+        [ActionName("DodajKraj")]
+        public bool DodajKraj([FromBody]LokacijaOdrediste k)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            List<Voznja> lista = xml.ReadDrives(ss);
+            List<Vozac> lv = xml.ReadDrivers(ss1);
+            bool ret = false;
+            foreach (Voznja v in lista)
+            {
+                if (v.Voz.KorisnickoIme == k.Voz.Voz.KorisnickoIme && DateTime.Parse(v.DatumIVremePorudzbine) == DateTime.Parse(k.Voz.DatumIVremePorudzbine))
+                {
+                    v.Iznos = k.Cena;
+                    v.Odrediste.Xkoordinate = k.XCoord;
+                    v.Odrediste.Ykoordinate = k.YCoord;
+                    v.Odrediste.Adr.Ulica = k.Street;
+                    v.Odrediste.Adr.Broj = k.Number;
+                    v.Odrediste.Adr.NaseljenoMesto = k.Town;
+                    v.Odrediste.Adr.PozivniBroj = Int32.Parse(k.PostalCode);
+
+                    v.Voz.Zauzet = false;
+                    v.Stat = Enums.StatusVoznje.Uspesna;
+
+                    ret = true;
+                    break;
+                }
+            }
+
+            if (ret)
+            {
+                foreach (Vozac vo in lv)
+                {
+                    if (vo.KorisnickoIme == k.Voz.Voz.KorisnickoIme)
+                    {
+                        vo.Zauzet = false;
+                        break;
+                    }
+                }
+            }
+            xml.WriteDrives(lista, ss);
+            xml.WriteDrivers(lv, ss1);
             return ret;
         }
     }

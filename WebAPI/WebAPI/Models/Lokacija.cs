@@ -11,7 +11,12 @@ namespace WebAPI.Models
         public String Ykoordinate { get; set; }
         public Adresa Adr { get; set; }
 
-        public Lokacija() { }
+        public Lokacija()
+        {
+            Xkoordinate = "";
+            Ykoordinate = "";
+            Adr = new Adresa();
+        }
         public Lokacija(String x, String y, Adresa ad )
         {
             Xkoordinate = x;

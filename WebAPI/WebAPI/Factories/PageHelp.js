@@ -54,8 +54,14 @@ WebAPI.config(function ($routeProvider) {
         {
             controller: 'CommentController',
             templateUrl: 'HTMLovi/Comment.html',
-            activeTab: 'Edit'
+            activeTab: 'none'
+        }).when('/ZavrsiVoznju',
+        {
+            controller: 'CommentController',
+            templateUrl: 'HTMLovi/ZavrsiVoznju.html',
+            activeTab: 'none'
         })
+
     
 
 });

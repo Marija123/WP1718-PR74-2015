@@ -77,16 +77,7 @@
             });
     }
 
-    //factory.Filter2 = function (Drives,fu) {
-    //    return $http.post('/api/Prof/GetFilterUserAll',
-    //        {
-    //            Username: sessionStorage.getItem("username"),
-    //            Uloga: sessionStorage.getItem("role"),
-    //            Status: fu,
-    //            Drivess: Drives
-    //        });
-    //}
-
+   
 
     factory.Sorting = function (Drives,fu) {
         return $http.post('/api/Prof/SortingUser',
@@ -126,6 +117,49 @@
                 KomOcena: ko.Ocena,
                 Voz: voz
             });
+    }
+
+    factory.ObradiVoznju = function (drive, drives) {
+        return $http.post('/api/Prof/ObradiVoznju', {
+            Username: sessionStorage.getItem("username"),
+            Voznj: drive,
+            ListaVoznji: drives
+        });
+    }
+
+    factory.PreuzmiVoznju = function (drive, drives) {
+        return $http.post('/api/Prof/PreuzmiVoznju', {
+            Username: sessionStorage.getItem("username"),
+            Voznj: drive,
+            ListaVoznji: drives
+        });
+    }
+
+    factory.getDriverData = function (username) {
+        return $http.get('/api/Prof/getDriverData?username=' + username);
+    }
+
+    factory.DodajKomentarVozac = function (ko, voz) {
+        return $http.post('/api/Prof/KomentarisanjeVozac',
+            {
+                Opis: ko.Opis,
+                Voz: voz
+            });
+    }
+
+    factory.DodajKraj = function (drive, dri) {
+        return $http.post('/api/Prof/DodajKraj', {
+            Cena: drive.Cena,
+            XCoord: drive.XCoord,
+            YCoord: drive.YCoord,
+            Street: drive.Street,
+            Number: drive.Number,
+            Town: drive.Town,
+            PostalCode: drive.PostalCode,
+            Voz: dri
+           
+
+        });
     }
 
     return factory;

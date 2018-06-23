@@ -9,7 +9,7 @@ namespace WebAPI.Models
     {
         public enum TipAutomobila
         {
-            putnicki, kombi
+            putnicki, kombi, nemaTip
         }
         public enum UlogaKorisnika
         {

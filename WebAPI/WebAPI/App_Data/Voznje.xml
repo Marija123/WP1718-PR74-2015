@@ -80,15 +80,37 @@
       <KorisnikVoznje />
     </Disp>
     <Voz>
-      <Ime />
-      <Prezime />
-      <Pol>Musko</Pol>
+      <KorisnickoIme>biba</KorisnickoIme>
+      <Lozinka>biba</Lozinka>
+      <Ime>Biljana</Ime>
+      <Prezime>Djurkovic</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
-      <Zauzet>false</Zauzet>
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>biba</UsernameVozaca>
+        <GodisteAutomobila>6</GodisteAutomobila>
+        <BrojRegistarskeOzn>sdfds</BrojRegistarskeOzn>
+        <BrojTaksiVozila>6</BrojTaksiVozila>
+        <TA>kombi</TA>
+      </Auto>
+      <Zauzet>true</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Obradjena</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
       <Ocena>0</Ocena>
@@ -137,7 +159,16 @@
       <Email>barbi@barbi</Email>
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
-      <Lok />
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
       <Auto>
         <UsernameVozaca>rina</UsernameVozaca>
         <GodisteAutomobila>2001</GodisteAutomobila>
@@ -197,19 +228,30 @@
       <Email>barbi@barbi</Email>
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
-      <Lok />
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
       <Auto>
         <GodisteAutomobila>2003</GodisteAutomobila>
         <BrojRegistarskeOzn>ns10</BrojRegistarskeOzn>
         <BrojTaksiVozila>3</BrojTaksiVozila>
         <TA>kombi</TA>
       </Auto>
-      <Zauzet>true</Zauzet>
+      <Zauzet>false</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Formirana</Stat>
+    <Stat>Neuspesna</Stat>
     <Kom>
-      <Datum>0001-01-01T00:00:00</Datum>
+      <Opis>Pokvarilo se auto</Opis>
+      <Datum>2018-06-23T18:26:39</Datum>
+      <VozKomUsername>Joca</VozKomUsername>
       <Ocena>0</Ocena>
     </Kom>
   </Voznja>
@@ -246,15 +288,37 @@
       <KorisnikVoznje />
     </Disp>
     <Voz>
-      <Ime />
-      <Prezime />
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
       <Pol>Musko</Pol>
-      <Uloga>Musterija</Uloga>
+      <JMBG>0510994123456</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
-      <Zauzet>false</Zauzet>
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>deki</UsernameVozaca>
+        <GodisteAutomobila>2015</GodisteAutomobila>
+        <BrojRegistarskeOzn>ns12</BrojRegistarskeOzn>
+        <BrojTaksiVozila>5</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>true</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Obradjena</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
       <Ocena>0</Ocena>
@@ -293,15 +357,37 @@
       <KorisnikVoznje />
     </Disp>
     <Voz>
-      <Ime />
-      <Prezime />
-      <Pol>Musko</Pol>
+      <KorisnickoIme>jeca</KorisnickoIme>
+      <Lozinka>jeca</Lozinka>
+      <Ime>Jelena</Ime>
+      <Prezime>Djurkovic</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
-      <Zauzet>false</Zauzet>
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>jeca</UsernameVozaca>
+        <GodisteAutomobila>2033</GodisteAutomobila>
+        <BrojRegistarskeOzn>sfd</BrojRegistarskeOzn>
+        <BrojTaksiVozila>7</BrojTaksiVozila>
+        <TA>kombi</TA>
+      </Auto>
+      <Zauzet>true</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Obradjena</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
       <Ocena>0</Ocena>
@@ -350,19 +436,30 @@
       <Email>luka@luka</Email>
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
-      <Lok />
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
       <Auto>
         <GodisteAutomobila>2011</GodisteAutomobila>
         <BrojRegistarskeOzn>ns1000</BrojRegistarskeOzn>
         <BrojTaksiVozila>4</BrojTaksiVozila>
         <TA>putnicki</TA>
       </Auto>
-      <Zauzet>true</Zauzet>
+      <Zauzet>false</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Formirana</Stat>
+    <Stat>Neuspesna</Stat>
     <Kom>
-      <Datum>0001-01-01T00:00:00</Datum>
+      <Opis>Nije se pojavila musterija</Opis>
+      <Datum>2018-06-23T17:30:40</Datum>
+      <VozKomUsername>luka</VozKomUsername>
       <Ocena>0</Ocena>
     </Kom>
   </Voznja>
@@ -438,7 +535,16 @@
       <Uloga>Musterija</Uloga>
       <KorisnikVoznje />
     </Mus>
-    <Odrediste />
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr>
+        <Ulica />
+        <Broj />
+        <NaseljenoMesto />
+        <PozivniBroj>0</PozivniBroj>
+      </Adr>
+    </Odrediste>
     <Disp>
       <Ime />
       <Prezime />
@@ -487,7 +593,16 @@
       <Uloga>Musterija</Uloga>
       <KorisnikVoznje />
     </Mus>
-    <Odrediste />
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr>
+        <Ulica />
+        <Broj />
+        <NaseljenoMesto />
+        <PozivniBroj>0</PozivniBroj>
+      </Adr>
+    </Odrediste>
     <Disp>
       <Ime />
       <Prezime />
@@ -531,7 +646,16 @@
       <Uloga>Musterija</Uloga>
       <KorisnikVoznje />
     </Mus>
-    <Odrediste />
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr>
+        <Ulica />
+        <Broj />
+        <NaseljenoMesto />
+        <PozivniBroj>0</PozivniBroj>
+      </Adr>
+    </Odrediste>
     <Disp>
       <KorisnickoIme>admin</KorisnickoIme>
       <Lozinka>admin</Lozinka>
@@ -545,15 +669,37 @@
       <KorisnikVoznje />
     </Disp>
     <Voz>
-      <Ime />
-      <Prezime />
+      <KorisnickoIme>pera</KorisnickoIme>
+      <Lozinka>pera</Lozinka>
+      <Ime>Petar</Ime>
+      <Prezime>Peric</Prezime>
       <Pol>Musko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
-      <Zauzet>false</Zauzet>
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>pera</UsernameVozaca>
+        <GodisteAutomobila>3</GodisteAutomobila>
+        <BrojRegistarskeOzn>ss</BrojRegistarskeOzn>
+        <BrojTaksiVozila>8</BrojTaksiVozila>
+        <TA>kombi</TA>
+      </Auto>
+      <Zauzet>true</Zauzet>
     </Voz>
     <Iznos>0</Iznos>
-    <Stat>Kreirana_NaCekanju</Stat>
+    <Stat>Obradjena</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
       <Ocena>0</Ocena>
@@ -584,7 +730,16 @@
       <Uloga>Musterija</Uloga>
       <KorisnikVoznje />
     </Mus>
-    <Odrediste />
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr>
+        <Ulica />
+        <Broj />
+        <NaseljenoMesto />
+        <PozivniBroj>0</PozivniBroj>
+      </Adr>
+    </Odrediste>
     <Disp>
       <Ime />
       <Prezime />
@@ -605,6 +760,301 @@
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
       <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Saturday, 23 June, 2018 14:24:42</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>222</Xkoordinate>
+      <Ykoordinate>333</Ykoordinate>
+      <Adr>
+        <Ulica>Sime Milosevica</Ulica>
+        <Broj>10</Broj>
+        <NaseljenoMesto>Novi Sad</NaseljenoMesto>
+        <PozivniBroj>21000</PozivniBroj>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>barbi</KorisnickoIme>
+      <Lozinka>barbi</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr>
+        <Ulica />
+        <Broj />
+        <NaseljenoMesto />
+        <PozivniBroj>0</PozivniBroj>
+      </Adr>
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>miki</KorisnickoIme>
+      <Lozinka>miki</Lozinka>
+      <Ime>Milos</Ime>
+      <Prezime>Popovic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>miki</UsernameVozaca>
+        <GodisteAutomobila>2014</GodisteAutomobila>
+        <BrojRegistarskeOzn>sfdf</BrojRegistarskeOzn>
+        <BrojTaksiVozila>9</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Neuspesna</Stat>
+    <Kom>
+      <Opis>Pokvarilo se auto</Opis>
+      <Datum>2018-06-23T18:31:25</Datum>
+      <VozKomUsername>miki</VozKomUsername>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Saturday, 23 June, 2018 14:27:07</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>36</Xkoordinate>
+      <Ykoordinate>45</Ykoordinate>
+      <Adr>
+        <Ulica>Kralja Milutina</Ulica>
+        <Broj>3</Broj>
+        <NaseljenoMesto>Nova Pazova</NaseljenoMesto>
+        <PozivniBroj>22330</PozivniBroj>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>kombi</TipAuta>
+    <Mus>
+      <KorisnickoIme>barbi</KorisnickoIme>
+      <Lozinka>barbi</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr>
+        <Ulica />
+        <Broj />
+        <NaseljenoMesto />
+        <PozivniBroj>0</PozivniBroj>
+      </Adr>
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Kreirana_NaCekanju</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Saturday, 23 June, 2018 18:16:04</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>89</Xkoordinate>
+      <Ykoordinate>98</Ykoordinate>
+      <Adr>
+        <Ulica>Nikole Pasica</Ulica>
+        <Broj>99</Broj>
+        <NaseljenoMesto>Beograd</NaseljenoMesto>
+        <PozivniBroj>18000</PozivniBroj>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate>87</Xkoordinate>
+      <Ykoordinate>23</Ykoordinate>
+      <Adr>
+        <Ulica>Cvije Kukolja</Ulica>
+        <Broj>166</Broj>
+        <NaseljenoMesto>Stara Pazova</NaseljenoMesto>
+        <PozivniBroj>22300</PozivniBroj>
+      </Adr>
+    </Odrediste>
+    <Disp>
+      <KorisnickoIme>admin</KorisnickoIme>
+      <Lozinka>admin</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>luka</KorisnickoIme>
+      <Lozinka>luka</Lozinka>
+      <Ime>Luka</Ime>
+      <Prezime>Crnomarkovic</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>luka@luka</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
+      <Auto>
+        <GodisteAutomobila>2011</GodisteAutomobila>
+        <BrojRegistarskeOzn>ns1000</BrojRegistarskeOzn>
+        <BrojTaksiVozila>4</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>1200</Iznos>
+    <Stat>Uspesna</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Saturday, 23 June, 2018 18:59:06</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>aaa</Xkoordinate>
+      <Ykoordinate>bbb</Ykoordinate>
+      <Adr>
+        <Ulica>taita</Ulica>
+        <Broj>1</Broj>
+        <NaseljenoMesto>kkk</NaseljenoMesto>
+        <PozivniBroj>21</PozivniBroj>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>barbi</KorisnickoIme>
+      <Lozinka>barbi</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate>gf</Xkoordinate>
+      <Ykoordinate>fgf</Ykoordinate>
+      <Adr>
+        <Ulica>drfd</Ulica>
+        <Broj>1</Broj>
+        <NaseljenoMesto>ftg</NaseljenoMesto>
+        <PozivniBroj>5</PozivniBroj>
+      </Adr>
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>luka</KorisnickoIme>
+      <Lozinka>luka</Lozinka>
+      <Ime>Luka</Ime>
+      <Prezime>Crnomarkovic</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>luka@luka</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate />
+        <Ykoordinate />
+        <Adr>
+          <Ulica />
+          <Broj />
+          <NaseljenoMesto />
+          <PozivniBroj>0</PozivniBroj>
+        </Adr>
+      </Lok>
+      <Auto>
+        <GodisteAutomobila>2011</GodisteAutomobila>
+        <BrojRegistarskeOzn>ns1000</BrojRegistarskeOzn>
+        <BrojTaksiVozila>4</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Uspesna</Stat>
+    <Kom>
+      <Opis>jj</Opis>
+      <Datum>2018-06-23T22:14:36</Datum>
+      <Ocena>4</Ocena>
     </Kom>
   </Voznja>
 </ArrayOfVoznja>

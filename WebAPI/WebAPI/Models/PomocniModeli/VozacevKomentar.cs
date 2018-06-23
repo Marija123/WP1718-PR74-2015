@@ -5,11 +5,9 @@ using System.Web;
 
 namespace WebAPI.Models.PomocniModeli
 {
-    public class PomocniKomentar
+    public class VozacevKomentar
     {
-        
-        public String KomOpis { get; set; }
-        public String KomOcena { get; set; }
+        public String Kometar { get; set; }
         public Voznja Voz { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿WebAPI.controller('MyHomeController', function ($scope, $rootScope, RegILogFactory,ProfCont,$window) {
+﻿WebAPI.controller('MyHomeController', function ($scope, $rootScope, RegILogFactory, ProfCont, $window, $route) {
 
     if (!$rootScope.loggedin) {
         $window.location.href = '#!/Login';
@@ -6,24 +6,23 @@
 
     function init() {
 
+       // $rootScope.PostavljenKomentar = false;
         //$scope.FilterRez = null;
         ProfCont.getDrives(sessionStorage.getItem("username")).then(function (response) {
             $scope.MyDrives = response.data;
             $rootScope.RegisterSuccessF = "Vase voznje";
-            //$scope.MD = true;
-            //$scope.AD = false;
-            //$scope.CD = false;
-            //$scope.SD = false;
-            //$scope.FD = false;
-            //$scope.SVE = false;
-            //$scope.FILT1 = false;
-            //$scope.FILT2 = false;
-
             $scope.listaFlag = 1;
             $scope.posebanFlag = 2;
             $scope.filtFlag = 0;
             console.log(response.data);
         });
+
+        ProfCont.getDriverData(sessionStorage.getItem("username")).then(function (response) {
+            $scope.DriverData = response.data;
+
+        });
+
+     
     }
 
     init();
@@ -211,10 +210,7 @@
         }
 
         $scope.OtkaziVoznju = function (drive) {
-            //if (Status == null || Status == "") {
-            //    alert('Morate uneti po cemu zelite da sortirate!')
-            //    return;
-            //}
+          
             ProfCont.OtkaziVoznju(drive).then(function (response) {
 
                 console.log(response.data);
@@ -225,6 +221,82 @@
                
             });
         }
-    
+
+        $scope.ObradiVoznju = function (drive, drives) {
+            ProfCont.ObradiVoznju(drive, drives).then(function (response) {
+                console.log(response.data);
+
+                if ($scope.listaFlag == 1) {
+                    $scope.MyDrives = response.data;
+                    $scope.apply();
+                }
+                if ($scope.listaFlag == 2) {
+                    $scope.AllDrives = response.data;
+                    $scope.apply();
+                }
+                if ($scope.listaFlag == 4) {
+                    $scope.SortedDrives = response.data;
+                    $scope.apply();
+                }
+                if ($scope.listaFlag == 5) {
+                    $scope.FilteredDrives = response.data;
+                    $scope.apply();
+                }
+                if ($scope.listaFlag == 6) {
+                    $scope.SearchedDrives = response.data;
+                    $scope.apply();
+                }
+
+            });
+        }
+
+        $scope.PreuzmiVoznju = function (drive, drives) {
+            ProfCont.PreuzmiVoznju(drive, drives).then(function (response) {
+                console.log(response.data);
+
+                $scope.DriverData.Zauzet = true;
+
+                if ($scope.listaFlag == 3) {
+                    $scope.WaitingDrives = response.data;
+                    //$scope.apply();
+                }
+
+                if ($scope.listaFlag == 4) {
+                    $scope.SortedDrives = response.data;
+                    //$scope.apply();
+                }
+
+                if ($scope.listaFlag == 6) {
+                    $scope.SearchedDrives = response.data;
+                    // $scope.apply();
+                }
+
+                $scope.apply();
+
+            });
+        }
+
+        $scope.ZavrsiVoznju = function (drive) {
+
+
+            $rootScope.VoznjaZaKomentarVozac = drive;
+
+            $window.location.href = "#!/ZavrsiVoznju";
+
+        }
+
+        $scope.DodajKomentar = function (drive) {
+
+            if (drive == null) {
+                return;
+            }
+
+            $rootScope.VoznjaZaKomentar = drive;
+
+            
+            
+            $window.location.href = "#!/DodajKomentar";
+           
+        }
 
 });

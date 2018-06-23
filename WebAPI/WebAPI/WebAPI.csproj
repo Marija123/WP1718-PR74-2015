@@ -181,9 +181,13 @@
     <Compile Include="Models\Lokacija.cs" />
     <Compile Include="Models\Musterija.cs" />
     <Compile Include="Models\MusterijaPomocni.cs" />
+    <Compile Include="Models\PomocniModeli\LokacijaOdrediste.cs" />
+    <Compile Include="Models\PomocniModeli\ModelZaObradiVoznju.cs" />
+    <Compile Include="Models\PomocniModeli\PodaciOVozacu.cs" />
     <Compile Include="Models\PomocniModeli\PomocnaVoznja.cs" />
     <Compile Include="Models\PomocniModeli\PomocniKomentar.cs" />
     <Compile Include="Models\PomocniModeli\PretraziModel.cs" />
+    <Compile Include="Models\PomocniModeli\VozacevKomentar.cs" />
     <Compile Include="Models\Vozac.cs" />
     <Compile Include="Models\VozacPomocna.cs" />
     <Compile Include="Models\Voznja.cs" />
@@ -196,6 +200,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\animate-custom.css" />
+    <Content Include="css\css_stil.css" />
     <Content Include="css\demo.css" />
     <Content Include="css\fonts\BebasNeue-webfont.svg" />
     <Content Include="css\fonts\Dharma Type Font License.txt" />
@@ -220,6 +225,7 @@
     <Content Include="HTMLovi\MyHome.html" />
     <Content Include="HTMLovi\Profile.html" />
     <Content Include="HTMLovi\Register.html" />
+    <Content Include="HTMLovi\ZavrsiVoznju.html" />
     <Content Include="JSControllers\CommentController.js" />
     <Content Include="JSControllers\JSRegILogController.js" />
     <Content Include="JSControllers\MainController.js" />
