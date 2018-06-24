@@ -9,25 +9,62 @@
         <div class="body">
             <label>Add your location: </label>
             <div>
-               
-                <div id="map" class="map"></div>
-                <script type="text/javascript">
-                  var map = new ol.Map({
-                    target: 'map',
-                    layers: [
-                      new ol.layer.Tile({
-                        source: new ol.source.OSM()
-                      })
-                    ],
-                    view: new ol.View({
-                      center: ol.proj.fromLonLat([37.41, 8.82]),
-                      zoom: 4
-                    })
-                  });
+
+                <div id="map" style="width: 100%; height: 400px; background: grey" />
+                <script type="text/javascript" charset="UTF-8">
+
+                
+                    function setUpClickListener(map) {
+                        
+                        map.addEventListener('tap', function (evt) {
+                            var coord = map.screenToGeo(evt.currentPointer.viewportX,
+                                evt.currentPointer.viewportY);
+
+                            var XCoord1 = Math.abs(coord.lat.toFixed(4)) +
+                                ((coord.lat > 0) ? 'N' : 'S');
+                            var YCoord1 = Math.abs(coord.lng.toFixed(4)) +
+                                ((coord.lng > 0) ? 'E' : 'W');
+
+                        document.getElementById("xCoord").value = XCoord1;
+                        document.getElementById("yCoord").value = YCoord1;
+                            alert('Clicked at ' + Math.abs(coord.lat.toFixed(4)) +
+                                ((coord.lat > 0) ? 'N' : 'S') +
+                                ' ' + Math.abs(coord.lng.toFixed(4)) +
+                                ((coord.lng > 0) ? 'E' : 'W'));
+                        });
+                    }
+                    
+                    var platform = new H.service.Platform({
+                        app_id: 'DemoAppId01082013GAL',
+                        app_code: 'AJKnXv84fjrb0KIHawS0Tg',
+                        useCIT: true,
+                        useHTTPS: true
+                    });
+                    var pixelRatio = window.devicePixelRatio || 1;
+                    var defaultLayers = platform.createDefaultLayers({
+                        tileSize: pixelRatio === 1 ? 256 : 512,
+                        ppi: pixelRatio === 1 ? undefined : 320
+                    });
+
+                    
+                    var map = new H.Map(document.getElementById('map'),
+                        defaultLayers.normal.map, {
+                            center: { lat: 30.94625288456589, lng: -54.10861860580418 },
+                            zoom: 1,
+                            pixelRatio: pixelRatio
+                        });
+
+                    
+                    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+                    setUpClickListener(map);
                 </script>
+
+
             </div>
             <div class="form-group">
-                <input type="text" class="t" id="xCoord" ng-model="drive.XCoord" placeholder="X coordinate">
+                
+                <input type="text" class="t" id="xCoord" ng-model="drive.XCoord"   placeholder="X coordinate">
             </div>
             <div class="form-group">
                 <input type="text" class="t" id="yCoord" ng-model="drive.YCoord" placeholder="Y coordinate">

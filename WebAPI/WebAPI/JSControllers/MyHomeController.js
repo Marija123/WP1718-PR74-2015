@@ -1,4 +1,4 @@
-﻿WebAPI.controller('MyHomeController', function ($scope, $rootScope, RegILogFactory, ProfCont, $window, $route) {
+﻿WebAPI.controller('MyHomeController', function ($scope, $rootScope, RegILogFactory, ProfCont, $window, $route, $routeParams) {
 
     if (!$rootScope.loggedin) {
         $window.location.href = '#!/Login';
@@ -6,8 +6,6 @@
 
     function init() {
 
-       // $rootScope.PostavljenKomentar = false;
-        //$scope.FilterRez = null;
         ProfCont.getDrives(sessionStorage.getItem("username")).then(function (response) {
             $scope.MyDrives = response.data;
             $rootScope.RegisterSuccessF = "Vase voznje";
@@ -22,6 +20,8 @@
 
         });
 
+        
+
      
     }
 
@@ -30,34 +30,17 @@
         ProfCont.Sorting(Drives,broj).then(function (response) {
 
             console.log(response.data);
-            //$scope.MD = false;
-            //$scope.AD = false;
-            //$scope.CD = false;
-            //$scope.SD = true;
-            //$scope.FD = false;
-
             $scope.listaFlag = 4;
-          
-            
             $scope.SortedDrives = response.data;
         });
     }
 
     $scope.getWaitingDrives = function () {
         ProfCont.getWaitingDrives(sessionStorage.getItem("username")).then(function (response) {
-           // $scope.FilterRez = response.data;
+          
             $scope.WaitingDrives = response.data;
             $rootScope.RegisterSuccessF = "Voznje sa statusom 'Kreirana_Na Cekanju'";
-            //$scope.MD = false;
-            //$scope.AD = false;
-            //$scope.CD = true;
-            //$scope.SD = false;
-            //$scope.FD = false;
-            //$scope.FILT1 = false;
-            //$scope.FILT2 = false;
-            //$scope.SVE = false;
-           // $scope.F = true;
-
+         
             $scope.listaFlag = 3;
             $scope.posebanFlag = 3;
             $scope.filtFlag = 0;
@@ -68,17 +51,10 @@
 
     $scope.getAllDrives = function () {
         ProfCont.getAllDrives(sessionStorage.getItem("username")).then(function (response) {
-           // $scope.FilterRez = response.data;
+   
             $scope.AllDrives = response.data;
             $rootScope.RegisterSuccessF = "Sve voznje";
-            //$scope.MD = false;
-            //$scope.AD = true;
-            //$scope.CD = false;
-            //$scope.SD = false;
-            //$scope.FD = false;
-            //$scope.SVE = true;
-            //$scope.FILT1 = false;
-            //$scope.FILT2 = false;
+
 
             $scope.listaFlag = 2;
             $scope.posebanFlag = 1;
@@ -94,17 +70,10 @@
         ProfCont.Filter(Drive, Status).then(function (response) {
 
             console.log(response.data);
-            //$scope.MD = false;
-            //$scope.AD = false;
-            //$scope.CD = false;
-            //$scope.SD = false;
-            //$scope.FD = true;
-            //$scope.FILT1 = true;
-            //$scope.FILT2 = true;
+
             $scope.FilteredDrives = response.data;
 
             $scope.listaFlag = 5;
-            // $scope.posebanFlag = 1;
             $scope.filtFlag = 1;
 
             //$scope.Drives = response.data;
@@ -118,8 +87,6 @@
             if (su.OcenaOd == "") {
                 su.OcenaOd = null;
             }
-            //else {
-
             if (su.OcenaOd != null) {
 
                 if (!/^\d+$/.test(su.OcenaOd)) {
@@ -192,13 +159,6 @@
             ProfCont.Pretrazi(Drive, su).then(function (response) {
 
                 console.log(response.data);
-                //$scope.MD = false;
-                //$scope.AD = false;
-                //$scope.CD = false;
-                //$scope.SD = false;
-                //$scope.FD = true;
-                //$scope.FILT1 = true;
-                //$scope.FILT2 = true;
                 $scope.SearchedDrives = response.data;
 
                 $scope.listaFlag = 6;
@@ -228,23 +188,23 @@
 
                 if ($scope.listaFlag == 1) {
                     $scope.MyDrives = response.data;
-                    $scope.apply();
+                    $scope.apply;
                 }
                 if ($scope.listaFlag == 2) {
                     $scope.AllDrives = response.data;
-                    $scope.apply();
+                    $scope.apply;
                 }
                 if ($scope.listaFlag == 4) {
                     $scope.SortedDrives = response.data;
-                    $scope.apply();
+                    $scope.apply;
                 }
                 if ($scope.listaFlag == 5) {
                     $scope.FilteredDrives = response.data;
-                    $scope.apply();
+                    $scope.apply;
                 }
                 if ($scope.listaFlag == 6) {
                     $scope.SearchedDrives = response.data;
-                    $scope.apply();
+                    $scope.apply;
                 }
 
             });
@@ -271,7 +231,7 @@
                     // $scope.apply();
                 }
 
-                $scope.apply();
+                $scope.apply;
 
             });
         }
@@ -297,6 +257,14 @@
             
             $window.location.href = "#!/DodajKomentar";
            
+        }
+
+        $scope.IzmeniVoznju = function (drive) {
+            if (drive == null) {
+                return;
+            }
+            $rootScope.VoznjaZaIzmenu = drive;
+            $window.location.href = "#!/IzmeniVoznju";
         }
 
 });

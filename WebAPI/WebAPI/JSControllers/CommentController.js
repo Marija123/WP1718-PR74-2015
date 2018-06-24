@@ -13,6 +13,7 @@
     $scope.DodajKomentarKo = function (ko) {
 
         if (ko == null) {
+            alert('Morate uneti komentar');
             return;
         }
         ProfCont.DodajKomentar(ko, $rootScope.VoznjaZaKomentar).then(function (response) {
@@ -28,12 +29,14 @@
     $scope.UspesnaVoznja = function () {
 
         $scope.Usp = true;
-        $scope.apply();
+        $scope.Neusp = false;
+        $scope.apply;
     }
 
     $scope.NeuspesnaVoznja = function () {
         $scope.Neusp = true;
-        $scope.apply();
+        $scope.Usp = false;
+        $scope.apply;
     }
 
     $scope.DodajKomentarVozac = function (ko) {

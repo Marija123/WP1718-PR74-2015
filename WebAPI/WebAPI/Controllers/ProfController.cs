@@ -315,72 +315,229 @@ namespace WebAPI.Controllers
         }
 
 
+
+
         [HttpPost]
         [ActionName("Edit")]
-        public bool Edit([FromBody]KorisnikPomocna k)
+        public int Edit([FromBody]EditModel k)
         {
+
             string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Musterije.xml");
-            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
-            string ss2 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Dispeceri.xml");
+            string adm = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Dispeceri.xml");
+            string drv = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            string voznje = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            string auta = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Automobili.xml");
+
             List<Musterija> users = xml.ReadUsers(ss);
-            List<Vozac> vozaci = xml.ReadDrivers(ss1);
-            List<Dispecer> disp = xml.ReadDispecer(ss2);
+            List<Dispecer> admins = xml.ReadDispecer(adm);
+            List<Vozac> drivers = xml.ReadDrivers(drv);
+            List<Voznja> lv = xml.ReadDrives(voznje);
+            List<Automobil> la = xml.ReadAuto(auta);
+
+            Vozac vv = new Vozac();
+            Musterija mm = new Musterija();
+            Dispecer dd = new Dispecer();
+
             bool g = true;
-            bool imaGaUMus = false;
-            foreach (Musterija u in users)
+            int q = 3;
+            if (k.OldUsername != k.Username)
             {
-                if (u.KorisnickoIme == k.Username)
+                foreach (Musterija u in users)
                 {
-                    imaGaUMus = true;
+                    if (u.KorisnickoIme == k.Username)
+                    {
+
+                        g = false;
+                    }
+                }
+
+                foreach (Dispecer ad in admins)
+                {
+                    if (ad.KorisnickoIme == k.Username)
+                    {
+                        g = false;
+                    }
+                }
+
+                foreach (Vozac dr in drivers)
+                {
+                    if (dr.KorisnickoIme == k.Username)
+                    {
+                        g = false;
+                    }
                 }
             }
-            foreach (Vozac u in vozaci)
-            {
-                if (u.KorisnickoIme == k.Username)
-                {
-
-                    g = false;
-                }
-            }
-            foreach (Dispecer u in disp)
-            {
-
-                if (u.KorisnickoIme == k.Username)
-                {
-
-                    g = false;
-                }
-            }
-
             if (g)
             {
-                Musterija user = new Musterija();
-                user.KorisnickoIme = k.Username;
-                user.Lozinka = k.Prezime;
-                user.Ime = k.Ime;
-                user.Prezime = k.Prezime;
-                if (k.Pol.ToString() == "Zensko")
+                //int cCounter = 0;
+                //int aCounter = 0;
+                //int dCounter = 0;
+                foreach (Musterija u in users)
                 {
-                    user.Pol = Enums.PolKorisnika.Zensko;
+                    if (u.KorisnickoIme == k.OldUsername)
+                    {
+
+                        u.KorisnickoIme = k.Username;
+                        u.Lozinka = k.Password;
+                        u.Ime = k.Ime;
+                        u.Prezime = k.Prezime;
+                        if (k.Pol == "1")
+                        {
+                            u.Pol = Enums.PolKorisnika.Zensko;
+                        }
+                        else
+                        {
+                            u.Pol = Enums.PolKorisnika.Musko;
+                        }
+                        u.JMBG = k.Jmbg;
+                        u.KontaktTelefon = k.Telefon;
+                        u.Email = k.Email;
+
+                        // users.ad(user);
+
+                        q = 0;
+                        mm = u;
+                        break;
+
+                    }
+
                 }
-                else
+
+                foreach (Dispecer u in admins)
                 {
-                    user.Pol = Enums.PolKorisnika.Musko;
+                    if (u.KorisnickoIme == k.OldUsername)
+                    {
+                        u.KorisnickoIme = k.Username;
+                        u.Lozinka = k.Password;
+                        u.Ime = k.Ime;
+                        u.Prezime = k.Prezime;
+                        if (k.Pol == "Zensko" || k.Pol == "1")
+                        {
+                            u.Pol = Enums.PolKorisnika.Zensko;
+                        }
+                        else
+                        {
+                            u.Pol = Enums.PolKorisnika.Musko;
+                        }
+                        u.JMBG =k.Jmbg;
+                        u.KontaktTelefon = k.Telefon;
+                        u.Email = k.Email;
+
+
+                        q = 1;
+                        dd = u;
+                        break;
+                    }
                 }
-                user.JMBG = k.Jmbg;
-                user.KontaktTelefon = k.Telefon;
-                user.Email = k.Email;
-                user.Uloga = Enums.UlogaKorisnika.Musterija;
+                foreach (Vozac u in drivers)
+                {
+                    if (u.KorisnickoIme == k.OldUsername)
+                    {
+                        u.KorisnickoIme = k.Username;
+                        if (k.Password != null)
+                        {
+                            u.Lozinka = k.Password;
+                        }
+                        u.Ime = k.Ime;
+                        u.Prezime = k.Prezime;
+                        if (k.Pol == "1")
+                        {
+                            u.Pol = Enums.PolKorisnika.Zensko;
+                        }
+                        else
+                        {
+                            u.Pol = Enums.PolKorisnika.Musko;
+                        }
+                        u.JMBG = k.Jmbg;
+                        u.KontaktTelefon = k.Telefon;
+                        u.Email = k.Email;
 
+                        u.Auto.UsernameVozaca = k.Username;
 
-                users.Add(user);
-                xml.WriteUsers(users, ss);
+                        q = 2;
+                        vv = u;
+                        break;
+                    }
+                }
+                if (q == 0)
+                {
+                    xml.WriteUsers(users, ss);
 
-                return true;
+                    foreach(Voznja v in lv)
+                    { 
+                        if(v.Mus.KorisnickoIme == k.OldUsername)
+                        {
+                            v.Mus.KorisnickoIme = mm.KorisnickoIme;
+                            v.Mus.Lozinka = mm.Lozinka;
+                            v.Mus.Ime = mm.Ime;
+                            v.Mus.Prezime = mm.Prezime;
+                            v.Mus.Pol = mm.Pol;
+                            v.Mus.Uloga = mm.Uloga;
+                            v.Mus.JMBG = mm.JMBG;
+                            v.Mus.KontaktTelefon = mm.KontaktTelefon;
+                            v.Mus.Email = mm.Email;
+                        }
+                    }
+                }
+                if (q == 1)
+                {
+                    xml.WriteDispecer(admins, adm);
+                    // return 2;
+                    foreach (Voznja v in lv)
+                    {
+                        if (v.Disp.KorisnickoIme == k.OldUsername)
+                        {
+                            v.Disp.KorisnickoIme = dd.KorisnickoIme;
+                            v.Disp.Lozinka = dd.Lozinka;
+                            v.Disp.Ime = dd.Ime;
+                            v.Disp.Prezime = dd.Prezime;
+                            v.Disp.Pol = dd.Pol;
+                            v.Disp.Uloga = dd.Uloga;
+                            v.Disp.JMBG = dd.JMBG;
+                            v.Disp.KontaktTelefon = dd.KontaktTelefon;
+                            v.Disp.Email = dd.Email;
+                           
+                        }
+                    }
+                }
+                if (q == 2)
+                {
+                    xml.WriteDrivers(drivers, drv);
+                    //return 3;
+                    foreach (Voznja v in lv)
+                    {
+                        if (v.Voz.KorisnickoIme == k.OldUsername)
+                        {
+                            v.Voz.KorisnickoIme = vv.KorisnickoIme;
+                            v.Voz.Lozinka = vv.Lozinka;
+                            v.Voz.Ime = vv.Ime;
+                            v.Voz.Prezime = vv.Prezime;
+                            v.Voz.Pol = vv.Pol;
+                            v.Voz.Uloga = vv.Uloga;
+                            v.Voz.JMBG = vv.JMBG;
+                            v.Voz.KontaktTelefon = vv.KontaktTelefon;
+                            v.Voz.Email = vv.Email;
+                            v.Voz.Auto.UsernameVozaca = vv.KorisnickoIme;
+                        }
+                    }
+                    foreach(Automobil a in la)
+                    {
+                        if(a.UsernameVozaca == k.OldUsername)
+                        {
+                            a.UsernameVozaca = vv.KorisnickoIme;
+                        }
+                    }
+
+                }
+                xml.WriteAuta(la, auta);
+                xml.WriteDrives(lv, voznje);
+                return q;
+
             }
             else
             {
-                return false;
+
+                return q;
             }
 
         }
@@ -502,7 +659,7 @@ namespace WebAPI.Controllers
                 {
                     v.Kom.Datum = DateTime.Parse(String.Format("{0:F}", DateTime.Now));
                     v.Kom.Opis = k.KomOpis;
-                    v.Kom.Ocena = int.Parse(k.KomOcena);
+                    v.Kom.Ocena = Int32.Parse(k.KomOcena);
                     v.Kom.KorKomUsername = k.Voz.Kom.KorKomUsername;
                     ret = true;
                     break;
@@ -687,7 +844,7 @@ namespace WebAPI.Controllers
                     v.Kom.Datum = DateTime.Parse(String.Format("{0:F}", DateTime.Now));
                     v.Kom.Opis = k.Kometar;
                     v.Kom.Ocena = 0;
-                    v.Kom.VozKomUsername = k.Voz.Voz.KorisnickoIme;
+                    v.Kom.KorKomUsername = k.Voz.Voz.KorisnickoIme;
 
                     v.Voz.Zauzet = false;
                     v.Stat = Enums.StatusVoznje.Neuspesna;

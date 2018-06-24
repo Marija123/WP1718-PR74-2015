@@ -5,11 +5,11 @@ WebAPI.config(function ($routeProvider) {
         {
             redirectTo: '/MyHome' //za sad
 
-            }).when('/MyHome',
-            {
-                controller: 'MyHomeController',
-                templateUrl: 'HTMLovi/MyHome.html',
-                activeTab: 'Home'
+        }).when('/MyHome',
+        {
+            controller: 'MyHomeController',
+            templateUrl: 'HTMLovi/MyHome.html',
+            activeTab: 'Home'
 
             //}).
         }).when('/Register',
@@ -59,6 +59,11 @@ WebAPI.config(function ($routeProvider) {
         {
             controller: 'CommentController',
             templateUrl: 'HTMLovi/ZavrsiVoznju.html',
+            activeTab: 'none'
+        }).when('/IzmeniVoznju',
+        {
+            controller: 'ProfileController',
+            templateUrl: 'HTMLovi/IzmeniVoznju.html',
             activeTab: 'none'
         })
 

@@ -3,12 +3,12 @@
   <Vozac>
     <KorisnickoIme>suza</KorisnickoIme>
     <Lozinka>suza</Lozinka>
-    <Ime>Suzana</Ime>
+    <Ime>Petra</Ime>
     <Prezime>Jovic</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
+    <KontaktTelefon>067123456</KontaktTelefon>
+    <Email>suza@suza</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
@@ -31,7 +31,7 @@
     <Zauzet>true</Zauzet>
   </Vozac>
   <Vozac>
-    <KorisnickoIme>rina</KorisnickoIme>
+    <KorisnickoIme>irina</KorisnickoIme>
     <Lozinka>rina</Lozinka>
     <Ime>Irina</Ime>
     <Prezime>Jovanovic</Prezime>
@@ -52,7 +52,7 @@
       </Adr>
     </Lok>
     <Auto>
-      <UsernameVozaca>rina</UsernameVozaca>
+      <UsernameVozaca>irina</UsernameVozaca>
       <GodisteAutomobila>2001</GodisteAutomobila>
       <BrojRegistarskeOzn>ST9850</BrojRegistarskeOzn>
       <BrojTaksiVozila>2</BrojTaksiVozila>
@@ -61,14 +61,14 @@
     <Zauzet>true</Zauzet>
   </Vozac>
   <Vozac>
-    <KorisnickoIme>Joca</KorisnickoIme>
-    <Lozinka>joca</Lozinka>
-    <Ime>Jovan</Ime>
-    <Prezime>Gajin</Prezime>
+    <KorisnickoIme>Boca</KorisnickoIme>
+    <Lozinka>jocamoca</Lozinka>
+    <Ime>Peta</Ime>
+    <Prezime>Pajin</Prezime>
     <Pol>Musko</Pol>
     <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
+    <KontaktTelefon>048238</KontaktTelefon>
+    <Email>joca@joca</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
@@ -82,6 +82,7 @@
       </Adr>
     </Lok>
     <Auto>
+      <UsernameVozaca>Boca</UsernameVozaca>
       <GodisteAutomobila>2003</GodisteAutomobila>
       <BrojRegistarskeOzn>ns10</BrojRegistarskeOzn>
       <BrojTaksiVozila>3</BrojTaksiVozila>
@@ -91,10 +92,10 @@
   </Vozac>
   <Vozac>
     <KorisnickoIme>luka</KorisnickoIme>
-    <Lozinka>luka</Lozinka>
-    <Ime>Luka</Ime>
-    <Prezime>Crnomarkovic</Prezime>
-    <Pol>Zensko</Pol>
+    <Lozinka>lukakuka</Lozinka>
+    <Ime>Luk</Ime>
+    <Prezime>Crnomar</Prezime>
+    <Pol>Musko</Pol>
     <JMBG>1234567890123</JMBG>
     <KontaktTelefon>04823875</KontaktTelefon>
     <Email>luka@luka</Email>
@@ -119,11 +120,11 @@
     <Zauzet>false</Zauzet>
   </Vozac>
   <Vozac>
-    <KorisnickoIme>deki</KorisnickoIme>
+    <KorisnickoIme>kide</KorisnickoIme>
     <Lozinka>deki</Lozinka>
     <Ime>Dejan</Ime>
     <Prezime>Stajic</Prezime>
-    <Pol>Musko</Pol>
+    <Pol>Zensko</Pol>
     <JMBG>0510994123456</JMBG>
     <KontaktTelefon>04823875</KontaktTelefon>
     <Email>barbi@barbi</Email>
@@ -140,7 +141,7 @@
       </Adr>
     </Lok>
     <Auto>
-      <UsernameVozaca>deki</UsernameVozaca>
+      <UsernameVozaca>kide</UsernameVozaca>
       <GodisteAutomobila>2015</GodisteAutomobila>
       <BrojRegistarskeOzn>ns12</BrojRegistarskeOzn>
       <BrojTaksiVozila>5</BrojTaksiVozila>
@@ -150,13 +151,12 @@
   </Vozac>
   <Vozac>
     <KorisnickoIme>biba</KorisnickoIme>
-    <Lozinka>biba</Lozinka>
     <Ime>Biljana</Ime>
     <Prezime>Djurkovic</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
     <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
+    <Email>biba@barbi</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
@@ -180,8 +180,7 @@
   </Vozac>
   <Vozac>
     <KorisnickoIme>jeca</KorisnickoIme>
-    <Lozinka>jeca</Lozinka>
-    <Ime>Jelena</Ime>
+    <Ime>Pelena</Ime>
     <Prezime>Djurkovic</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
@@ -206,7 +205,7 @@
       <BrojTaksiVozila>7</BrojTaksiVozila>
       <TA>kombi</TA>
     </Auto>
-    <Zauzet>true</Zauzet>
+    <Zauzet>false</Zauzet>
   </Vozac>
   <Vozac>
     <KorisnickoIme>pera</KorisnickoIme>

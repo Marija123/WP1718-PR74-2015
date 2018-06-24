@@ -100,9 +100,12 @@
             Pol: user.pol,
             Jmbg: user.jmbg,
             Telefon: user.kontaktTelefon,
-            Email: user.email
+            Email: user.email,
+            OldUsername: sessionStorage.getItem("username")
         });
+
     }
+
 
     factory.OtkaziVoznju = function (drive) {
         return $http.post('/api/Prof/OtkaziVoznju', {

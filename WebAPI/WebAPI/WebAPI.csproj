@@ -181,6 +181,7 @@
     <Compile Include="Models\Lokacija.cs" />
     <Compile Include="Models\Musterija.cs" />
     <Compile Include="Models\MusterijaPomocni.cs" />
+    <Compile Include="Models\PomocniModeli\EditModel.cs" />
     <Compile Include="Models\PomocniModeli\LokacijaOdrediste.cs" />
     <Compile Include="Models\PomocniModeli\ModelZaObradiVoznju.cs" />
     <Compile Include="Models\PomocniModeli\PodaciOVozacu.cs" />
@@ -221,6 +222,7 @@
     <Content Include="HTMLovi\DriveGet.html" />
     <Content Include="HTMLovi\DriverGet.html" />
     <Content Include="HTMLovi\Edit.html" />
+    <Content Include="HTMLovi\IzmeniVoznju.html" />
     <Content Include="HTMLovi\Login.html" />
     <Content Include="HTMLovi\MyHome.html" />
     <Content Include="HTMLovi\Profile.html" />

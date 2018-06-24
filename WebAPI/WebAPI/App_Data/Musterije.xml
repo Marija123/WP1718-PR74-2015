@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfMusterija xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Musterija>
-    <KorisnickoIme>barbi</KorisnickoIme>
-    <Lozinka>barbi</Lozinka>
+    <KorisnickoIme>barb</KorisnickoIme>
+    <Lozinka>bakikiba</Lozinka>
     <Ime>Barbara</Ime>
-    <Prezime>Segrt</Prezime>
+    <Prezime>Segr</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
     <KontaktTelefon>04823875</KontaktTelefon>
