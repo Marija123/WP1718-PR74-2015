@@ -65,6 +65,11 @@ WebAPI.config(function ($routeProvider) {
             controller: 'ProfileController',
             templateUrl: 'HTMLovi/IzmeniVoznju.html',
             activeTab: 'none'
+        }).when('/IzmeniLokaciju',
+        {
+            controller: 'ProfileController',
+            templateUrl: 'HTMLovi/IzmeniLokaciju.html',
+            activeTab: 'none'
         })
 
     

@@ -105,7 +105,7 @@ namespace WebAPI.Controllers
                 if (u.KorisnickoIme == k.korisnicko)
                 {
                     c = u;
-                    Adresa a = new Adresa(k.Street, k.Number, k.Town, Int32.Parse(k.PostalCode));
+                    Adresa a = new Adresa(k.Street);
                     Lokacija l = new Lokacija(k.XCoord, k.YCoord, a);
                     drive.Mus = (Musterija)c;
                     drive.LokacijaZaDolazak = l;
@@ -138,7 +138,7 @@ namespace WebAPI.Controllers
 
         [HttpPost]
         [ActionName("AddDriveDispecer")]
-        public bool AddDriveDispecer([FromBody]VoznjaPomocna k)
+        public List<string> AddDriveDispecer([FromBody]VoznjaPomocna k)
         {
             string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Dispeceri.xml");
             string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
@@ -146,21 +146,90 @@ namespace WebAPI.Controllers
             List<Dispecer> users = xml.ReadDispecer(ss);
             List<Voznja> drives = xml.ReadDrives(ss1);
             List<Vozac> vozaci = xml.ReadDrivers(ss2);
-            // bool g = true;
+             bool g = true;
+            Korisnik c = new Dispecer();
+            Voznja drive = new Voznja();
+          
+            List<Tuple<Point, string>> prosledi = new List<Tuple<Point, string>>();
+            foreach (Vozac v in vozaci)
+            {
+                if (!v.Zauzet && v.Auto.TA == (Enums.TipAutomobila)int.Parse(k.tipAuta))
+                {
+                    Point pos = new Point(Double.Parse(v.Lok.Xkoordinate), Double.Parse(v.Lok.Ykoordinate));
+                     prosledi.Add(new Tuple<Point, string>(pos, v.KorisnickoIme));
+                   
+                }
+
+            }
+            NajkracaUdaljenost nk = new NajkracaUdaljenost();
+            List<string> ret = new List<string>();
+           
+            if (!prosledi.Any())
+            {
+                foreach (Dispecer u in users)
+                {
+                    if (u.KorisnickoIme == k.korisnicko)
+                    {
+                        c = u;
+                        Adresa a = new Adresa(k.Street);
+                        Lokacija l = new Lokacija(k.XCoord, k.YCoord, a);
+                        drive.Mus = new Musterija();
+                        drive.LokacijaZaDolazak = l;
+                        if (k.tipAuta != "")
+                        {
+                            drive.TipAuta = (Enums.TipAutomobila)int.Parse(k.tipAuta);
+                        }
+                        drive.Iznos = 0;
+                        drive.Kom = new Komentar();
+                        drive.DatumIVremePorudzbine = String.Format("{0:F}", DateTime.Now); ;
+                        drive.Odrediste = new Lokacija();
+                        drive.Disp = (Dispecer)c;
+                        drive.Stat = Enums.StatusVoznje.Kreirana_NaCekanju;
+                        drive.Voz = new Vozac();
+                        break;
+                    }
+                }
+                drives.Add(drive);
+                xml.WriteDrives(drives, ss1);
+
+            }else
+            {
+                ret = nk.OrderByDistance(prosledi, new Point(Double.Parse(k.XCoord), Double.Parse(k.YCoord)));
+
+            }
+
+
+            return ret;
+
+
+        }
+
+        [HttpPost]
+        [ActionName("DodajVoznjuDisp")]
+        public bool DodajVoznjuDisp([FromBody]KonacnaVoznja k)
+        {
+            
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Dispeceri.xml");
+            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            string ss2 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            List<Dispecer> users = xml.ReadDispecer(ss);
+            List<Voznja> drives = xml.ReadDrives(ss1);
+            List<Vozac> vozaci = xml.ReadDrivers(ss2);
+            bool g = true;
             Korisnik c = new Dispecer();
             Voznja drive = new Voznja();
             foreach (Dispecer u in users)
             {
-                if (u.KorisnickoIme == k.korisnicko)
+                if (u.KorisnickoIme == k.korisnickoImeAdmin)
                 {
                     c = u;
-                    Adresa a = new Adresa(k.Street, k.Number, k.Town, Int32.Parse(k.PostalCode));
-                    Lokacija l = new Lokacija(k.XCoord, k.YCoord, a);
+                    Adresa a = new Adresa(k.voznja.Street);
+                    Lokacija l = new Lokacija(k.voznja.XCoord, k.voznja.YCoord, a);
                     drive.Mus = new Musterija();
                     drive.LokacijaZaDolazak = l;
-                    if (k.tipAuta != "")
+                    if (k.voznja.tipAuta != "")
                     {
-                        drive.TipAuta = (Enums.TipAutomobila)int.Parse(k.tipAuta);
+                        drive.TipAuta = (Enums.TipAutomobila)int.Parse(k.voznja.tipAuta);
                     }
                     drive.Iznos = 0;
                     drive.Kom = new Komentar();
@@ -168,30 +237,22 @@ namespace WebAPI.Controllers
                     drive.Odrediste = new Lokacija();
                     drive.Disp = (Dispecer)c;
                     drive.Stat = Enums.StatusVoznje.Formirana;
-
+                    
                 }
             }
-            bool imaSlobodan = false;
+            
             foreach (Vozac v in vozaci)
             {
-                if (!v.Zauzet && v.Auto.TA == (Enums.TipAutomobila)int.Parse(k.tipAuta))
+                if(v.KorisnickoIme == k.korisnickoImeVozac)
                 {
                     v.Zauzet = true;
                     drive.Voz = v;
-                    imaSlobodan = true;
+                    
                     break;
                 }
-
+               
             }
-
-            if (!imaSlobodan)
-            {
-                drive.Voz = new Vozac();
-                drive.Stat = Enums.StatusVoznje.Kreirana_NaCekanju;
-            }
-
             drives.Add(drive);
-            xml.WriteDispecer(users, ss);
             xml.WriteDrivers(vozaci, ss2);
             xml.WriteDrives(drives, ss1);
 
@@ -608,7 +669,8 @@ namespace WebAPI.Controllers
         [ActionName("SortingUser")]
         public List<Voznja> SortingUser([FromBody]KorisnikSort k)
         {
-            // string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+             string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            List<Vozac> lv = xml.ReadDrivers(ss);
             List<Voznja> listaDrives = k.Drivess;
             List<Voznja> sortiranaVoznja = new List<Voznja>();
             if (k.PoCemu == 0)
@@ -619,10 +681,23 @@ namespace WebAPI.Controllers
             {
                 sortiranaVoznja = listaDrives.OrderByDescending(o => DateTime.Parse(o.DatumIVremePorudzbine)).ToList();
             }
+            else if(k.PoCemu == 2)
+            {
+                Point np = new Point();
+                foreach(Vozac v in lv)
+                {
+                    if(v.KorisnickoIme == k.Username)
+                    {
+                        np.X = Double.Parse(v.Lok.Xkoordinate);
+                        np.Y = Double.Parse(v.Lok.Ykoordinate);
+                        break;
+                    }
+                }
 
-
-
-
+                NajkracaUdaljenost nu = new NajkracaUdaljenost();
+                sortiranaVoznja = nu.OrderByDistanceZaVoz(listaDrives, np);
+            }
+            
             return sortiranaVoznja;
         }
 
@@ -811,6 +886,7 @@ namespace WebAPI.Controllers
                 {
                     po.Zauzet = d.Zauzet;
                     po.TipA = d.Auto.TA;
+                    po.TrenutnaLokacija = d.Lok;
                     nasao = true;
                     break;
 
@@ -820,6 +896,7 @@ namespace WebAPI.Controllers
             if(!nasao)
             {
                 po.Zauzet = true;
+                po.TrenutnaLokacija = new Lokacija();
                 po.TipA = Enums.TipAutomobila.nemaTip;
             }
             return po ;
@@ -887,11 +964,11 @@ namespace WebAPI.Controllers
                     v.Iznos = k.Cena;
                     v.Odrediste.Xkoordinate = k.XCoord;
                     v.Odrediste.Ykoordinate = k.YCoord;
-                    v.Odrediste.Adr.Ulica = k.Street;
-                    v.Odrediste.Adr.Broj = k.Number;
-                    v.Odrediste.Adr.NaseljenoMesto = k.Town;
-                    v.Odrediste.Adr.PozivniBroj = Int32.Parse(k.PostalCode);
-
+                    v.Odrediste.Adr.FormatAdrese = k.Street;
+                    
+                    v.Voz.Lok.Xkoordinate = k.XCoord;
+                    v.Voz.Lok.Ykoordinate = k.YCoord;
+                    v.Voz.Lok.Adr.FormatAdrese = k.Street;
                     v.Voz.Zauzet = false;
                     v.Stat = Enums.StatusVoznje.Uspesna;
 
@@ -906,6 +983,9 @@ namespace WebAPI.Controllers
                 {
                     if (vo.KorisnickoIme == k.Voz.Voz.KorisnickoIme)
                     {
+                        vo.Lok.Xkoordinate = k.XCoord;
+                        vo.Lok.Ykoordinate = k.YCoord;
+                        vo.Lok.Adr.FormatAdrese = k.Street;
                         vo.Zauzet = false;
                         break;
                     }
@@ -914,6 +994,81 @@ namespace WebAPI.Controllers
             xml.WriteDrives(lista, ss);
             xml.WriteDrivers(lv, ss1);
             return ret;
+        }
+
+        [HttpPost]
+        [ActionName("Izmeni")]
+        public bool Izmeni([FromBody]VoznjaPomocnaZaIzmenu k)
+        {
+            
+            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+         
+           
+            List<Voznja> drives = xml.ReadDrives(ss1);
+         
+            foreach (Voznja u in drives)
+            {
+                if (DateTime.Parse(u.DatumIVremePorudzbine ) == DateTime.Parse(k.Datum) && u.Mus.KorisnickoIme == k.korisnicko)
+                {
+                   
+                    //Adresa a = new Adresa(k.Street);
+                    //Lokacija l = new Lokacija(k.XCoord, k.YCoord, a);
+                    u.LokacijaZaDolazak.Xkoordinate = k.XCoord;
+                    u.LokacijaZaDolazak.Ykoordinate = k.YCoord;
+                    u.LokacijaZaDolazak.Adr.FormatAdrese = k.Street;
+                    if (k.tipAuta != "")
+                    {
+                        u.TipAuta = (Enums.TipAutomobila)int.Parse(k.tipAuta);
+                    }
+                    break;
+                }
+            }
+           
+            xml.WriteDrives(drives, ss1);
+
+            return true;
+
+
+        }
+
+        [HttpPost]
+        [ActionName("IzmeniV")]
+        public bool IzmeniV([FromBody]VoznjaPomocnaZaIzmenu k)
+        {
+            string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Vozaci.xml");
+            string ss1 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+
+
+            List<Voznja> drives = xml.ReadDrives(ss1);
+            List<Vozac> vozaci = xml.ReadDrivers(ss); 
+
+            foreach (Voznja u in drives)
+            {
+                if (u.Voz.KorisnickoIme == k.korisnicko)
+                {
+
+                    u.Voz.Lok.Xkoordinate = k.XCoord;
+                    u.Voz.Lok.Ykoordinate = k.YCoord;
+                    u.Voz.Lok.Adr.FormatAdrese = k.Street;
+                }
+            }
+
+            foreach(Vozac m in vozaci)
+            {
+                if(m.KorisnickoIme == k.korisnicko)
+                {
+                    m.Lok.Xkoordinate = k.XCoord;
+                    m.Lok.Ykoordinate = k.YCoord;
+                    m.Lok.Adr.FormatAdrese = k.Street;
+                }
+            }
+
+            xml.WriteDrives(drives, ss1);
+            xml.WriteDrivers(vozaci, ss);
+
+            return true;
+
+
         }
     }
 }

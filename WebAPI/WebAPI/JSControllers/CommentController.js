@@ -62,11 +62,24 @@
             alert('Morate uneti cenu');
             return;
         }
-        if (drive.XCoord == "" || drive.YCoord == "" || drive.Street == "" || drive.Number == "" || drive.Town == "" || drive.PostalCode == "") {
-            alert('Sva polja moraju biti popunjena');
+        if (document.getElementById("lon").value == null || document.getElementById("lon").value == "") {
+            alert('X coordinate cant be empty!');
             return;
-
         }
+
+        else if (document.getElementById("lat").value == null || document.getElementById("lat").value == "") {
+            alert('Y coordinate cant be empty!');
+            return;
+        }
+        else if (document.getElementById("address").innerHTML == null || document.getElementById("address").innerHTML == "") {
+            alert('Street cant be empty!');
+            return;
+        }
+
+
+        drive.XCoord = document.getElementById("lon").value;
+        drive.YCoord = document.getElementById("lat").value;
+        drive.Street = document.getElementById("address").innerHTML;
 
         ProfCont.DodajKraj(drive, $rootScope.VoznjaZaKomentarVozac).then(function (response) {
 

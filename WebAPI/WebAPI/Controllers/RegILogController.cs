@@ -176,7 +176,7 @@ namespace WebAPI.Controllers
                 user.Email = k.Email;
                 user.Uloga = Enums.UlogaKorisnika.Vozac;
                 user.Zauzet = false;
-                user.Lok = new Lokacija();
+                user.Lok = new Lokacija("19.848948","45.245165",new Adresa("Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad"));
 
                 string ss4 = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Automobili.xml");
                 

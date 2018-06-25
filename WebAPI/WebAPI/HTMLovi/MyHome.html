@@ -9,6 +9,14 @@
         <h4 ng-show="!loggedin">Please login if you want to use our services.</h4>
     </div>
 </div>
+<div ng-show="user.role==2">
+    <p>Trenutna lokacija:</p>
+    <p>{{DriverData.TrenutnaLokacija.Adr.FormatAdrese}}</p>
+    <p>{{DriverData.TrenutnaLokacija.Xkoordinate}}</p>
+    <p>{{DriverData.TrenutnaLokacija.Ykoordinate}}</p>
+    <br />
+    <button type="submit" ng-click="IzmeniLokaciju()">Izmeni trenutnu lokaciju</button>
+</div>
 <div>
     <!--class="container"-->
     <div class="topright" ng-show="user.role==1">
@@ -25,6 +33,7 @@
 
 <input type="radio" name="group" value="0" ng-checked="true" ng-model="fu.PoCemu"> Po oceni<br>
 <input type="radio" name="group" value="1" ng-model="fu.PoCemu"> Po datumu<br>
+<input  ng-show="user.role==2" type="radio" name="group" value="2" ng-model="fu.PoCemu"> Po blizini<br>
 
 <button ng-show="listaFlag!=3 && posebanFlag==2 && filtFlag==0" type="submit" ng-click="Sorting(MyDrives,fu.PoCemu)">Sortiraj</button>
 <button ng-show="filtFlag==1" type="submit" ng-click="Sorting(FilteredDrives,fu.PoCemu)">Sortiraj</button>
@@ -145,9 +154,7 @@
     <div ng-show="listaFlag==1" class="rezultati" ng-repeat="drive in MyDrives">
         <div class="tema">
             <p>  {{drive.DatumIVremePorudzbine}} </p>
-            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
             <p> {{drive.Stat}}</p>
             <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis">Komentar:</p>
             <p ng-show="drive.Kom.Opis">{{drive.Kom.Opis}}</p>
@@ -159,7 +166,7 @@
             <button ng-show="(drive.Stat==1 || drive.Stat==2 || drive.Stat==3) && user.role==2" type="submit" ng-click="ZavrsiVoznju(drive)">Zavrsi voznju</button>
             <button ng-show="drive.Stat==6 && user.role==0 && !drive.Kom.Opis" type="submit" ng-click="DodajKomentar(drive)">Dodaj komentar</button>
             <button ng-show="drive.Stat==0 && user.role==0" type="submit" ng-click="IzmeniVoznju(drive)">Izmeni voznju</button>
-        
+
         </div>
     </div>
 </div>
@@ -168,9 +175,7 @@
     <div ng-show="listaFlag==3" class="rezultati" ng-repeat="drive in WaitingDrives">
         <div class="tema">
             <p>  {{drive.DatumIVremePorudzbine}} </p>
-            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
             <p> {{drive.Stat}}</p>
             <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis">Komentar:</p>
             <p ng-show="drive.Kom.Opis">{{drive.Kom.Opis}}</p>
@@ -178,6 +183,7 @@
             <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis">{{drive.Kom.KorKomUsername}}</p>
             <p ng-show="drive.Kom.Opis || drive.Kom.Ocena!=0">{{drive.Kom.Datum}}</p>
             <button ng-show="user.role==2  &&  !DriverData.Zauzet && DriverData.TipA == drive.TipAuta" type="submit" ng-click="PreuzmiVoznju(drive,WaitingDrives)">Preuzmi voznju</button>
+
 
         </div>
     </div>
@@ -187,9 +193,7 @@
     <div ng-show="listaFlag==2" class="rezultati" ng-repeat="drive in AllDrives">
         <div class="tema">
             <p> {{drive.DatumIVremePorudzbine}} </p>
-            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
             <p> {{drive.Stat}}</p>
             <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis">Komentar:</p>
             <p ng-show="drive.Kom.Opis">{{drive.Kom.Opis}}</p>
@@ -208,9 +212,7 @@
     <div ng-show="listaFlag==4" class="rezultati" ng-repeat="drive in SortedDrives">
         <div class="tema">
             <p>  {{drive.DatumIVremePorudzbine}} </p>
-            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
             <p> {{drive.Stat}}</p>
             <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis">Komentar:</p>
             <p ng-show="drive.Kom.Opis">{{drive.Kom.Opis}}</p>
@@ -233,9 +235,7 @@
     <div ng-show="listaFlag==5" class="rezultati" ng-repeat="drive in FilteredDrives">
         <div class="tema">
             <p>  {{drive.DatumIVremePorudzbine}} </p>
-            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
             <p> {{drive.Stat}}</p>
             <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis">Komentar:</p>
             <p ng-show="drive.Kom.Opis">{{drive.Kom.Opis}}</p>
@@ -259,9 +259,7 @@
     <div ng-show="listaFlag==6" class="rezultati" ng-repeat="drive in SearchedDrives">
         <div class="tema">
             <p>  {{drive.DatumIVremePorudzbine}} </p>
-            <p> {{drive.LokacijaZaDolazak.Adr.Ulica}}, {{drive.LokacijaZaDolazak.Adr.Broj}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.NaseljenoMesto}}</p>
-            <p> {{drive.LokacijaZaDolazak.Adr.PozivniBroj}}</p>
+            <p> {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
             <p> {{drive.Stat}}</p>
             <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis">Komentar:</p>
             <p ng-show="drive.Kom.Opis">{{drive.Kom.Opis}}</p>

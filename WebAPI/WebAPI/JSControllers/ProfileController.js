@@ -1,22 +1,25 @@
 ﻿WebAPI.controller('ProfileController', function ($scope, ProfCont, $routeParams,$window, $rootScope) {
-
+   
 
     function init() {
         console.log('Profile controller initialized');
         $scope.PrikaziKorisnickoIme = false;
         $scope.PrikaziIme = false;
         $scope.PrikaziPrezime = false;
+        $scope.najbliziVozaci = false;
+        $scope.Prazna = false;
 
         ProfCont.getUserByUsername($routeParams.username).then(function (response) {
             console.log(response.data);
 
-            if (response.data.Pol == 0) {
-                $scope.P = 'Musko';
-            }
-            else {
-                $scope.P = 'Zensko';
-            }
+            
             $scope.userProfile = response.data;
+            //if ($scope.userProfile.Pol == "Musko") {
+            //    $scope.P = 'Musko';
+            //}
+            //else {
+            //    $scope.P = 'Zensko';
+            //}
             //$rootScope.XCoord = "";
             //$scope.user = response.data;
 
@@ -30,40 +33,24 @@
 
         //alert($rootScope.XCoord);
         
-        if (document.getElementById("xCoord") == null || document.getElementById("xCoord") == "") {
+        if (document.getElementById("lon").value == null || document.getElementById("lon").value == "") {
             alert('X coordinate cant be empty!');
             return;
         }
 
-        //if (drive.XCoord == null || drive.XCoord == "") {
-        //    alert('X coordinate cant be empty!');
-        //    return;
-        //}
-        //else if (drive.YCoord == null || drive.YCoord == "") {
-        //    alert('Y coordinate cant be empty!');
-        //    return;
-        //}
-        else if (document.getElementById("yCoord") == null || document.getElementById("yCoord") == "") {
+        else if (document.getElementById("lat").value == null || document.getElementById("lat").value == "") {
             alert('Y coordinate cant be empty!');
             return;
         }
-        else if (drive.Street == null || drive.Street == "") {
+        else if (document.getElementById("address").innerHTML == null || document.getElementById("address").innerHTML == "") {
             alert('Street cant be empty!');
             return;
         }
-        else if (drive.Number == null || drive.Number == "") {
-            alert('Number cant be empty!');
-            return;
-        } else if (drive.Town == null || drive.Town == "") {
-            alert('Town cant be empty!');
-            return;
-        } else if (drive.PostalCode == null || drive.PostalCode == "") {
-            alert('Postal code cant be empty!');
-            return;
-        }
+       
 
-        drive.XCoord = document.getElementById("xCoord").value;
-        drive.YCoord = document.getElementById("yCoord").value;
+        drive.XCoord = document.getElementById("lon").value;
+        drive.YCoord = document.getElementById("lat").value;
+        drive.Street = document.getElementById("address").innerHTML;
         ProfCont.AddDriveCustomer(drive).then(function (response) {
             if (response.data == true) {
                 console.log(response.data);
@@ -80,45 +67,60 @@
 
     $scope.AddDriveDispecer = function (drive) {
 
-        if (drive.XCoord == null || drive.XCoord == "") {
+        if (document.getElementById("lon").value == null || document.getElementById("lon").value == "") {
             alert('X coordinate cant be empty!');
             return;
         }
-        else if (drive.YCoord == null || drive.YCoord == "") {
+
+        else if (document.getElementById("lat").value == null || document.getElementById("lat").value == "") {
             alert('Y coordinate cant be empty!');
             return;
         }
-        else if (drive.Street == null || drive.Street == "") {
+        else if (document.getElementById("address").innerHTML == null || document.getElementById("address").innerHTML == "") {
             alert('Street cant be empty!');
             return;
         }
-        else if (drive.Number == null || drive.Number == "") {
-            alert('Number cant be empty!');
-            return;
-        } else if (drive.Town == null || drive.Town == "") {
-            alert('Town cant be empty!');
-            return;
-        } else if (drive.PostalCode == null || drive.PostalCode == "") {
-            alert('Postal code cant be empty!');
-            return;
-        }
 
 
+        drive.XCoord = document.getElementById("lon").value;
+        drive.YCoord = document.getElementById("lat").value;
+        drive.Street = document.getElementById("address").innerHTML;
+        $scope.VoznjaZaDodavanjeDispecer = drive;
+       
         ProfCont.AddDriveDispecer(drive).then(function (response) {
-            if (response.data == true) {
+           
                 console.log(response.data);
-                $scope.newDrive = response.data;
+                // $scope.newDrive = response.data;
+                if (response.data.length == 0) {
+                    $scope.Prazna = true;
+                }
+
+
+                $scope.ListaNajblizih = response.data;
+                $scope.najbliziVozaci = true;
+                $scope.apply;
                 //$rootScope.RegisterSuccess = "Registration was successful. You can login now.";
-                $window.location.href = "#!/MyHome";
-            }
-            else {
-                alert("Drive does not exist.");
-            }
+               // $window.location.href = "#!/MyHome";
+          
+            
         });
 
 
 
     };
+
+    $scope.DodajVoznjuDisp = function (noviModel) {
+        if (noviModel == null) {
+            alert('Morate selektovati vozaca');
+            return;
+        }
+        ProfCont.DodajVoznjuDisp(noviModel, $scope.VoznjaZaDodavanjeDispecer).then(function (response) {
+
+            console.log(response.data);
+
+            $window.location.href = "#!/MyHome";
+        });
+    }
 
     $scope.EditUser = function (user) {
 
@@ -168,16 +170,9 @@
                 sessionStorage.setItem("role", response.data);
                 sessionStorage.setItem("nameSurname", user.ime + " " + user.prezime);
 
-                //$rootScope.loggedin = true;
                 $rootScope.user.username = sessionStorage.getItem("username");
                 $rootScope.user.nameSurname = sessionStorage.getItem("nameSurname");
-                // = {
-                //    username: sessionStorage.getItem("username"),
-                //    role: sessionStorage.getItem("role"),
-                //    nameSurname: sessionStorage.getItem("nameSurname")
-                //};
-
-
+             
                 $window.location.href = "#!/MyHome";
             }
             else {
@@ -189,17 +184,73 @@
 
 
     };
+    
+    $scope.Izmeni = function (drivee) {
 
+        if (drivee == null) {
+            drivee = {};
+            drivee.tipAuta = $rootScope.VoznjaZaIzmenu.TipAuta;
+           
+        }
+        //drivee.XCoord = $rootScope.VoznjaZaIzmenu.LokacijaZaDolazak.Xkoordinate;
+        //drivee.YCoord = $rootScope.VoznjaZaIzmenu.LokacijaZaDolazak.Ykoordinate;
 
-            //ProfCont.EditUser(user, userProfileA).then(function (response) {
-            //    if (response.data == true) {
-            //        console.log(response.data);
-            //        $rootScope.RegisterSuccess = "Edit was successful. You can login now.";
-            //        $window.location.href = "#!/MyHome";
-            //    }
-               
-            //});
-        
+        //$rootScope.Adresa = $rootScope.VoznjaZaIzmenu.LokacijaZaDolazak.Adr.FormatAdrese;
+
+        if (document.getElementById("lon").value == null || document.getElementById("lon").value == "") {
+            drivee.XCoord = $rootScope.VoznjaZaIzmenu.LokacijaZaDolazak.Xkoordinate;
+        }
+        else {
+            drivee.XCoord = document.getElementById("lon").value;
+        }
+
+        if (document.getElementById("lat").value == null || document.getElementById("lat").value == "") {
+            drivee.YCoord = $rootScope.VoznjaZaIzmenu.LokacijaZaDolazak.Ykoordinate;
+        } else {
+            drivee.YCoord = document.getElementById("lat").value;
+        }
+        if (document.getElementById("address").innerText == null || document.getElementById("address").innerText == "") {
+            drivee.Street = $rootScope.VoznjaZaIzmenu.LokacijaZaDolazak.Adr.FormatAdrese;
+        } else {
+            drivee.Street = document.getElementById("address").innerText;
+        }
+
+        if (drivee.tipAuta == null || drivee.tipAuta == "") {
+            drivee.tipAuta = $rootScope.VoznjaZaIzmenu.TipAuta;
+        }
+        drivee.Datum = $rootScope.VoznjaZaIzmenu.DatumIVremePorudzbine;
+        ProfCont.Izmeni(drivee).then(function (response) {
+            if (response.data == true) {
+                console.log(response.data);
+                //$scope.newDrive = response.data;
+                //$rootScope.RegisterSuccess = "Registration was successful. You can login now.";
+                $window.location.href = "#!/MyHome";
+            }
+            else {
+                alert("Drive does not exist.");
+            }
+        });
+
+    }
+
+    $scope.IzmeniV = function () {
+
+        drivee = {};
+        if (document.getElementById("lon").value == null || document.getElementById("lon").value == "" || document.getElementById("lat").value == null || document.getElementById("lat").value == "" || document.getElementById("address").innerText == null || document.getElementById("address").innerText == "") {
+            alert('Morate odabrati novu lokaciju');
+            return;
+        }
+        else {
+            drivee.XCoord = document.getElementById("lon").value;
+            drivee.YCoord = document.getElementById("lat").value;
+            drivee.Street = document.getElementById("address").innerText;
+        }
+
+        ProfCont.IzmeniV(drivee).then(function (response) {
+            window.location.href = "#!/MyHome";
+        });
+
+    }
 
        
 });

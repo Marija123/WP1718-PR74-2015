@@ -63,4 +63,11 @@
     <BrojTaksiVozila>9</BrojTaksiVozila>
     <TA>putnicki</TA>
   </Automobil>
+  <Automobil>
+    <UsernameVozaca>joka</UsernameVozaca>
+    <GodisteAutomobila>1209</GodisteAutomobila>
+    <BrojRegistarskeOzn>avs</BrojRegistarskeOzn>
+    <BrojTaksiVozila>10</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
 </ArrayOfAutomobil>

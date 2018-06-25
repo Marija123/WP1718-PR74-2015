@@ -6,10 +6,7 @@
       <Xkoordinate>45</Xkoordinate>
       <Ykoordinate>aa</Ykoordinate>
       <Adr>
-        <Ulica>SPenezica</Ulica>
-        <Broj>2</Broj>
-        <NaseljenoMesto>ds</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -29,10 +26,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -63,10 +57,7 @@
       <Xkoordinate>45</Xkoordinate>
       <Ykoordinate>23</Ykoordinate>
       <Adr>
-        <Ulica>ff</Ulica>
-        <Broj>2</Broj>
-        <NaseljenoMesto>ddd</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>kombi</TipAuta>
@@ -81,10 +72,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -114,10 +102,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -142,10 +127,7 @@
       <Xkoordinate>65</Xkoordinate>
       <Ykoordinate>44</Ykoordinate>
       <Adr>
-        <Ulica>ul</Ulica>
-        <Broj>98</Broj>
-        <NaseljenoMesto>huj</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -157,13 +139,10 @@
       <KorisnikVoznje />
     </Mus>
     <Odrediste>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-115.699221</Xkoordinate>
+      <Ykoordinate>43.834527</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>Rabbit Creek Road, Boise County, Idaho, United States of America</FormatAdrese>
       </Adr>
     </Odrediste>
     <Disp>
@@ -190,13 +169,10 @@
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
       <Lok>
-        <Xkoordinate />
-        <Ykoordinate />
+        <Xkoordinate>-115.699221</Xkoordinate>
+        <Ykoordinate>43.834527</Ykoordinate>
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese>Rabbit Creek Road, Boise County, Idaho, United States of America</FormatAdrese>
         </Adr>
       </Lok>
       <Auto>
@@ -206,10 +182,10 @@
         <BrojTaksiVozila>2</BrojTaksiVozila>
         <TA>kombi</TA>
       </Auto>
-      <Zauzet>true</Zauzet>
+      <Zauzet>false</Zauzet>
     </Voz>
-    <Iznos>0</Iznos>
-    <Stat>Formirana</Stat>
+    <Iznos>1200</Iznos>
+    <Stat>Uspesna</Stat>
     <Kom>
       <Datum>0001-01-01T00:00:00</Datum>
       <Ocena>0</Ocena>
@@ -221,10 +197,7 @@
       <Xkoordinate>99</Xkoordinate>
       <Ykoordinate>88</Ykoordinate>
       <Adr>
-        <Ulica>shjd</Ulica>
-        <Broj>1</Broj>
-        <NaseljenoMesto>nova</NaseljenoMesto>
-        <PozivniBroj>32</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>kombi</TipAuta>
@@ -239,10 +212,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -272,10 +242,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -298,13 +265,10 @@
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T11:38:37.4455133+02:00</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
-      <Xkoordinate>sdf1</Xkoordinate>
-      <Ykoordinate>wewe2</Ykoordinate>
+      <Xkoordinate>48.123456</Xkoordinate>
+      <Ykoordinate>24.458785</Ykoordinate>
       <Adr>
-        <Ulica>noa</Ulica>
-        <Broj>1</Broj>
-        <NaseljenoMesto>fs</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -319,10 +283,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -352,10 +313,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -377,13 +335,10 @@
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T11:50:26.8621769+02:00</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
-      <Xkoordinate>9s9fj</Xkoordinate>
-      <Ykoordinate>mfsid8</Ykoordinate>
+      <Xkoordinate>48.2365</Xkoordinate>
+      <Ykoordinate>47.3645</Ykoordinate>
       <Adr>
-        <Ulica>ulica</Ulica>
-        <Broj>2</Broj>
-        <NaseljenoMesto>sdf</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>kombi</TipAuta>
@@ -398,10 +353,7 @@
       <Xkoordinate>dfghj</Xkoordinate>
       <Ykoordinate>4e5678</Ykoordinate>
       <Adr>
-        <Ulica>edrfthjk</Ulica>
-        <Broj>76</Broj>
-        <NaseljenoMesto>dfghj</NaseljenoMesto>
-        <PozivniBroj>876</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -431,10 +383,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -456,13 +405,10 @@
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T11:51:32.4702447+02:00</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
-      <Xkoordinate>ijsid9</Xkoordinate>
-      <Ykoordinate>jsjide2</Ykoordinate>
+      <Xkoordinate>48.12345</Xkoordinate>
+      <Ykoordinate>19.36589</Ykoordinate>
       <Adr>
-        <Ulica>vndn</Ulica>
-        <Broj>2</Broj>
-        <NaseljenoMesto>usg</NaseljenoMesto>
-        <PozivniBroj>44</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -477,10 +423,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -510,10 +453,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -536,13 +476,10 @@
   <Voznja>
     <DatumIVremePorudzbine>2018-06-19T12:20:58.205309+02:00</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
-      <Xkoordinate>aa</Xkoordinate>
-      <Ykoordinate>bb</Ykoordinate>
+      <Xkoordinate>12.3654</Xkoordinate>
+      <Ykoordinate>19.3698</Ykoordinate>
       <Adr>
-        <Ulica>ul</Ulica>
-        <Broj>11</Broj>
-        <NaseljenoMesto>cc</NaseljenoMesto>
-        <PozivniBroj>22</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -562,10 +499,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -596,10 +530,7 @@
       <Xkoordinate>000</Xkoordinate>
       <Ykoordinate>888</Ykoordinate>
       <Adr>
-        <Ulica>jsijf</Ulica>
-        <Broj>1</Broj>
-        <NaseljenoMesto>vxcv</NaseljenoMesto>
-        <PozivniBroj>444</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -619,10 +550,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -652,12 +580,9 @@
     <DatumIVremePorudzbine>Thursday, 21 June, 2018 11:34:58</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
       <Xkoordinate>9888</Xkoordinate>
-      <Ykoordinate>y77</Ykoordinate>
+      <Ykoordinate>9888</Ykoordinate>
       <Adr>
-        <Ulica>Ljermontova</Ulica>
-        <Broj>12</Broj>
-        <NaseljenoMesto>Novi Sad</NaseljenoMesto>
-        <PozivniBroj>21000</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -677,10 +602,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -710,12 +632,9 @@
     <DatumIVremePorudzbine>Thursday, 21 June, 2018 18:45:28</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
       <Xkoordinate>98</Xkoordinate>
-      <Ykoordinate>66y</Ykoordinate>
+      <Ykoordinate>66</Ykoordinate>
       <Adr>
-        <Ulica>Skerliceva</Ulica>
-        <Broj>17</Broj>
-        <NaseljenoMesto>Novi Sad</NaseljenoMesto>
-        <PozivniBroj>21000</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>kombi</TipAuta>
@@ -730,10 +649,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -763,10 +679,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -789,12 +702,9 @@
     <DatumIVremePorudzbine>Thursday, 21 June, 2018 23:20:12</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
       <Xkoordinate>888</Xkoordinate>
-      <Ykoordinate>ppp</Ykoordinate>
+      <Ykoordinate>999</Ykoordinate>
       <Adr>
-        <Ulica>Slovacka</Ulica>
-        <Broj>4</Broj>
-        <NaseljenoMesto>NS</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -814,10 +724,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -848,10 +755,7 @@
       <Xkoordinate>222</Xkoordinate>
       <Ykoordinate>333</Ykoordinate>
       <Adr>
-        <Ulica>Sime Milosevica</Ulica>
-        <Broj>10</Broj>
-        <NaseljenoMesto>Novi Sad</NaseljenoMesto>
-        <PozivniBroj>21000</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -871,10 +775,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -896,13 +797,10 @@
       <Uloga>Vozac</Uloga>
       <KorisnikVoznje />
       <Lok>
-        <Xkoordinate />
-        <Ykoordinate />
+        <Xkoordinate>-113.414059</Xkoordinate>
+        <Ykoordinate>43.325175</Ykoordinate>
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese>Blaine County, Idaho, United States of America</FormatAdrese>
         </Adr>
       </Lok>
       <Auto>
@@ -926,13 +824,10 @@
   <Voznja>
     <DatumIVremePorudzbine>Saturday, 23 June, 2018 14:27:07</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
-      <Xkoordinate>36</Xkoordinate>
-      <Ykoordinate>45</Ykoordinate>
+      <Xkoordinate>-56.355464</Xkoordinate>
+      <Ykoordinate>-11.385263</Ykoordinate>
       <Adr>
-        <Ulica>Kralja Milutina</Ulica>
-        <Broj>3</Broj>
-        <NaseljenoMesto>Nova Pazova</NaseljenoMesto>
-        <PozivniBroj>22330</PozivniBroj>
+        <FormatAdrese>Tabaporã, Microrregião de Arinos, Mesorregião Norte Mato-Grossense, MT, Região Centro-Oeste, Brasil</FormatAdrese>
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>kombi</TipAuta>
@@ -952,10 +847,7 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -986,10 +878,7 @@
       <Xkoordinate>89</Xkoordinate>
       <Ykoordinate>98</Ykoordinate>
       <Adr>
-        <Ulica>Nikole Pasica</Ulica>
-        <Broj>99</Broj>
-        <NaseljenoMesto>Beograd</NaseljenoMesto>
-        <PozivniBroj>18000</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -1004,10 +893,7 @@
       <Xkoordinate>87</Xkoordinate>
       <Ykoordinate>23</Ykoordinate>
       <Adr>
-        <Ulica>Cvije Kukolja</Ulica>
-        <Broj>166</Broj>
-        <NaseljenoMesto>Stara Pazova</NaseljenoMesto>
-        <PozivniBroj>22300</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -1037,10 +923,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -1064,10 +947,7 @@
       <Xkoordinate>aaa</Xkoordinate>
       <Ykoordinate>bbb</Ykoordinate>
       <Adr>
-        <Ulica>taita</Ulica>
-        <Broj>1</Broj>
-        <NaseljenoMesto>kkk</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -1087,10 +967,7 @@
       <Xkoordinate>gf</Xkoordinate>
       <Ykoordinate>fgf</Ykoordinate>
       <Adr>
-        <Ulica>drfd</Ulica>
-        <Broj>1</Broj>
-        <NaseljenoMesto>ftg</NaseljenoMesto>
-        <PozivniBroj>5</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -1115,10 +992,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -1143,10 +1017,7 @@
       <Xkoordinate>fdddf</Xkoordinate>
       <Ykoordinate>jkjkjk</Ykoordinate>
       <Adr>
-        <Ulica>jkll</Ulica>
-        <Broj>32</Broj>
-        <NaseljenoMesto>ggg</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -1166,10 +1037,7 @@
       <Xkoordinate>hg6</Xkoordinate>
       <Ykoordinate>hgf9</Ykoordinate>
       <Adr>
-        <Ulica>fcxdx</Ulica>
-        <Broj>3</Broj>
-        <NaseljenoMesto>ddfdf</NaseljenoMesto>
-        <PozivniBroj>21</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -1194,10 +1062,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -1222,10 +1087,7 @@
       <Xkoordinate>kkk</Xkoordinate>
       <Ykoordinate>fff</Ykoordinate>
       <Adr>
-        <Ulica>dsdfs</Ulica>
-        <Broj>32</Broj>
-        <NaseljenoMesto>dfghj</NaseljenoMesto>
-        <PozivniBroj>4</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -1245,10 +1107,7 @@
       <Xkoordinate>dfghj</Xkoordinate>
       <Ykoordinate>dfghj</Ykoordinate>
       <Adr>
-        <Ulica>hjkhjh</Ulica>
-        <Broj>5</Broj>
-        <NaseljenoMesto>ookjh</NaseljenoMesto>
-        <PozivniBroj>433</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -1273,10 +1132,7 @@
         <Xkoordinate />
         <Ykoordinate />
         <Adr>
-          <Ulica />
-          <Broj />
-          <NaseljenoMesto />
-          <PozivniBroj>0</PozivniBroj>
+          <FormatAdrese />
         </Adr>
       </Lok>
       <Auto>
@@ -1298,13 +1154,10 @@
   <Voznja>
     <DatumIVremePorudzbine>Sunday, 24 June, 2018 21:50:29</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>31.113281</Xkoordinate>
+      <Ykoordinate>14.808873</Ykoordinate>
       <Adr>
-        <Ulica>Ulica Nova</Ulica>
-        <Broj>2</Broj>
-        <NaseljenoMesto>Grad</NaseljenoMesto>
-        <PozivniBroj>77</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>putnicki</TipAuta>
@@ -1321,13 +1174,80 @@
       <KorisnikVoznje />
     </Mus>
     <Odrediste>
+      <Xkoordinate>20.460942</Xkoordinate>
+      <Ykoordinate>43.631302</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Станча, Град Краљево, Моравички округ, Централна Србија, Србија</FormatAdrese>
+      </Adr>
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>miki</KorisnickoIme>
+      <Lozinka>miki</Lozinka>
+      <Ime>Milos</Ime>
+      <Prezime>Popovic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate>-113.414059</Xkoordinate>
+        <Ykoordinate>43.325175</Ykoordinate>
+        <Adr>
+          <FormatAdrese>Blaine County, Idaho, United States of America</FormatAdrese>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>miki</UsernameVozaca>
+        <GodisteAutomobila>2014</GodisteAutomobila>
+        <BrojRegistarskeOzn>sfdf</BrojRegistarskeOzn>
+        <BrojTaksiVozila>9</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>300</Iznos>
+    <Stat>Uspesna</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Sunday, 24 June, 2018 21:55:00</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>34.0005N</Xkoordinate>
+      <Ykoordinate>92.6047W</Ykoordinate>
+      <Adr>
+        <FormatAdrese />
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>kombi</TipAuta>
+    <Mus>
+      <KorisnickoIme>barb</KorisnickoIme>
+      <Lozinka>bakikiba</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segr</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
     </Odrediste>
     <Disp>
@@ -1353,15 +1273,82 @@
     </Kom>
   </Voznja>
   <Voznja>
-    <DatumIVremePorudzbine>Sunday, 24 June, 2018 21:55:00</DatumIVremePorudzbine>
+    <DatumIVremePorudzbine>Monday, 25 June, 2018 10:15:04</DatumIVremePorudzbine>
     <LokacijaZaDolazak>
-      <Xkoordinate>34.0005N</Xkoordinate>
-      <Ykoordinate>92.6047W</Ykoordinate>
+      <Xkoordinate>19.849424</Xkoordinate>
+      <Ykoordinate>45.245405</Ykoordinate>
       <Adr>
-        <Ulica>Ta i ta</Ulica>
-        <Broj>9</Broj>
-        <NaseljenoMesto>Taj i taj</NaseljenoMesto>
-        <PozivniBroj>8</PozivniBroj>
+        <FormatAdrese>Студентски дом „Слободан Бајић“, Др Илије Ђуричића, Лиман 1, Нови Сад, Град Нови Сад, Јужнобачки округ, Војводина, 21101, Србија</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>barb</KorisnickoIme>
+      <Lozinka>bakikiba</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segr</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
+      <Adr>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
+      </Adr>
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>miki</KorisnickoIme>
+      <Lozinka>miki</Lozinka>
+      <Ime>Milos</Ime>
+      <Prezime>Popovic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate>-108.351561</Xkoordinate>
+        <Ykoordinate>44.440054</Ykoordinate>
+        <Adr>
+          <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>miki</UsernameVozaca>
+        <GodisteAutomobila>2014</GodisteAutomobila>
+        <BrojRegistarskeOzn>sfdf</BrojRegistarskeOzn>
+        <BrojTaksiVozila>9</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>1200</Iznos>
+    <Stat>Uspesna</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Monday, 25 June, 2018 10:22:41</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>20.215366</Xkoordinate>
+      <Ykoordinate>44.935553</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Igraliste, Његошева, Општина Стара Пазова, Сремски округ, Војводина, 22330, Србија</FormatAdrese>
       </Adr>
     </LokacijaZaDolazak>
     <TipAuta>kombi</TipAuta>
@@ -1381,11 +1368,173 @@
       <Xkoordinate />
       <Ykoordinate />
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese />
       </Adr>
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Kreirana_NaCekanju</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Monday, 25 June, 2018 20:29:45</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>-60.574214</Xkoordinate>
+      <Ykoordinate>-9.795676</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Aripuanã, Microrregião de Aripuanã, Mesorregião Norte Mato-Grossense, MT, Região Centro-Oeste, Brasil</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>kombi</TipAuta>
+    <Mus>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <KorisnickoIme>admin</KorisnickoIme>
+      <Lozinka>admin</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>jeca</KorisnickoIme>
+      <Ime>Pelena</Ime>
+      <Prezime>Djurkovic</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate>-108.351561</Xkoordinate>
+        <Ykoordinate>44.440054</Ykoordinate>
+        <Adr>
+          <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>jeca</UsernameVozaca>
+        <GodisteAutomobila>2033</GodisteAutomobila>
+        <BrojRegistarskeOzn>sfd</BrojRegistarskeOzn>
+        <BrojTaksiVozila>7</BrojTaksiVozila>
+        <TA>kombi</TA>
+      </Auto>
+      <Zauzet>true</Zauzet>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Formirana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Monday, 25 June, 2018 20:38:42</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>-109.230462</Xkoordinate>
+      <Ykoordinate>44.289254</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Carter Mountain Access Road, Park County, Wyoming, United States of America</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>barb</KorisnickoIme>
+      <Lozinka>bakikiba</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segr</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Kreirana_NaCekanju</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Monday, 25 June, 2018 21:13:23</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>19.850452</Xkoordinate>
+      <Ykoordinate>45.240826</Ykoordinate>
+      <Adr>
+        <FormatAdrese>10, Драге Спасић, Лиман, Нови Сад, Град Нови Сад, Јужнобачки округ, Војводина, 21102, Србија</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>kombi</TipAuta>
+    <Mus>
+      <KorisnickoIme>barb</KorisnickoIme>
+      <Lozinka>bakikiba</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segr</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
     </Odrediste>
     <Disp>
       <Ime />

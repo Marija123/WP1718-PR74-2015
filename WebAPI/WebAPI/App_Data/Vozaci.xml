@@ -12,13 +12,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -42,13 +39,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-115.699221</Xkoordinate>
+      <Ykoordinate>43.834527</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>Rabbit Creek Road, Boise County, Idaho, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -58,7 +52,7 @@
       <BrojTaksiVozila>2</BrojTaksiVozila>
       <TA>kombi</TA>
     </Auto>
-    <Zauzet>true</Zauzet>
+    <Zauzet>false</Zauzet>
   </Vozac>
   <Vozac>
     <KorisnickoIme>Boca</KorisnickoIme>
@@ -72,13 +66,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -102,13 +93,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -131,13 +119,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -160,13 +145,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -189,13 +171,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -205,7 +184,7 @@
       <BrojTaksiVozila>7</BrojTaksiVozila>
       <TA>kombi</TA>
     </Auto>
-    <Zauzet>false</Zauzet>
+    <Zauzet>true</Zauzet>
   </Vozac>
   <Vozac>
     <KorisnickoIme>pera</KorisnickoIme>
@@ -219,13 +198,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -249,13 +225,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate />
-      <Ykoordinate />
+      <Xkoordinate>-108.351561</Xkoordinate>
+      <Ykoordinate>44.440054</Ykoordinate>
       <Adr>
-        <Ulica />
-        <Broj />
-        <NaseljenoMesto />
-        <PozivniBroj>0</PozivniBroj>
+        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -263,6 +236,33 @@
       <GodisteAutomobila>2014</GodisteAutomobila>
       <BrojRegistarskeOzn>sfdf</BrojRegistarskeOzn>
       <BrojTaksiVozila>9</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>joka</KorisnickoIme>
+    <Lozinka>joka</Lozinka>
+    <Ime>Joka</Ime>
+    <Prezime>Kanlic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>1234567890123</JMBG>
+    <KontaktTelefon>04823875</KontaktTelefon>
+    <Email>barbi@barbi</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>joka</UsernameVozaca>
+      <GodisteAutomobila>1209</GodisteAutomobila>
+      <BrojRegistarskeOzn>avs</BrojRegistarskeOzn>
+      <BrojTaksiVozila>10</BrojTaksiVozila>
       <TA>putnicki</TA>
     </Auto>
     <Zauzet>false</Zauzet>

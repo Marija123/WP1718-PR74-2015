@@ -10,76 +10,63 @@
             <label>Add your location: </label>
             <div>
 
-                <div id="map" style="width: 100%; height: 400px; background: grey" />
-                <script type="text/javascript" charset="UTF-8">
+                <div id="map" class="map"></div>
+                <div>
+                    <!--<input id="lon" type="number" step="0.000001">-->
+                    <!--<input id="lat" type="number" step="0.000001">-->
+                    <!--<button id="reversegeocoding" type=button name="button">Reverse geocode manually</button>
+                    <span id="address">
 
-                
-                    function setUpClickListener(map) {
-                        
-                        map.addEventListener('tap', function (evt) {
-                            var coord = map.screenToGeo(evt.currentPointer.viewportX,
-                                evt.currentPointer.viewportY);
-
-                            var XCoord1 = Math.abs(coord.lat.toFixed(4)) +
-                                ((coord.lat > 0) ? 'N' : 'S');
-                            var YCoord1 = Math.abs(coord.lng.toFixed(4)) +
-                                ((coord.lng > 0) ? 'E' : 'W');
-
-                        document.getElementById("xCoord").value = XCoord1;
-                        document.getElementById("yCoord").value = YCoord1;
-                            alert('Clicked at ' + Math.abs(coord.lat.toFixed(4)) +
-                                ((coord.lat > 0) ? 'N' : 'S') +
-                                ' ' + Math.abs(coord.lng.toFixed(4)) +
-                                ((coord.lng > 0) ? 'E' : 'W'));
-                        });
+                    </span>-->
+                </div>
+                <script>
+                    var map = new ol.Map({
+                        layers: [
+                            new ol.layer.Tile({
+                                source: new ol.source.OSM()
+                            })
+                        ],
+                        target: 'map',
+                        view: new ol.View({
+                            center: [0, 0],
+                            zoom: 2
+                        })
+                    });
+                    function simpleReverseGeocoding(lon, lat) {
+                        fetch('https://cors.io/?http://nominatim.openstreetmap.org/reverse?format=json&lon=' + lon + '&lat=' + lat).then(function (response) {
+                            return response.json();
+                        }).then(function (json) {
+                            document.getElementById('address').innerHTML = json.display_name;
+                        })
                     }
-                    
-                    var platform = new H.service.Platform({
-                        app_id: 'DemoAppId01082013GAL',
-                        app_code: 'AJKnXv84fjrb0KIHawS0Tg',
-                        useCIT: true,
-                        useHTTPS: true
-                    });
-                    var pixelRatio = window.devicePixelRatio || 1;
-                    var defaultLayers = platform.createDefaultLayers({
-                        tileSize: pixelRatio === 1 ? 256 : 512,
-                        ppi: pixelRatio === 1 ? undefined : 320
-                    });
-
-                    
-                    var map = new H.Map(document.getElementById('map'),
-                        defaultLayers.normal.map, {
-                            center: { lat: 30.94625288456589, lng: -54.10861860580418 },
-                            zoom: 1,
-                            pixelRatio: pixelRatio
+                    map.on('click', function (e) {
+                        var coordinate = ol.proj.toLonLat(e.coordinate).map(function (val) {
+                            return val.toFixed(6);
                         });
-
-                    
-                    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-
-                    setUpClickListener(map);
+                        var lon = document.getElementById('lon').value = coordinate[0];
+                        var lat = document.getElementById('lat').value = coordinate[1];
+                        simpleReverseGeocoding(lon, lat);
+                    });
+                    //document.getElementById('reversegeocoding').addEventListener('click', function (e) {
+                    //    if (document.getElementById('lon').value && document.getElementById('lat').value) {
+                    //        simpleReverseGeocoding(document.getElementById('lon').value, document.getElementById('lat').value);
+                    //    }
+                    //});
                 </script>
 
 
             </div>
             <div class="form-group">
-                
-                <input type="text" class="t" id="xCoord" ng-model="drive.XCoord"   placeholder="X coordinate">
+                <input id="lon" type="number" step="0.000001">
             </div>
             <div class="form-group">
-                <input type="text" class="t" id="yCoord" ng-model="drive.YCoord" placeholder="Y coordinate">
+                <input id="lat" type="number" step="0.000001">
             </div>
             <div class="form-group">
-                <input type="text" class="t" id="street" ng-model="drive.Street" placeholder="Street">
-            </div>
-            <div class="form-group">
-                <input type="text" class="t" id="number" ng-model="drive.Number" placeholder="Number">
-            </div>
-            <div class="form-group">
-                <input type="text" class="t" id="town" ng-model="drive.Town" placeholder="Town">
-            </div>
-            <div class="form-group">
-                <input type="text" class="t" id="postalCode" ng-model="drive.PostalCode" placeholder="Postal code">
+                <span id="address">
+
+                </span>
+              
             </div>
             <div class="form-group">
                 <select class="t" id="tipVoznje" ng-model="drive.tipAuta" placeholder="CarType">
@@ -90,9 +77,25 @@
             </div>
             <br>
 
-            <button ng-show="user.role==0" type="submit" class="btn button-success" ng-click="AddDriveCustomer(drive)">Add a drive</button>
-            <button ng-show="user.role==1" type="submit" class="btn button-success" ng-click="AddDriveDispecer(drive)">Add a drive disp</button>
+            <button ng-show="user.role==0 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveCustomer(drive)">Add a drive</button>
+            <button ng-show="user.role==1 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveDispecer(drive)">Add a drive disp</button>
         </div>
+    </div>
+    <div class="form-group">
+        <div ng-show="!Prazna">
+            <div ng-show="user.role==1 && najbliziVozaci">
+
+                <select id="slobodni" ng-model="noviModel.SelektovaniVozac">
+                    <option ng-repeat="kor in ListaNajblizih" value="{{kor}}">{{kor}}</option>
+                </select>
+                <button type="submit" ng-click="DodajVoznjuDisp(noviModel)">Dodaj ga</button>
+            </div>
+           
+        </div>
+        <div ng-show="Prazna">
+            <p>Nema slobodnih vozaca. Voznja ce biti dodata bez vozaca sa statusom 'Kreirana-Na cekanju'.</p>
+        </div>
+        
     </div>
 </div>
    

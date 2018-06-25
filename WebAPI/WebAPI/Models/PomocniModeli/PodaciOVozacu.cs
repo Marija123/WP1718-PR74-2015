@@ -10,5 +10,6 @@ namespace WebAPI.Models.PomocniModeli
     {
         public bool Zauzet { get; set; }
         public Enums.TipAutomobila TipA { get; set; }
+        public Lokacija TrenutnaLokacija { get; set; }
     }
 }

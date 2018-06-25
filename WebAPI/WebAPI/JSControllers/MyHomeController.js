@@ -19,10 +19,8 @@
             $scope.DriverData = response.data;
 
         });
-
+      
         
-
-     
     }
 
     init();
@@ -265,6 +263,11 @@
             }
             $rootScope.VoznjaZaIzmenu = drive;
             $window.location.href = "#!/IzmeniVoznju";
+        }
+
+        $scope.IzmeniLokaciju = function () {
+            $rootScope.drverUsername = $scope.DriverData;
+            $window.location.href = "#!/IzmeniLokaciju";
         }
 
 });

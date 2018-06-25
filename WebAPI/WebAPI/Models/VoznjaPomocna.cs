@@ -10,10 +10,14 @@ namespace WebAPI.Models
         public string XCoord { get; set; }
         public string YCoord { get; set; }
         public string Street { get; set; }
-        public string Number { get; set; }
-        public string Town { get; set; }
-        public string PostalCode { get; set; }
         public string tipAuta { get; set; }
         public string korisnicko { get; set; }
+    }
+
+    public class KonacnaVoznja
+    {
+        public VoznjaPomocna voznja { get; set; }
+        public String korisnickoImeAdmin { get; set; }
+        public String korisnickoImeVozac { get; set; }
     }
 }

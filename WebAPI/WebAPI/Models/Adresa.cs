@@ -7,24 +7,17 @@ namespace WebAPI.Models
 {
     public class Adresa
     {
-        public String Ulica { get; set; }
-        public String Broj { get; set; }
-        public String NaseljenoMesto { get; set; }
-        public Double PozivniBroj { get; set; }
+        public String FormatAdrese { get; set; }
+        
 
         public Adresa()
         {
-            Ulica = "";
-            Broj = "";
-            NaseljenoMesto = "";
-            PozivniBroj = 0;
+            //FormatAdrese = "";
+          
         }
-        public Adresa(String u, String b, String nm, Double pb)
+        public Adresa(String f)
         {
-            Ulica = u;
-            Broj = b;
-            NaseljenoMesto = nm;
-            PozivniBroj = pb;
+            FormatAdrese = f;
         }
     }
 }
