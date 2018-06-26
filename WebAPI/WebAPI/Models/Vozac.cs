@@ -10,13 +10,14 @@ namespace WebAPI.Models
         public Lokacija Lok { get; set; }
         public Automobil Auto { get; set; }
         public bool Zauzet { get; set; }
-
+        public bool Blokiran { get; set; }
         public Vozac()
         {
             Uloga = Enums.UlogaKorisnika.Vozac;
             KorisnikVoznje = new List<Voznja>();
             Ime = "";
             Prezime = "";
+            Blokiran = false;
         }
     }
 }

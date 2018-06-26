@@ -1,6 +1,11 @@
 ﻿WebAPI.factory('RegILogFactory', function ($http) {
 
     var factory = {};
+
+    factory.GetUserStatusByUsername = function (username) {
+        return $http.get('/api/RegILog/GetUserStatusByUsername?username' + username);
+    }
+
     factory.RegisterUser = function (user) {
         return $http.post('/api/RegILog/Register', {
             Username: user.username,

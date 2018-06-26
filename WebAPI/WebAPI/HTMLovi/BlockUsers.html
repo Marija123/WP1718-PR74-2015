@@ -1,0 +1,38 @@
+﻿<br/>
+<br/>
+<br/>
+<div ng-show="!loggedin || user.role!=1"><h3>Zabranjena akcija!</h3></div>
+<div ng-show="loggedin && user.role==1">
+    <button type="submit" id="btnBlock" ng-click="PrikaziBlokirane()">Blokirani korisnici</button>
+    <button type="submit" id="btnUnblock" ng-click="PrikaziNeblokirane()">Neblokirani korisnici</button>
+    <br />
+    <br />
+    <div ng-show="FlegZaBlokirane">
+        <div class="form-group">
+            <div ng-repeat="kor in BlokiraniKorisnici">
+                <p ng-show="kor.Uloga==0">
+                    Musterija:&nbsp;{{kor.Ime}} &nbsp; {{kor.Prezime}} &nbsp;|&nbsp;{{kor.KorisnickoIme}} &nbsp; &nbsp;
+                    <button type="submit" ng-click="Odblokiraj(kor.KorisnickoIme)">Odblokiraj</button>
+                </p>
+                <p ng-show="kor.Uloga==2">
+                    Vozac:&nbsp;{{kor.Ime}} &nbsp; {{kor.Prezime}} &nbsp;|&nbsp;{{kor.KorisnickoIme}} &nbsp; &nbsp;
+                    <button type="submit" ng-click="Odblokiraj(kor.KorisnickoIme)">Odblokiraj</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div ng-show="FlegZaNeblokirane">
+        <div class="form-group">
+            <div ng-repeat="kor in NeblokiraniKorisnici">
+                <p ng-show="kor.Uloga==0">
+                    Musterija:&nbsp;{{kor.Ime}} &nbsp; {{kor.Prezime}} &nbsp;|&nbsp;{{kor.KorisnickoIme}} &nbsp; &nbsp;
+                    <button type="submit" ng-click="Blokiraj(kor.KorisnickoIme)">Blokiraj</button>
+                </p>
+                <p ng-show="kor.Uloga==2">
+                    Vozac:&nbsp;{{kor.Ime}} &nbsp; {{kor.Prezime}} &nbsp;|&nbsp;{{kor.KorisnickoIme}} &nbsp; &nbsp;
+                    <button type="submit" ng-click="Blokiraj(kor.KorisnickoIme)">Blokiraj</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,58 +1,60 @@
 ﻿<br />
 <br />
 <br />
+<div ng-show="!loggedin"><h3>Morate se ulogovati za ovu akciju!</h3></div>
+<div ng-show="loggedin">
+    <div class="registerWindow">
 
-<div class="registerWindow">
+        <h2>Edit user: </h2>
 
-    <h2>Edit user: </h2>
+        <div class="form-group">
+            <div class="form-group">
+                <label>Unesite novo korisnicko ime: </label>
+                <br />
+                <input type="text" class="t" id="username" ng-model="user.username" ng-value="userProfile.KorisnickoIme" contenteditable="true">
+            </div>
+            <div class="form-group">
+                <label>Unesite novo ime:  </label>
+                <br />
+                <input type="text" class="t" id="ime" ng-model="user.ime" ng-value="userProfile.Ime" contenteditable="true">
+            </div>
+            <div class="form-group">
+                <label>Unesite novo  prezime: </label>
+                <br />
+                <input type="text" class="t" id="prezime" ng-model="user.prezime" ng-value="userProfile.Prezime" contenteditable="true">
+            </div>
+            <div class="form-group">
+                <label>Odaberite pol:  </label>
+                <br />
+                <select class="t" id="pol" ng-model="user.pol">
+                    <option value="" disabled>{{P}}</option>
+                    <option value="0"> Musko</option>
+                    <option value="1">Zensko</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Unesite novi jmbg:  </label>
+                <br />
+                <input type="text" class="t" id="jmbg" ng-model="user.jmbg" ng-value="userProfile.JMBG" contenteditable="true">
+            </div>
+            <div class="form-group">
+                <label>Novi kontakt telefon:  </label>
+                <br />
+                <input type="text" class="t" id="kontaktTelefon" ng-model="user.kontaktTelefon" ng-value="userProfile.KontaktTelefon" contenteditable="true">
+            </div>
+            <div class="form-group">
+                <label>Nova e-mail adresa:  </label>
+                <br />
+                <input type="text" class="t" id="email" ng-model="user.email" ng-value="userProfile.Email" contenteditable="true">
+            </div>
+            <div class="form-group">
+                <label>Unesite novu lozinku:  </label>
+                <br />
+                <input type="password" class="t" id="pwd" ng-model="user.pwd" ng-value="userProfile.Lozinka" contenteditable="true">
+            </div>
 
-    <div  class="form-group">
-        <div class="form-group">
-            <label>Unesite novo korisnicko ime: </label>
-            <br/>
-            <input  type="text" class="t" id="username" ng-model="user.username" ng-value="userProfile.KorisnickoIme" contenteditable="true">
+            <br>
+            <button type="submit" ng-click="EditUser(user)">Edit</button>
         </div>
-        <div class="form-group">
-            <label>Unesite novo ime:  </label>
-            <br />
-            <input type="text" class="t" id="ime" ng-model="user.ime" ng-value="userProfile.Ime" contenteditable="true">
-        </div>
-        <div class="form-group">
-            <label>Unesite novo  prezime: </label>
-            <br />
-            <input type="text" class="t" id="prezime" ng-model="user.prezime" ng-value="userProfile.Prezime" contenteditable="true">
-        </div>
-        <div class="form-group">
-            <label>Odaberite pol:  </label>
-            <br />
-            <select class="t" id="pol" ng-model="user.pol">
-                <option value="" disabled>{{P}}</option>
-                <option value="0"> Musko</option>
-                <option value="1">Zensko</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Unesite novi jmbg:  </label>
-            <br />
-            <input type="text" class="t" id="jmbg" ng-model="user.jmbg" ng-value="userProfile.JMBG" contenteditable="true">
-        </div>
-        <div class="form-group">
-            <label>Novi kontakt telefon:  </label>
-            <br />
-            <input type="text" class="t" id="kontaktTelefon" ng-model="user.kontaktTelefon" ng-value="userProfile.KontaktTelefon" contenteditable="true">
-        </div>
-        <div class="form-group">
-            <label>Nova e-mail adresa:  </label>
-            <br />
-            <input type="text" class="t" id="email" ng-model="user.email" ng-value="userProfile.Email" contenteditable="true">
-        </div>
-        <div class="form-group">
-            <label>Unesite novu lozinku:  </label>
-            <br />
-            <input type="password" class="t" id="pwd" ng-model="user.pwd" ng-value="userProfile.Lozinka" contenteditable="true">
-        </div>
-
-        <br>
-        <button type="submit"  ng-click="EditUser(user)">Edit</button>
     </div>
 </div>

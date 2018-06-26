@@ -18,5 +18,6 @@ namespace WebAPI.Models
         public String Email { get; set; }
         public UlogaKorisnika Uloga { get; set; }
         public List<Voznja> KorisnikVoznje { get; set; }
+
     }
 }

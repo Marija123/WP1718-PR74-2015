@@ -1,13 +1,14 @@
 ﻿<br />
 <br />
 <br />
-<div class="registerWindow">
+
+<div  ng-show="!loggedin" class="registerWindow container">
     <div class="header">
         <h2>Registration Form: </h2>
     </div>
-    <div class="body">
+    <div class="container body">
         <div class="form-group">
-            <input type="text" class="t" id="username" ng-model="user.username" placeholder="Username">
+            <input type="text" class="t" id="username" ng-model="user.username" placeholder="Korisnicko ime">
         </div>
         <div class="form-group">
             <input type="text" class="t" id="ime" ng-model="user.ime" placeholder="Name">
@@ -21,7 +22,7 @@
                 <option value="Male"> Male</option>
                 <option value="Female">Female</option>
             </select>
-            <!--<input type="text" class="t" id="pol" ng-model="user.pol" placeholder="Pol">-->
+            
         </div>
         <div class="form-group">
             <input type="text" class="t" id="jmbg" ng-model="user.jmbg" placeholder="JMBG">
@@ -38,4 +39,8 @@
         <br>
         <button type="submit" class="btn button-success" ng-click="RegisterUser(user)">Register</button>
     </div>
+</div>
+
+<div ng-show="loggedin">
+    Vec ste ulogovani!
 </div>

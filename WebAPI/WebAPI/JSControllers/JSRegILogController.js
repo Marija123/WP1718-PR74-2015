@@ -5,6 +5,7 @@
 
     function init() {
         console.log('Login controller initialized'); //ispis na konzoli da se inicijalizovao
+        $rootScope.Uloga = sessionStorage.getItem("role");
     };
 
     init();
@@ -110,6 +111,8 @@
     }
 
     $scope.RegisterDriver = function (user) {
+
+
 
         if (user.username == null || user.username == "") {
             alert('Username field cant be empty!');

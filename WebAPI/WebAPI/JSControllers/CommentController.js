@@ -1,6 +1,8 @@
 ﻿WebAPI.controller('CommentController', function ($scope, $location, $rootScope, ProfCont, $window) {
 
-
+    if (!$rootScope.loggedin) {
+        $window.location.href = '#!/Login';
+    }
     function init() 
     {
         $scope.Usp = false;

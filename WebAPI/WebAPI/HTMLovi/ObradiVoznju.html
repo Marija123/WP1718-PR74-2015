@@ -1,0 +1,17 @@
+﻿<br />
+<br />
+<br/>
+<div ng-show="!loggedin || !DozvolaZaObraduVoznji || user.role != 1">
+    <h3>Nemate dozvolu za ovu akciju!</h3>
+</div>
+<div  ng-show="loggedin && DozvolaZaObraduVoznji && user.role == 1">
+    <div ng-show="NemaVozaca">
+        <h3>Voznja nije obradjena, nema slobodnih vozaca.</h3>
+    </div>
+    <div class="form-group" ng-show="!NemaVozaca">
+        <select id="slobodni" ng-model="noviModel.SelektovaniVozac">
+            <option ng-repeat="kor in PonudjeniVozaci" value="{{kor}}">{{kor}}</option>
+        </select>
+        <button type="submit" ng-click="ObradiVoznjuDisp(noviModel)">Obradi</button>
+    </div>
+</div>

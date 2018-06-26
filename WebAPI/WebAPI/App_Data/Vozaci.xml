@@ -3,252 +3,40 @@
   <Vozac>
     <KorisnickoIme>suza</KorisnickoIme>
     <Lozinka>suza</Lozinka>
-    <Ime>Petra</Ime>
+    <Ime>Suzana</Ime>
     <Prezime>Jovic</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>067123456</KontaktTelefon>
+    <KontaktTelefon>04823875</KontaktTelefon>
     <Email>suza@suza</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
+      <Xkoordinate>19.833495</Xkoordinate>
+      <Ykoordinate>45.258176</Ykoordinate>
       <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
+        <FormatAdrese>Informatika, 36, Булевар ослобођења, Банатић, Нови Сад, Град Нови Сад, Јужнобачки округ, Војводина, 21101, Србија</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
       <UsernameVozaca>suza</UsernameVozaca>
-      <GodisteAutomobila>1998</GodisteAutomobila>
-      <BrojRegistarskeOzn>ST98900</BrojRegistarskeOzn>
+      <GodisteAutomobila>1397</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns201</BrojRegistarskeOzn>
       <BrojTaksiVozila>1</BrojTaksiVozila>
       <TA>putnicki</TA>
     </Auto>
     <Zauzet>true</Zauzet>
+    <Blokiran>false</Blokiran>
   </Vozac>
   <Vozac>
-    <KorisnickoIme>irina</KorisnickoIme>
-    <Lozinka>rina</Lozinka>
-    <Ime>Irina</Ime>
-    <Prezime>Jovanovic</Prezime>
-    <Pol>Musko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-115.699221</Xkoordinate>
-      <Ykoordinate>43.834527</Ykoordinate>
-      <Adr>
-        <FormatAdrese>Rabbit Creek Road, Boise County, Idaho, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>irina</UsernameVozaca>
-      <GodisteAutomobila>2001</GodisteAutomobila>
-      <BrojRegistarskeOzn>ST9850</BrojRegistarskeOzn>
-      <BrojTaksiVozila>2</BrojTaksiVozila>
-      <TA>kombi</TA>
-    </Auto>
-    <Zauzet>false</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>Boca</KorisnickoIme>
-    <Lozinka>jocamoca</Lozinka>
-    <Ime>Peta</Ime>
-    <Prezime>Pajin</Prezime>
-    <Pol>Musko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>048238</KontaktTelefon>
-    <Email>joca@joca</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
-      <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>Boca</UsernameVozaca>
-      <GodisteAutomobila>2003</GodisteAutomobila>
-      <BrojRegistarskeOzn>ns10</BrojRegistarskeOzn>
-      <BrojTaksiVozila>3</BrojTaksiVozila>
-      <TA>kombi</TA>
-    </Auto>
-    <Zauzet>false</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>luka</KorisnickoIme>
-    <Lozinka>lukakuka</Lozinka>
-    <Ime>Luk</Ime>
-    <Prezime>Crnomar</Prezime>
-    <Pol>Musko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>luka@luka</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
-      <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <GodisteAutomobila>2011</GodisteAutomobila>
-      <BrojRegistarskeOzn>ns1000</BrojRegistarskeOzn>
-      <BrojTaksiVozila>4</BrojTaksiVozila>
-      <TA>putnicki</TA>
-    </Auto>
-    <Zauzet>false</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>kide</KorisnickoIme>
-    <Lozinka>deki</Lozinka>
-    <Ime>Dejan</Ime>
-    <Prezime>Stajic</Prezime>
-    <Pol>Zensko</Pol>
-    <JMBG>0510994123456</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
-      <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>kide</UsernameVozaca>
-      <GodisteAutomobila>2015</GodisteAutomobila>
-      <BrojRegistarskeOzn>ns12</BrojRegistarskeOzn>
-      <BrojTaksiVozila>5</BrojTaksiVozila>
-      <TA>putnicki</TA>
-    </Auto>
-    <Zauzet>true</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>biba</KorisnickoIme>
-    <Ime>Biljana</Ime>
-    <Prezime>Djurkovic</Prezime>
+    <KorisnickoIme>tami</KorisnickoIme>
+    <Lozinka>tami</Lozinka>
+    <Ime>Tamara</Ime>
+    <Prezime>Gengo</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
     <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>biba@barbi</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
-      <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>biba</UsernameVozaca>
-      <GodisteAutomobila>6</GodisteAutomobila>
-      <BrojRegistarskeOzn>sdfds</BrojRegistarskeOzn>
-      <BrojTaksiVozila>6</BrojTaksiVozila>
-      <TA>kombi</TA>
-    </Auto>
-    <Zauzet>true</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>jeca</KorisnickoIme>
-    <Ime>Pelena</Ime>
-    <Prezime>Djurkovic</Prezime>
-    <Pol>Zensko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
-      <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>jeca</UsernameVozaca>
-      <GodisteAutomobila>2033</GodisteAutomobila>
-      <BrojRegistarskeOzn>sfd</BrojRegistarskeOzn>
-      <BrojTaksiVozila>7</BrojTaksiVozila>
-      <TA>kombi</TA>
-    </Auto>
-    <Zauzet>true</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>pera</KorisnickoIme>
-    <Lozinka>pera</Lozinka>
-    <Ime>Petar</Ime>
-    <Prezime>Peric</Prezime>
-    <Pol>Musko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
-      <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>pera</UsernameVozaca>
-      <GodisteAutomobila>3</GodisteAutomobila>
-      <BrojRegistarskeOzn>ss</BrojRegistarskeOzn>
-      <BrojTaksiVozila>8</BrojTaksiVozila>
-      <TA>kombi</TA>
-    </Auto>
-    <Zauzet>true</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>miki</KorisnickoIme>
-    <Lozinka>miki</Lozinka>
-    <Ime>Milos</Ime>
-    <Prezime>Popovic</Prezime>
-    <Pol>Musko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>-108.351561</Xkoordinate>
-      <Ykoordinate>44.440054</Ykoordinate>
-      <Adr>
-        <FormatAdrese>County Lane 39, Big Horn County, Wyoming, United States of America</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>miki</UsernameVozaca>
-      <GodisteAutomobila>2014</GodisteAutomobila>
-      <BrojRegistarskeOzn>sfdf</BrojRegistarskeOzn>
-      <BrojTaksiVozila>9</BrojTaksiVozila>
-      <TA>putnicki</TA>
-    </Auto>
-    <Zauzet>false</Zauzet>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>joka</KorisnickoIme>
-    <Lozinka>joka</Lozinka>
-    <Ime>Joka</Ime>
-    <Prezime>Kanlic</Prezime>
-    <Pol>Zensko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
+    <Email>tami@tami</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
@@ -259,12 +47,13 @@
       </Adr>
     </Lok>
     <Auto>
-      <UsernameVozaca>joka</UsernameVozaca>
-      <GodisteAutomobila>1209</GodisteAutomobila>
-      <BrojRegistarskeOzn>avs</BrojRegistarskeOzn>
-      <BrojTaksiVozila>10</BrojTaksiVozila>
-      <TA>putnicki</TA>
+      <UsernameVozaca>tami</UsernameVozaca>
+      <GodisteAutomobila>1920</GodisteAutomobila>
+      <BrojRegistarskeOzn>nss</BrojRegistarskeOzn>
+      <BrojTaksiVozila>2</BrojTaksiVozila>
+      <TA>kombi</TA>
     </Auto>
     <Zauzet>false</Zauzet>
+    <Blokiran>true</Blokiran>
   </Vozac>
 </ArrayOfVozac>

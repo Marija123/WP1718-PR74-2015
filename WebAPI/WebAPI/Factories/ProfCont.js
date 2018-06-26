@@ -124,11 +124,10 @@
             });
     }
 
-    factory.ObradiVoznju = function (drive, drives) {
+    factory.ObradiVoznju = function (drive) {
         return $http.post('/api/Prof/ObradiVoznju', {
-            Username: sessionStorage.getItem("username"),
-            Voznj: drive,
-            ListaVoznji: drives
+            Kometar: sessionStorage.getItem("username"),
+            Voz: drive
         });
     }
 
@@ -188,5 +187,32 @@
         });
     }
 
+    factory.ObradiVoznjuDisp = function (noviModel, voz) {
+        return $http.post('/api/Prof/ObradiVoznjuDisp', {
+            voznja: voz,
+            korisnickoImeAdmin: sessionStorage.getItem("username"),
+            korisnickoImeVozac: noviModel.SelektovaniVozac
+        });
+    }
+
+    
+    factory.getBlockedUsers = function (username) {
+        return $http.get('/api/Prof/getBlockedUsers');
+    }
+
+    factory.getUnblockedUsers = function (username) {
+        return $http.get('/api/Prof/getUnblockedUsers');
+    }
+
+    factory.Blokiraj = function (username) {
+        return $http.get('/api/Prof/Blokiraj?username=' + username);
+    }
+
+    factory.Odblokiraj = function (username) {
+        return $http.get('/api/Prof/Odblokiraj?username=' + username);
+    }
+    
+
     return factory;
 });
+//?username=' + username

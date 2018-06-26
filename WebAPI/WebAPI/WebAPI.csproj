@@ -220,6 +220,7 @@
     <Content Include="fonts\fontomas-webfont.svg" />
     <Content Include="fonts\franchise-bold-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="HTMLovi\BlockUsers.html" />
     <Content Include="HTMLovi\Comment.html" />
     <Content Include="HTMLovi\DriveGet.html" />
     <Content Include="HTMLovi\DriverGet.html" />
@@ -228,9 +229,11 @@
     <Content Include="HTMLovi\IzmeniVoznju.html" />
     <Content Include="HTMLovi\Login.html" />
     <Content Include="HTMLovi\MyHome.html" />
+    <Content Include="HTMLovi\ObradiVoznju.html" />
     <Content Include="HTMLovi\Profile.html" />
     <Content Include="HTMLovi\Register.html" />
     <Content Include="HTMLovi\ZavrsiVoznju.html" />
+    <Content Include="JSControllers\BlockController.js" />
     <Content Include="JSControllers\CommentController.js" />
     <Content Include="JSControllers\JSRegILogController.js" />
     <Content Include="JSControllers\MainController.js" />

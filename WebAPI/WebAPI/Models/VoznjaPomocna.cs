@@ -20,4 +20,11 @@ namespace WebAPI.Models
         public String korisnickoImeAdmin { get; set; }
         public String korisnickoImeVozac { get; set; }
     }
+
+    public class KonacnaVoznjaDisp
+    {
+        public Voznja voznja { get; set; }
+        public String korisnickoImeAdmin { get; set; }
+        public String korisnickoImeVozac { get; set; }
+    }
 }
