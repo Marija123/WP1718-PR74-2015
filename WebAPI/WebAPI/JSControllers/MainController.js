@@ -5,13 +5,17 @@
     if (document.cookie !== "") {
         //console.log(document.cookie);
         var cookieInfo = document.cookie.substring(5, document.cookie.length);
-        var parsed = JSON.parse(cookieInfo);
-
+        //var parsed = JSON.parse(cookieInfo);
+        var parsed = jQuery.parseJSON(cookieInfo);
         sessionStorage.setItem("username", parsed.username);
         sessionStorage.setItem("role", parsed.role);
         sessionStorage.setItem("nameSurname", parsed.nameSurname);
 
         $rootScope.loggedin = true;
+        $rootScope.moraKomentar = false;
+        $rootScope.moraKomentarKorisnik = false;
+
+      
         $rootScope.user = {
             username: sessionStorage.getItem("username"),
             role: sessionStorage.getItem("role"),

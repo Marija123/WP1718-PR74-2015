@@ -6,11 +6,11 @@
 </div>
 <div ng-show="loggedin && user.role!=2">
     <div class="container-fluid" ng-show="loggedin">
-        <div class="registerWindow">
+        <div class="registerWindow" >
             <div class="header">
                 <h2>Drive</h2>
             </div>
-            <div class="body">
+            <div class="body" ng-show="!najbliziVozaci">
                 <label>Add your location: </label>
                 <div>
 

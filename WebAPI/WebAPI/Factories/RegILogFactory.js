@@ -3,7 +3,7 @@
     var factory = {};
 
     factory.GetUserStatusByUsername = function (username) {
-        return $http.get('/api/RegILog/GetUserStatusByUsername?username' + username);
+        return $http.get('/api/Prof/GetUserStatusByUsername?username=' + username);
     }
 
     factory.RegisterUser = function (user) {

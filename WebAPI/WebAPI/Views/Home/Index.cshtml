@@ -72,15 +72,15 @@
 
                 <div class="headercolor collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li ng-show="loggedin" ng-class="checkActive('/MyHome')"><a href="#!/"><i class="ion ion-android-home"></i> Home</a></li>
-                        <li ng-show="loggedin" ng-class="checkActive('/Edit')"><a href="#!/Edit"><i class="ion ion-person"></i>Edit Profile</a></li>
+                        <li ng-show="loggedin && !moraKomentar && !moraKomentarKorisnik" ng-class="checkActive('/MyHome')"><a href="#!/"><i class="ion ion-android-home"></i> Home</a></li>
+                        <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik" ng-class="checkActive('/Edit')"><a href="#!/Edit"><i class="ion ion-person"></i>Edit Profile</a></li>
                         <li ng-show="loggedin && user.role==1" ng-class="checkActive('/BlockUsers')"><a href="#!/BlockUsers"><i class="ion ion-person"></i>Block Users</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li ng-show="!loggedin" ng-class="checkActive('/Login')"><a href="#!/Login">Login</a></li>
                         <li ng-show="!loggedin" ng-class="checkActive('/Register')"><a href="#!/Register">Register</a></li>
-                        <li ng-show="loggedin" ng-class="checkActive('/Profile')"><a href="#!/Profile"><i class="ion ion-person"></i> {{user.nameSurname}}</a></li>
-                        <li ng-show="loggedin"><a href ng-click="Logout()"><i class="ion ion-log-out"></i> Logout</a></li>
+                        <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik" ng-class="checkActive('/Profile')"><a href="#!/Profile"><i class="ion ion-person"></i> {{user.nameSurname}}</a></li>
+                        <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik"><a href ng-click="Logout()"><i class="ion ion-log-out"></i> Logout</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse    class="glyphicon glyphicon-user"   class="glyphicon glyphicon-log-in" -->

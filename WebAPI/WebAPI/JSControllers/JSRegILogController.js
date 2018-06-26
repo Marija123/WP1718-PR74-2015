@@ -83,29 +83,50 @@
             alert('Password cant be empty!');
             return;
         }
+        
 
         RegILogFactory.LoginUser(user).then(function (response) {
+            $rootScope.ZapamtiKorisnika = response.data;
             if (response.data == null) {
                 alert("User with the given username and password does not exist.");
+                return;
             }
             else {
+
+                RegILogFactory.GetUserStatusByUsername(user.username).then(function (response) {
+                    if (response.data == true) {
+                        alert('Blokirani ste!');
+                        return;
+                    }
+                   
+                
+                //    }
+                //});
+
                 console.log(response);
                 document.cookie = "user=" + JSON.stringify({
-                    username: response.data.KorisnickoIme,
-                    role: response.data.Uloga,
-                    nameSurname: response.data.Ime + " " + response.data.Prezime
+                    username: $rootScope.ZapamtiKorisnika.KorisnickoIme, /*response.data.KorisnickoIme,*/
+                    role: $rootScope.ZapamtiKorisnika.Uloga, /*response.data.Uloga*/
+                    nameSurname: $rootScope.ZapamtiKorisnika.Ime + " " + $rootScope.ZapamtiKorisnika.Prezime/*response.data.Ime + " " + response.data.Prezime*/
                 }) + ";expires=Thu, 01 Jan 2019 00:00:01 GMT;";
-                sessionStorage.setItem("username", response.data.KorisnickoIme);
-                sessionStorage.setItem("role", response.data.Uloga);
-                sessionStorage.setItem("nameSurname", response.data.Ime + " " + response.data.Prezime);
+                sessionStorage.setItem("username", $rootScope.ZapamtiKorisnika.KorisnickoIme);
+                sessionStorage.setItem("role", $rootScope.ZapamtiKorisnika.Uloga);
+                sessionStorage.setItem("nameSurname", $rootScope.ZapamtiKorisnika.Ime + " " + $rootScope.ZapamtiKorisnika.Prezime);
 
                 $rootScope.loggedin = true;
+
+                $rootScope.moraKomentar = false;
+                $rootScope.moraKomentarKorisnik = false;
+         
+           
                 $rootScope.user = {
                     username: sessionStorage.getItem("username"),
                     role: sessionStorage.getItem("role"),
                     nameSurname: sessionStorage.getItem("nameSurname")
                 };
                 $window.location.href = "#!/";
+                });  
+               
             }
         });
     }

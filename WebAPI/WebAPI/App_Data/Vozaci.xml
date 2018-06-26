@@ -12,10 +12,10 @@
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate>19.833495</Xkoordinate>
-      <Ykoordinate>45.258176</Ykoordinate>
+      <Xkoordinate>-66.375004</Xkoordinate>
+      <Ykoordinate>-1.757539</Ykoordinate>
       <Adr>
-        <FormatAdrese>Informatika, 36, Булевар ослобођења, Банатић, Нови Сад, Град Нови Сад, Јужнобачки округ, Војводина, 21101, Србија</FormatAdrese>
+        <FormatAdrese>Japurá, Microrregião de Japurá, Mesorregião Norte Amazonense, AM, Região Norte, Brasil</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
@@ -29,31 +29,31 @@
     <Blokiran>false</Blokiran>
   </Vozac>
   <Vozac>
-    <KorisnickoIme>tami</KorisnickoIme>
+    <KorisnickoIme>tami123</KorisnickoIme>
     <Lozinka>tami</Lozinka>
     <Ime>Tamara</Ime>
     <Prezime>Gengo</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
     <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>tami@tami</Email>
+    <Email>gica@tami</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate>19.848948</Xkoordinate>
-      <Ykoordinate>45.245165</Ykoordinate>
+      <Xkoordinate>81.492194</Xkoordinate>
+      <Ykoordinate>54.977606</Ykoordinate>
       <Adr>
-        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+        <FormatAdrese>Осиновский сельсовет, Чулымский район, Новосибирская область, СФО, РФ</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
-      <UsernameVozaca>tami</UsernameVozaca>
+      <UsernameVozaca>tami123</UsernameVozaca>
       <GodisteAutomobila>1920</GodisteAutomobila>
       <BrojRegistarskeOzn>nss</BrojRegistarskeOzn>
       <BrojTaksiVozila>2</BrojTaksiVozila>
       <TA>kombi</TA>
     </Auto>
     <Zauzet>false</Zauzet>
-    <Blokiran>true</Blokiran>
+    <Blokiran>false</Blokiran>
   </Vozac>
 </ArrayOfVozac>

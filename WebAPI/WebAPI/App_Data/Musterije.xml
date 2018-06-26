@@ -11,6 +11,6 @@
     <Email>barbi@barbi</Email>
     <Uloga>Musterija</Uloga>
     <KorisnikVoznje />
-    <Blokiran>true</Blokiran>
+    <Blokiran>false</Blokiran>
   </Musterija>
 </ArrayOfMusterija>
