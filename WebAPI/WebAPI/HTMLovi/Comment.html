@@ -3,12 +3,15 @@
 <br/>
 <div ng-show="!loggedin || !DozvolaZaKomentarKorisnika || user.role!=0 "> <h3>Nije moguce ostavljanje komentara</h3></div>
 <div ng-show="loggedin && DozvolaZaKomentarKorisnika && user.role==0">
-    <h1>Ostavite komentar</h1>
+   
     <div class="form-group">
-        <table>
+        <table align="center" class="tabelaZaKomentar">
             <tr>
-                <td>Opis:</td>
-                <td>
+                <td colspan="2" align="center"> <h1>Ostavite komentar</h1></td>
+            </tr>
+            <tr>
+                <td align="right" valign="middle" width="30%"><h3>Opis:</h3></td>
+                <td width="70%">
                     <textarea class="form-control" placeholder="Ostavi komentar.." ng-model="ko.Opis"></textarea>
                 </td>
             </tr>
@@ -21,8 +24,9 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <button type="submit" ng-click="DodajKomentarKo(ko)">Dodaj komentar</button>
+                <td align="center" colspan="2">
+                    <br/>
+                    <button class="button-successBlok" type="submit" ng-click="DodajKomentarKo(ko)">Dodaj komentar</button>
                 </td>
             </tr>
         </table>

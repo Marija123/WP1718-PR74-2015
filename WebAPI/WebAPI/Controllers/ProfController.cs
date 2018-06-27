@@ -474,6 +474,10 @@ namespace WebAPI.Controllers
                     {
 
                         u.KorisnickoIme = k.Username;
+                        if (k.Password != null)
+                        {
+                            u.Lozinka = k.Password;
+                        }
                         u.Lozinka = k.Password;
                         u.Ime = k.Ime;
                         u.Prezime = k.Prezime;
@@ -504,6 +508,10 @@ namespace WebAPI.Controllers
                     if (u.KorisnickoIme == k.OldUsername)
                     {
                         u.KorisnickoIme = k.Username;
+                        if (k.Password != null)
+                        {
+                            u.Lozinka = k.Password;
+                        }
                         u.Lozinka = k.Password;
                         u.Ime = k.Ime;
                         u.Prezime = k.Prezime;

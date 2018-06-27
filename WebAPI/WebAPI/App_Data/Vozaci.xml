@@ -26,7 +26,7 @@
       <TA>putnicki</TA>
     </Auto>
     <Zauzet>true</Zauzet>
-    <Blokiran>false</Blokiran>
+    <Blokiran>true</Blokiran>
   </Vozac>
   <Vozac>
     <KorisnickoIme>tami123</KorisnickoIme>
@@ -54,6 +54,34 @@
       <TA>kombi</TA>
     </Auto>
     <Zauzet>false</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>rina</KorisnickoIme>
+    <Lozinka>rina</Lozinka>
+    <Ime>Irina</Ime>
+    <Prezime>Jovanovic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>1234567891234</JMBG>
+    <KontaktTelefon>064789153</KontaktTelefon>
+    <Email>rina@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>rina</UsernameVozaca>
+      <GodisteAutomobila>1369</GodisteAutomobila>
+      <BrojRegistarskeOzn>nsjwi</BrojRegistarskeOzn>
+      <BrojTaksiVozila>3</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>true</Zauzet>
     <Blokiran>false</Blokiran>
   </Vozac>
 </ArrayOfVozac>

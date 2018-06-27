@@ -13,4 +13,17 @@
     <KorisnikVoznje />
     <Blokiran>false</Blokiran>
   </Musterija>
+  <Musterija>
+    <KorisnickoIme>deki</KorisnickoIme>
+    <Lozinka>deki</Lozinka>
+    <Ime>Dejan</Ime>
+    <Prezime>Stajic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>0510994715104</JMBG>
+    <KontaktTelefon>064268983</KontaktTelefon>
+    <Email>dejanstajic@gmail.com</Email>
+    <Uloga>Musterija</Uloga>
+    <KorisnikVoznje />
+    <Blokiran>false</Blokiran>
+  </Musterija>
 </ArrayOfMusterija>

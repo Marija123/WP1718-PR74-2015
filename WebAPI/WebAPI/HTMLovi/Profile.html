@@ -2,20 +2,21 @@
 <br />
 <br />
 
-<div class="container-fluid" ng-show="loggedin" >
-        <div class="userProfileDetails">
+<div  ng-show="loggedin" >
+        <div class="userProfileDetails ">
             <br/>
             <br/>
             <h1> {{userProfile.Ime}} {{userProfile.Prezime}} - ({{userProfile.KorisnickoIme}})</h1>
             
-            <h4 ng-show="userProfile.Uloga==0">Role: Customer</h4>
-            <h4 ng-show="userProfile.Uloga==1">Role: Dispatcher</h4>
-            <h4 ng-show="userProfile.Uloga==2">Role: Driver</h4>
+                    <h4 ng-show="userProfile.Uloga==0">Uloga: Musterija</h4>
+                    <h4 ng-show="userProfile.Uloga==1">Uloga: Dispecer</h4>
+                    <h4 ng-show="userProfile.Uloga==2">Uloga: Vozac</h4>
 
-            <h4 ng-show="userProfile.Pol==0">Gender: Male</h4>
-            <h4 ng-show="userProfile.Pol==1">Gender: Female</h4>
-            <h4>JMBG: {{userProfile.JMBG}}</h4>
-            <h4>E-mail: {{userProfile.Email}}</h4>
-            <h4>Phone number: {{userProfile.KontaktTelefon}}</h4>
+                    <h4 ng-show="userProfile.Pol==0">Pol: Musko</h4>
+                    <h4 ng-show="userProfile.Pol==1">Pol: Zensko</h4>
+                    <h4>JMBG: {{userProfile.JMBG}}</h4>
+                    <h4>E-mail: {{userProfile.Email}}</h4>
+                    <h4>Kontakt telefon: {{userProfile.KontaktTelefon}}</h4>
+              
          </div>
 </div>

@@ -7,23 +7,23 @@
 <div ng-show="loggedin && Uloga==1">
     <div class="registerWindow">
         <div class="header">
-            <h2>Create driver: </h2>
+            <h2>Registracija vozaca: </h2>
         </div>
         <div class="body">
             <div class="form-group">
-                <input type="text" class="t" id="username" ng-model="user.username" placeholder="Username">
+                <input type="text" class="t" id="username" ng-model="user.username" placeholder="Korisnicko ime">
             </div>
             <div class="form-group">
-                <input type="text" class="t" id="ime" ng-model="user.ime" placeholder="Name">
+                <input type="text" class="t" id="ime" ng-model="user.ime" placeholder="Ime">
             </div>
             <div class="form-group">
-                <input type="text" class="t" id="prezime" ng-model="user.prezime" placeholder="Surname">
+                <input type="text" class="t" id="prezime" ng-model="user.prezime" placeholder="Prezime">
             </div>
             <div class="form-group">
-                <select class="t" id="pol" ng-model="user.pol" placeholder="Gender">
-                    <option value="" disabled>Choose gender</option>
-                    <option value="Male"> Male</option>
-                    <option value="Female">Female</option>
+                <select class="t" id="pol" ng-model="user.pol" placeholder="Pol">
+                    <option value="" disabled>Odaberite pol</option>
+                    <option value="Male"> Musko</option>
+                    <option value="Female">Zensko</option>
                 </select>
                 <!--<input type="text" class="t" id="pol" ng-model="user.pol" placeholder="Pol">-->
             </div>
@@ -31,16 +31,17 @@
                 <input type="text" class="t" id="jmbg" ng-model="user.jmbg" placeholder="JMBG">
             </div>
             <div class="form-group">
-                <input type="text" class="t" id="kontaktTelefon" ng-model="user.kontaktTelefon" placeholder="Phone Number">
+                <input type="text" class="t" id="kontaktTelefon" ng-model="user.kontaktTelefon" placeholder="Kontakt telefon">
             </div>
             <div class="form-group">
                 <input type="text" class="t" id="email" ng-model="user.email" placeholder="Email">
             </div>
             <div class="form-group">
-                <input type="password" class="t" id="pwd" ng-model="user.pwd" placeholder="Password">
+                <input type="password" class="t" id="pwd" ng-model="user.pwd" placeholder="Lozinka">
             </div>
+            <h4>Automobil koji ce vozac voziti:</h4>
             <div class="form-group">
-                <input type="number" class="t" id="godina" ng-model="user.godina" placeholder="Godina">
+                <input type="number" class="t" id="godina" ng-model="user.godina" placeholder="Godiste">
             </div>
             <div class="form-group">
                 <input type="text" class="t" id="registarskaOznaka" ng-model="user.registarskaOznaka" placeholder="Registarska oznaka">
@@ -48,14 +49,14 @@
 
             <div class="form-group">
                 <select class="t" id="tipVozila" ng-model="user.tipVozila" placeholder="TipVozila">
-                    <option value="" disabled>Choose type</option>
+                    <option value="" disabled>Odaberite tip</option>
                     <option value="putnicki">Putnicki</option>
                     <option value="kombi">Kombi</option>
                 </select>
                 <!--<input type="text" class="t" id="pol" ng-model="user.pol" placeholder="Pol">-->
             </div>
             <br>
-            <button type="submit" class="btn button-success" ng-click="RegisterDriver(user)">Register</button>
+            <button type="submit" class="btn button-success" ng-click="RegisterDriver(user)">Registruj vozaca</button>
         </div>
     </div>
 </div>

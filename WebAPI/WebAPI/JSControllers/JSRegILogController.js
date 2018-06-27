@@ -6,6 +6,7 @@
     function init() {
         console.log('Login controller initialized'); //ispis na konzoli da se inicijalizovao
         $rootScope.Uloga = sessionStorage.getItem("role");
+        $rootScope.RegisterSuccess = "";
     };
 
     init();
@@ -13,59 +14,59 @@
     $scope.RegisterUser = function (user) {
 
         if (user.username == null || user.username == "") {
-            alert('Username field cant be empty!');
+            alert('Polje korsnicko ime mora biti popunjeno!');
             return;
         }
         else if (user.ime == null || user.ime == "") {
-            alert('Name field cant be empty!');
+            alert('Polje ime mora biti popunjeno!');
             return;
         }
         else if (user.prezime == null || user.prezime == "") {
-            alert('Surname field cant be empty !');
+            alert('Polje prezime mora biti popunjeno !');
             return;
         }
         else if (user.pol == null || user.pol == "") {
-            alert('You must choose a gender!');
+            alert('Morate odabrati pol!');
             return;
         }
         else if (user.jmbg == null || user.jmbg == "") {
-            alert('Jmbg field cant be empty!');
+            alert('Polje jmbg mora biti popunjeno!');
             return;
         }
         else if (user.jmbg.match(/[a-z]/i)) {
-            alert('Jmbg cant contain characters: a-z');
+            alert('Jmbg ne moze da sadrzi karaktere: a-z');
             return;
         }
         else if (user.jmbg.length != 13) {
-            alert('Jmbg must contain 13 numbers');
+            alert('Jmbg mora da sadrzi 13 cifara');
             return;
         }
         else if (user.kontaktTelefon == null || user.kontaktTelefon == "") {
-            alert('Phone number cant be empty!');
+            alert('Polje kontakt telefon mora biti popunjeno!');
             return;
         }
 
         else if (user.kontaktTelefon.match(/[a-z]/i)) {
-            alert('Phone number cant contain characterse a-z');
+            alert('Kontakt telefon ne moze da sadrzi karaktere a-z');
             return;
         }
         else if (user.email == null || user.email == "") {
-            alert('Email field cant be empty!');
+            alert('Polje email mora biti popunjeno!');
             return;
         }
         else if (!user.email.includes('@')) {
-            alert('Email is not valid!');
+            alert('Email email nije validan!');
             return;
         }
         else if (user.pwd == null || user.pwd == "") {
-            alert('Password cant be empty!');
+            alert('Polje lozinka mora biti popunjeno!');
             return;
         }
 
         RegILogFactory.RegisterUser(user).then(function (response) {
             if (response.data == true) {
                 console.log(response.data);
-                $rootScope.RegisterSuccess = "Registration was successful. You can login now.";
+                $rootScope.RegisterSuccess = "Registracija uspesna.Mozete se ulogovati.";
                 $window.location.href = "#!/Login";
             }
             else {
@@ -88,7 +89,7 @@
         RegILogFactory.LoginUser(user).then(function (response) {
             $rootScope.ZapamtiKorisnika = response.data;
             if (response.data == null) {
-                alert("User with the given username and password does not exist.");
+                alert("Korisnik sa unetim korisnickim imenom i lozinkom ne postoji!");
                 return;
             }
             else {
@@ -136,76 +137,76 @@
 
 
         if (user.username == null || user.username == "") {
-            alert('Username field cant be empty!');
+            alert('Polje korsnicko ime mora biti popunjeno!');
             return;
         }
         else if (user.ime == null || user.ime == "") {
-            alert('Name field cant be empty!');
+            alert('Polje ime mora biti popunjeno!');
             return;
         }
         else if (user.prezime == null || user.prezime == "") {
-            alert('Surname field cant be empty !');
+            alert('Polje prezime mora biti popunjeno!');
             return;
         }
         else if (user.pol == null || user.pol == "") {
-            alert('You must choose a gender!');
+            alert('Morate odabrati pol!');
             return;
         }
         else if (user.jmbg == null || user.jmbg == "") {
-            alert('Jmbg field cant be empty!');
+            alert('Polje jmbg mora biti popunjeno!');
             return;
         }
         else if (user.jmbg.match(/[a-z]/i)) {
-            alert('Jmbg cant contain characters: a-z');
+            alert('Jmbg ne moze da sadrzi karaktere: a-z');
             return;
         }
         else if (user.jmbg.length != 13) {
-            alert('Jmbg must contain 13 numbers');
+            alert('Jmbg mora da sadrzi 13 cifara');
             return;
         }
         else if (user.kontaktTelefon == null || user.kontaktTelefon == "") {
-            alert('Phone number cant be empty!');
+            alert('Polje kontakt telefon mora biti popunjeno!');
             return;
         }
 
         else if (user.kontaktTelefon.match(/[a-z]/i)) {
-            alert('Phone number cant contain characterse a-z');
+            alert('Kontakt telefon ne moze da sadrzi karaktere a-z');
             return;
         }
         else if (user.email == null || user.email == "") {
-            alert('Email field cant be empty!');
+            alert('Polje email mora biti popunjeno!');
             return;
         }
         else if (!user.email.includes('@')) {
-            alert('Email is not valid!');
+            alert('Email nije validan!');
             return;
         }
         else if (user.pwd == null || user.pwd == "") {
-            alert('Password cant be empty!');
+            alert('Polje lozinka mora biti popunjeno!');
             return;
         }
         else if (user.godina == null || user.godina == "") {
-            alert('Godina field cant be empty!');
+            alert('Polje godste auta mora biti popunjeno!');
             return;
         }
         
         else if (user.registarskaOznaka == null || user.registarskaOznaka == "") {
-            alert('Registarska oznaka field cant be empty!');
+            alert('Polje registarska oznaka mora biti popunjeno!');
             return;
         }
         else if (user.tipVozila == null || user.tipVozila == "") {
-            alert('You must choose a type!');
+            alert('Morate odabrati tip automobila!');
             return;
         }
 
         RegILogFactory.RegisterDriver(user).then(function (response) {
             if (response.data == true) {
                 console.log(response.data);
-                $rootScope.RegisterSuccess = "Registration was successful. You can login now.";
+               // $rootScope.RegisterSuccess = "Registration was successful. You can login now.";
                 $window.location.href = "#!/MyHome";
             }
             else {
-                alert("Username already exists, try again.");
+                alert("Korisnicko ime postoji, pokusajte ponovo.");
             }
         });
     };

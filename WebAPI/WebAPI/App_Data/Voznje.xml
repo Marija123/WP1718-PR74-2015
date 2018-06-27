@@ -1015,4 +1015,765 @@
       <Ocena>0</Ocena>
     </Kom>
   </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 12:45:01</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>9.421871</Xkoordinate>
+      <Ykoordinate>-70.448570</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Antarctica</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>barb</KorisnickoIme>
+      <Lozinka>bakikiba</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segr</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <KorisnickoIme>admin</KorisnickoIme>
+      <Lozinka>admin</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>rina</KorisnickoIme>
+      <Lozinka>rina</Lozinka>
+      <Ime>Irina</Ime>
+      <Prezime>Jovanovic</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567891234</JMBG>
+      <KontaktTelefon>064789153</KontaktTelefon>
+      <Email>rina@gmail.com</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate>19.848948</Xkoordinate>
+        <Ykoordinate>45.245165</Ykoordinate>
+        <Adr>
+          <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>rina</UsernameVozaca>
+        <GodisteAutomobila>1369</GodisteAutomobila>
+        <BrojRegistarskeOzn>nsjwi</BrojRegistarskeOzn>
+        <BrojTaksiVozila>3</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Neuspesna</Stat>
+    <Kom>
+      <Datum>2018-06-27T16:35:50</Datum>
+      <KorKomUsername>rina</KorKomUsername>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 15:51:25</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>17.015612</Xkoordinate>
+      <Ykoordinate>25.419461</Ykoordinate>
+      <Adr>
+        <FormatAdrese>واو الناموس Waw al Namus, مرزق, ليبيا</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 15:55:13</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>45.703125</Xkoordinate>
+      <Ykoordinate>56.326282</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Михайловский сельсовет, Воротынский район, Нижегородская область, Приволжский федеральный округ, 606273, РФ</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Opis>Lepa voznja</Opis>
+      <Datum>2018-06-27T15:57:12</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 15:57:25</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>-65.109379</Xkoordinate>
+      <Ykoordinate>-32.546813</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Chacabuco, San Luis, Argentina</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>kombi</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 15:57:44</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>30.515621</Xkoordinate>
+      <Ykoordinate>49.014814</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Чорна Кам’янка, Маньківський район, Черкаська область, 20122, Україна</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 15:59:32</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>45.421858</Xkoordinate>
+      <Ykoordinate>62.333289</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Двинской, Верхнетоемский район, Архангельская область, Северо-Западный федеральный округ, РФ</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:01:21</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>2.671866</Xkoordinate>
+      <Ykoordinate>47.517186</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Allée du Verdois, Pierrefitte-ès-Bois, Montargis, Loiret, Centre-Val de Loire, France métropolitaine, 45360, France</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Opis>Imam drugih obaveza</Opis>
+      <Datum>2018-06-27T16:03:40</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:03:58</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>-61.453142</Xkoordinate>
+      <Ykoordinate>-27.434194</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Municipio de General Capdevila, Departamento Doce de Octubre, CCO, Argentina</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:04:22</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>54.984362</Xkoordinate>
+      <Ykoordinate>57.098063</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Новопутская улица, Еловское сельское поселение, Еловский район, Пермский край, Приволжский федеральный округ, 618170, РФ</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>kombi</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Otkazana</Stat>
+    <Kom>
+      <Opis>Iskrslo nesto drugo</Opis>
+      <Datum>2018-06-27T16:04:39</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:08:28</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>46.265616</Xkoordinate>
+      <Ykoordinate>55.218999</Ykoordinate>
+      <Adr>
+        <FormatAdrese>97К-011, Мочкасы, Порецкий район, Чувашия, Приволжский федеральный округ, РФ</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Kreirana_NaCekanju</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:23:46</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>-58.359364</Xkoordinate>
+      <Ykoordinate>-4.635564</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Osório da Fonseca, Maués, Microrregião de Parintins, Mesorregião Centro Amazonense, AM, Região Norte, 69190-000, Brasil</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Kreirana_NaCekanju</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:29:08</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>19.687489</Xkoordinate>
+      <Ykoordinate>-15.487565</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Cuito Cuanavale, Cuando Cubango, Angola</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <KorisnickoIme>admin</KorisnickoIme>
+      <Lozinka>admin</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Kreirana_NaCekanju</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:36:23</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>5.484377</Xkoordinate>
+      <Ykoordinate>30.872052</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Hassi Messaoud, Daïra Hassi Messaoud, Ouargla ورقلة, ⵍⵣⵣⴰⵢⴻⵔ الجزائر</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <KorisnickoIme>deki</KorisnickoIme>
+      <Lozinka>deki</Lozinka>
+      <Ime>Dejan</Ime>
+      <Prezime>Stajic</Prezime>
+      <Pol>Musko</Pol>
+      <JMBG>0510994715104</JMBG>
+      <KontaktTelefon>064268983</KontaktTelefon>
+      <Email>dejanstajic@gmail.com</Email>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Zauzet>false</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Kreirana_NaCekanju</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
+  <Voznja>
+    <DatumIVremePorudzbine>Wednesday, 27 June, 2018 16:37:47</DatumIVremePorudzbine>
+    <LokacijaZaDolazak>
+      <Xkoordinate>62.718748</Xkoordinate>
+      <Ykoordinate>54.856374</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Субботинский сельсовет, Сафакулевский район, Курганская область, Уральский федеральный округ, РФ</FormatAdrese>
+      </Adr>
+    </LokacijaZaDolazak>
+    <TipAuta>putnicki</TipAuta>
+    <Mus>
+      <Ime />
+      <Prezime />
+      <Pol>Musko</Pol>
+      <Uloga>Musterija</Uloga>
+      <KorisnikVoznje />
+      <Blokiran>false</Blokiran>
+    </Mus>
+    <Odrediste>
+      <Xkoordinate />
+      <Ykoordinate />
+      <Adr />
+    </Odrediste>
+    <Disp>
+      <KorisnickoIme>admin</KorisnickoIme>
+      <Lozinka>admin</Lozinka>
+      <Ime>Barbara</Ime>
+      <Prezime>Segrt</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567890123</JMBG>
+      <KontaktTelefon>04823875</KontaktTelefon>
+      <Email>barbi@barbi</Email>
+      <Uloga>Dispecer</Uloga>
+      <KorisnikVoznje />
+    </Disp>
+    <Voz>
+      <KorisnickoIme>rina</KorisnickoIme>
+      <Lozinka>rina</Lozinka>
+      <Ime>Irina</Ime>
+      <Prezime>Jovanovic</Prezime>
+      <Pol>Zensko</Pol>
+      <JMBG>1234567891234</JMBG>
+      <KontaktTelefon>064789153</KontaktTelefon>
+      <Email>rina@gmail.com</Email>
+      <Uloga>Vozac</Uloga>
+      <KorisnikVoznje />
+      <Lok>
+        <Xkoordinate>19.848948</Xkoordinate>
+        <Ykoordinate>45.245165</Ykoordinate>
+        <Adr>
+          <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+        </Adr>
+      </Lok>
+      <Auto>
+        <UsernameVozaca>rina</UsernameVozaca>
+        <GodisteAutomobila>1369</GodisteAutomobila>
+        <BrojRegistarskeOzn>nsjwi</BrojRegistarskeOzn>
+        <BrojTaksiVozila>3</BrojTaksiVozila>
+        <TA>putnicki</TA>
+      </Auto>
+      <Zauzet>true</Zauzet>
+      <Blokiran>false</Blokiran>
+    </Voz>
+    <Iznos>0</Iznos>
+    <Stat>Formirana</Stat>
+    <Kom>
+      <Datum>0001-01-01T00:00:00</Datum>
+      <Ocena>0</Ocena>
+    </Kom>
+  </Voznja>
 </ArrayOfVoznja>

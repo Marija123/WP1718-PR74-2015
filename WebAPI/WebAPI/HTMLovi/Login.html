@@ -1,24 +1,24 @@
 ﻿<br />
 <br />
 <br />
-<div ng-show="loggedin"><h3>Vec ste ulogovani!</h3></div>
+<div class="poruka" ng-show="loggedin"><h3>Vec ste ulogovani!</h3></div>
 <div ng-show="!loggedin">
     <div class="porukaORegistraciji">
         <h4 class="success">{{RegisterSuccess}}</h4>
     </div>
     <div class="loginWindow">
         <div class="header container">
-            <h2>Login</h2>
+            <h2>Uloguj se</h2>
         </div>
         <div class="body">
             <div class="form-group">
-                <input type="text" class="t" id="username" ng-model="user.username" placeholder="Username">
+                <input type="text" class="t" id="username" ng-model="user.username" placeholder="Korisnicko ime">
             </div>
             <div class="form-group">
-                <input type="password" class="t" id="pwd" ng-model="user.pwd" placeholder="Password">
+                <input type="password" class="t" id="pwd" ng-model="user.pwd" placeholder="Lozinka">
             </div>
             <br>
-            <button type="submit" class="btn button-success" ng-click="LoginUser(user)">Login</button>
+            <button type="submit" class="btn button-success" ng-click="LoginUser(user)">Uloguj se</button>
         </div>
     </div>
 </div>

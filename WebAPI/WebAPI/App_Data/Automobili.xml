@@ -14,4 +14,11 @@
     <BrojTaksiVozila>2</BrojTaksiVozila>
     <TA>kombi</TA>
   </Automobil>
+  <Automobil>
+    <UsernameVozaca>rina</UsernameVozaca>
+    <GodisteAutomobila>1369</GodisteAutomobila>
+    <BrojRegistarskeOzn>nsjwi</BrojRegistarskeOzn>
+    <BrojTaksiVozila>3</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
 </ArrayOfAutomobil>

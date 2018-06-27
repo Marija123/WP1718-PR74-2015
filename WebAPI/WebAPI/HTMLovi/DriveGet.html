@@ -6,22 +6,17 @@
 </div>
 <div ng-show="loggedin && user.role!=2">
     <div class="container-fluid" ng-show="loggedin">
-        <div class="registerWindow" >
+        <div class="DodavanjeVoznji">
             <div class="header">
-                <h2>Drive</h2>
+                <h2>Voznja</h2>
             </div>
             <div class="body" ng-show="!najbliziVozaci">
-                <label>Add your location: </label>
+                <label>Dodajte lokaciju: </label>
                 <div>
 
                     <div id="map" class="map"></div>
                     <div>
-                        <!--<input id="lon" type="number" step="0.000001">-->
-                        <!--<input id="lat" type="number" step="0.000001">-->
-                        <!--<button id="reversegeocoding" type=button name="button">Reverse geocode manually</button>
-                        <span id="address">
 
-                        </span>-->
                     </div>
                     <script>
                         var map = new ol.Map({
@@ -47,6 +42,9 @@
                             var coordinate = ol.proj.toLonLat(e.coordinate).map(function (val) {
                                 return val.toFixed(6);
                             });
+                            document.getElementById('lon').innerHTML = coordinate[0];
+                            document.getElementById('lat').innerHTML = coordinate[1];
+
                             var lon = document.getElementById('lon').value = coordinate[0];
                             var lat = document.getElementById('lat').value = coordinate[1];
                             simpleReverseGeocoding(lon, lat);
@@ -56,46 +54,53 @@
 
 
                 </div>
+                <br />
+                <br />
                 <div class="form-group">
-                    <input id="lon" type="number" step="0.000001">
+                    <b>X koordinate:</b> &nbsp; <span id="lon"></span>
+                    <!--<input id="lon" type="number" step="0.000001" >-->
                 </div>
                 <div class="form-group">
-                    <input id="lat" type="number" step="0.000001">
+                    <b>Y koordinate: </b> &nbsp; <span id="lat"></span>
+                    <!--<input id="lat" type="number" step="0.000001">-->
                 </div>
                 <div class="form-group">
-                    <span id="address">
+                    <b> Adresa: </b>&nbsp;<span id="address">
 
                     </span>
 
                 </div>
                 <div class="form-group">
-                    <select class="t" id="tipVoznje" ng-model="drive.tipAuta" placeholder="CarType">
-                        <option value="" disabled>Choose a car type</option>
-                        <option value="0"> Passanger car</option>
-                        <option value="1">Van</option>
+                    <select class="t" id="tipVoznje" ng-model="drive.tipAuta" placeholder="TipAuta">
+                        <option value="" disabled>Odaberite tip auta</option>
+                        <option value="0"> Putnicko</option>
+                        <option value="1">Kombi</option>
                     </select>
                 </div>
                 <br>
 
-                <button ng-show="user.role==0 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveCustomer(drive)">Add a drive</button>
-                <button ng-show="user.role==1 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveDispecer(drive)">Add a drive disp</button>
+                <button ng-show="user.role==0 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveCustomer(drive)">Dodaj voznju</button>
+                <button ng-show="user.role==1 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveDispecer(drive)">Dodaj voznju</button>
             </div>
-        </div>
-        <div class="form-group">
-            <div ng-show="!Prazna">
-                <div ng-show="user.role==1 && najbliziVozaci">
 
-                    <select id="slobodni" ng-model="noviModel.SelektovaniVozac">
-                        <option ng-repeat="kor in ListaNajblizih" value="{{kor}}">{{kor}}</option>
-                    </select>
-                    <button type="submit" ng-click="DodajVoznjuDisp(noviModel)">Dodaj ga</button>
+            <div class="form-group">
+                <div ng-show="!Prazna">
+                    <div ng-show="user.role==1 && najbliziVozaci">
+                        <h4>Najblizi vozaci: </h4>
+                        <select id="slobodni" ng-model="noviModel.SelektovaniVozac">
+                            <option class="inputZaVozaca" ng-repeat="kor in ListaNajblizih" value="{{kor}}">{{kor}}</option>
+                        </select>
+                        <button class="dugme" type="submit" ng-click="DodajVoznjuDisp(noviModel)">Dodaj ga</button>
+                    </div>
+
+                </div>
+                <div ng-show="Prazna">
+                    <h4>Nema slobodnih vozaca. Voznja ce biti dodata bez vozaca sa statusom 'Kreirana-Na cekanju'.</h4>
                 </div>
 
             </div>
-            <div ng-show="Prazna">
-                <p>Nema slobodnih vozaca. Voznja ce biti dodata bez vozaca sa statusom 'Kreirana-Na cekanju'.</p>
-            </div>
 
         </div>
+       
     </div>
 </div>
