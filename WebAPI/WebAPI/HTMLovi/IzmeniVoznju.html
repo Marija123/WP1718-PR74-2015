@@ -3,70 +3,82 @@
 <br />
 <div ng-show="!loggedin || user.role!=0 || !DozvolaZaIzmenuVoznjeKorisniku"><h3>Ova akcija nije dostupna</h3></div>
 <div ng-show="loggedin && user.role==0 && DozvolaZaIzmenuVoznjeKorisniku">
-    <div>
+    
+        <div class="DodavanjeVoznji">
+            <div class="header">
+                <h2>Izmeni voznju</h2>
+            </div>
+            <div class="body">
 
-        <div id="map" class="map"></div>
+                <div id="map" class="map"></div>
 
-        <script>
-            var map = new ol.Map({
-                layers: [
-                    new ol.layer.Tile({
-                        source: new ol.source.OSM()
-                    })
-                ],
-                target: 'map',
-                view: new ol.View({
-                    center: [0, 0],
-                    zoom: 2
-                })
-            });
-            function simpleReverseGeocoding(lon, lat) {
-                fetch('https://cors.io/?http://nominatim.openstreetmap.org/reverse?format=json&lon=' + lon + '&lat=' + lat).then(function (response) {
-                    return response.json();
-                }).then(function (json) {
-                    document.getElementById('address').innerHTML = json.display_name;
-                })
-            }
-            map.on('click', function (e) {
-                var coordinate = ol.proj.toLonLat(e.coordinate).map(function (val) {
-                    return val.toFixed(6);
-                });
-                var lon = document.getElementById('lon').value = coordinate[0];
-                var lat = document.getElementById('lat').value = coordinate[1];
-                simpleReverseGeocoding(lon, lat);
-            });
-                
-        </script>
+                <script>
+                    var map = new ol.Map({
+                        layers: [
+                            new ol.layer.Tile({
+                                source: new ol.source.OSM()
+                            })
+                        ],
+                        target: 'map',
+                        view: new ol.View({
+                            center: [0, 0],
+                            zoom: 2
+                        })
+                    });
+                    function simpleReverseGeocoding(lon, lat) {
+                        fetch('https://cors.io/?http://nominatim.openstreetmap.org/reverse?format=json&lon=' + lon + '&lat=' + lat).then(function (response) {
+                            return response.json();
+                        }).then(function (json) {
+                            document.getElementById('address').innerHTML = json.display_name;
+                        })
+                    }
+                    map.on('click', function (e) {
+                        var coordinate = ol.proj.toLonLat(e.coordinate).map(function (val) {
+                            return val.toFixed(6);
+                        });
+
+                        document.getElementById('lon').innerHTML = coordinate[0];
+                        document.getElementById('lat').innerHTML = coordinate[1];
+
+                        var lon = document.getElementById('lon').value = coordinate[0];
+                        var lat = document.getElementById('lat').value = coordinate[1];
+                        simpleReverseGeocoding(lon, lat);
+                    });
+
+                </script>
 
 
-    </div>
-    <div>
-        <label>Staro odrediste:</label>
-        <p>{{VoznjaZaIzmenu.LokacijaZaDolazak.Adr.FormatAdrese}}</p>
-        <p>{{VoznjaZaIzmenu.LokacijaZaDolazak.Xkoordinate}} , {{VoznjaZaIzmenu.LokacijaZaDolazak.Ykoordinate}}</p>
-        <p ng-show="VoznjaZaIzmenu.TipAuta == 0">Tip automobila: putnicki</p>
-        <p ng-show="VoznjaZaIzmenu.TipAuta == 1">Tip automobila: kombi</p>
+            </div>
+            <div>
+                <label>Staro odrediste:</label>
+                <p>{{VoznjaZaIzmenu.LokacijaZaDolazak.Adr.FormatAdrese}}</p>
+                <p>{{VoznjaZaIzmenu.LokacijaZaDolazak.Xkoordinate}} , {{VoznjaZaIzmenu.LokacijaZaDolazak.Ykoordinate}}</p>
+                <p ng-show="VoznjaZaIzmenu.TipAuta == 0">Tip automobila: putnicki</p>
+                <p ng-show="VoznjaZaIzmenu.TipAuta == 1">Tip automobila: kombi</p>
+                <br />
+                <div class="form-group">
+                    <b>X koordinate:</b> &nbsp; <span id="lon"></span>
+                    <!--<input id="lon" type="number" step="0.000001">-->
+                </div>
+                <div class="form-group">
+                    <b>Y koordinate: </b> &nbsp; <span id="lat"></span>
+                    <!--<input id="lat" type="number" step="0.000001">-->
+                </div>
+                <div class="form-group">
+                    <b> Adresa: </b>&nbsp; <span id="address">
 
-        <div class="form-group">
-            <input id="lon" type="number" step="0.000001">
+                    </span>
+
+                </div>
+                <div class="form-group">
+                    <select class="t" id="tipAuta" ng-model="drive.tipAuta" placeholder="CarType">
+                        <option value="" disabled>Izaberite tip auta</option>
+                        <option value="0"> Putnicki</option>
+                        <option value="1">Kombi</option>
+                    </select>
+                </div>
+                <br>
+                <button ng-show="user.role==0" type="submit" class="btn button-success" ng-click="Izmeni(drive)">Izmeni voznju</button>
+            </div>
         </div>
-        <div class="form-group">
-            <input id="lat" type="number" step="0.000001">
-        </div>
-        <div class="form-group">
-            <span id="address">
-
-            </span>
-
-        </div>
-        <div class="form-group">
-            <select class="t" id="tipVoznje" ng-model="drive.tipAuta" placeholder="CarType">
-                <option value="" disabled>Choose a car type</option>
-                <option value="0"> Passanger car</option>
-                <option value="1">Van</option>
-            </select>
-        </div>
-        <br>
-        <button ng-show="user.role==0" type="submit" class="btn button-success" ng-click="Izmeni(drivee)">Izmeni voznju</button>
-    </div>
-</div>
+   </div>

@@ -9,9 +9,20 @@
         <h3>Voznja nije obradjena, nema slobodnih vozaca.</h3>
     </div>
     <div class="form-group" ng-show="!NemaVozaca">
-        <select id="slobodni" ng-model="noviModel.SelektovaniVozac">
-            <option ng-repeat="kor in PonudjeniVozaci" value="{{kor}}">{{kor}}</option>
-        </select>
-        <button type="submit" ng-click="ObradiVoznjuDisp(noviModel)">Obradi</button>
+        <table align="center">
+            <tr>
+                <td align="center" colspan="2"><h3>Slobodni vozaci koji ispunjavaju zahteve:</h3></td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <select id="slobodni" ng-model="noviModel.SelektovaniVozac">
+                        <option class="inputZaVozaca" ng-repeat="kor in PonudjeniVozaci" value="{{kor}}">{{kor}}</option>
+                    </select>
+                </td>
+                <td>
+                    <button class="dugme" type="submit" ng-click="ObradiVoznjuDisp(noviModel)">Obradi</button>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>

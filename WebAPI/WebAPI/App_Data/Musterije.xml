@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfMusterija xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Musterija>
-    <KorisnickoIme>barb</KorisnickoIme>
+    <KorisnickoIme>barbi</KorisnickoIme>
     <Lozinka>bakikiba</Lozinka>
     <Ime>Barbara</Ime>
     <Prezime>Segr</Prezime>
     <Pol>Zensko</Pol>
     <JMBG>1234567890123</JMBG>
     <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>barbi@barbi</Email>
+    <Email>barbi@gmail.com</Email>
     <Uloga>Musterija</Uloga>
     <KorisnikVoznje />
     <Blokiran>false</Blokiran>
@@ -25,5 +25,31 @@
     <Uloga>Musterija</Uloga>
     <KorisnikVoznje />
     <Blokiran>false</Blokiran>
+  </Musterija>
+  <Musterija>
+    <KorisnickoIme>joca</KorisnickoIme>
+    <Lozinka>joca</Lozinka>
+    <Ime>Jovan</Ime>
+    <Prezime>Gajin</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>1105996853214</JMBG>
+    <KontaktTelefon>062784112</KontaktTelefon>
+    <Email>jovangajin@gmail.com</Email>
+    <Uloga>Musterija</Uloga>
+    <KorisnikVoznje />
+    <Blokiran>false</Blokiran>
+  </Musterija>
+  <Musterija>
+    <KorisnickoIme>somi</KorisnickoIme>
+    <Lozinka>somi</Lozinka>
+    <Ime>Milos</Ime>
+    <Prezime>Nikolic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>3006986532124</JMBG>
+    <KontaktTelefon>062147365</KontaktTelefon>
+    <Email>milossomi@yahoo.com</Email>
+    <Uloga>Musterija</Uloga>
+    <KorisnikVoznje />
+    <Blokiran>true</Blokiran>
   </Musterija>
 </ArrayOfMusterija>

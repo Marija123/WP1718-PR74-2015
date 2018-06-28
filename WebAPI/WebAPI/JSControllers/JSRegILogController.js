@@ -1,10 +1,10 @@
 ﻿WebAPI.controller('JSRegILogController', function ($scope, RegILogFactory, $window, $rootScope) {
 
-    $scope.user = {}; //inicijalizacija na prazno
+    $scope.user = {}; 
 
 
     function init() {
-        console.log('Login controller initialized'); //ispis na konzoli da se inicijalizovao
+        console.log('Login controller initialized'); 
         $rootScope.Uloga = sessionStorage.getItem("role");
         $rootScope.RegisterSuccess = "";
     };
@@ -70,18 +70,18 @@
                 $window.location.href = "#!/Login";
             }
             else {
-                alert("Username already exists, try again.");
+                alert("Korisnicko ime postoji, pokusajte ponovo.");
             }
         });
     };
 
     $scope.LoginUser = function (user) {
         if (user.username == null || user.username == "") {
-            alert('Username cant be empty!');
+            alert('Morate popuniti korisnicko ime!');
             return;
         }
         else if (user.pwd == null || user.pwd == "") {
-            alert('Password cant be empty!');
+            alert('Morate popuniti lozinku!');
             return;
         }
         
@@ -99,10 +99,7 @@
                         alert('Blokirani ste!');
                         return;
                     }
-                   
-                
-                //    }
-                //});
+              
 
                 console.log(response);
                 document.cookie = "user=" + JSON.stringify({
@@ -202,11 +199,10 @@
         RegILogFactory.RegisterDriver(user).then(function (response) {
             if (response.data == true) {
                 console.log(response.data);
-               // $rootScope.RegisterSuccess = "Registration was successful. You can login now.";
                 $window.location.href = "#!/MyHome";
             }
             else {
-                alert("Korisnicko ime postoji, pokusajte ponovo.");
+                alert("Registarska oznaka auta postoji ili je korisnicko ime zauzeto. Pokusajte ponovo!");
             }
         });
     };

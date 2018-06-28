@@ -5,36 +5,9 @@
 <head>
     <title>Taxi Service</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    @*<link rel="stylesheet" href="../../css/css_stil.css" type="text/css" />
-        <link rel="stylesheet" href="../../css/animate-custom.css" type="text/css" />
-        <link rel="stylesheet" href="../../css/st.css" type="text/css" />*@
-
     <link rel="stylesheet" href="../../css/app.css" type="text/css" />
-
-    @*<link rel="stylesheet" href="../../css/demo.css" type="text/css" />
-        <link rel="stylesheet" href="../../css/style.css" type="text/css" />
-        <link rel="stylesheet" href="../../css/animate-custom.css" type="text/css" />*@
-
-    @*<link rel="stylesheet" href="../../css/css_stil.css" type="text/css" />*@
-
-    @*<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1526040296" />
-        <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
-        <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
-        <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
-        <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>*@
-
-
     <link rel="shortcut icon" href="../favicon.ico">
 
-    @*<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
-        <style>
-            .map {
-                height: 400px;
-                width: 100%;
-            }
-        </style>*@
 
     <meta charset=utf-8>
     <meta name=description content="">
@@ -73,15 +46,15 @@
                 <div class="headercolor collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                    
                     <ul class="nav navbar-nav">
-                        <li ng-show="loggedin && !moraKomentar && !moraKomentarKorisnik" ng-class="checkActive('/MyHome')"><a href="#!/"><i class="ion ion-android-home"></i> Home</a></li>
-                        <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik" ng-class="checkActive('/Edit')"><a href="#!/Edit"><i class="ion ion-person"></i>Edit Profile</a></li>
-                        <li ng-show="loggedin && user.role==1" ng-class="checkActive('/BlockUsers')"><a href="#!/BlockUsers"><i class="ion ion-person"></i>Block Users</a></li>
+                        <li ng-show="loggedin && !moraKomentar && !moraKomentarKorisnik" ng-class="checkActive('/MyHome')"><a href="#!/"><i class="ion ion-android-home"></i> Pocetna</a></li>
+                        <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik" ng-class="checkActive('/Edit')"><a href="#!/Edit"><i class="ion ion-person"></i>Izmeni profil</a></li>
+                        <li ng-show="loggedin && user.role==1" ng-class="checkActive('/BlockUsers')"><a href="#!/BlockUsers"><i class="ion ion-person"></i>Blokiranje</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li ng-show="!loggedin" ng-class="checkActive('/Login')"><a href="#!/Login">Login</a></li>
-                        <li ng-show="!loggedin" ng-class="checkActive('/Register')"><a href="#!/Register">Register</a></li>
+                        <li ng-show="!loggedin" ng-class="checkActive('/Login')"><a href="#!/Login">Uloguj se</a></li>
+                        <li ng-show="!loggedin" ng-class="checkActive('/Register')"><a href="#!/Register">Registruj se</a></li>
                         <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik" ng-class="checkActive('/Profile')"><a href="#!/Profile"><i class="ion ion-person"></i> {{user.nameSurname}}</a></li>
-                        <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik"><a href ng-click="Logout()"><i class="ion ion-log-out"></i> Logout</a></li>
+                        <li ng-show="loggedin  && !moraKomentar  && !moraKomentarKorisnik"><a href ng-click="Logout()"><i class="ion ion-log-out"></i> Izloguj se</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse    class="glyphicon glyphicon-user"   class="glyphicon glyphicon-log-in" -->
@@ -95,11 +68,7 @@
     <script src="../../Scripts/angular.min.js"></script>
     <script src="../../Scripts/angular-route.min.js"></script>
 
-    @*<script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>*@
+  
 
     <script src="../../Factories/PageHelp.js"></script>
     <script src="../../JSControllers/MainController.js"></script>

@@ -187,7 +187,7 @@ namespace WebAPI.Controllers
             List<Tuple<Point, string>> prosledi = new List<Tuple<Point, string>>();
             foreach (Vozac v in vozaci)
             {
-                if (!v.Zauzet && v.Auto.TA == (Enums.TipAutomobila)int.Parse(k.tipAuta))
+                if (!v.Zauzet && v.Auto.TA == (Enums.TipAutomobila)int.Parse(k.tipAuta) && !v.Blokiran)
                 {
                     Point pos = new Point(Double.Parse(v.Lok.Xkoordinate), Double.Parse(v.Lok.Ykoordinate));
                     prosledi.Add(new Tuple<Point, string>(pos, v.KorisnickoIme));
@@ -232,11 +232,8 @@ namespace WebAPI.Controllers
                 ret = nk.OrderByDistance(prosledi, new Point(Double.Parse(k.XCoord), Double.Parse(k.YCoord)));
 
             }
-
-
+            
             return ret;
-
-
         }
 
         [HttpPost]
@@ -349,12 +346,12 @@ namespace WebAPI.Controllers
         [ActionName("Pretraga")]
         public List<Voznja> Pretraga([FromBody]PretraziModel k)
         {
-            //string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+           
             if (k.Drivess == null)
             {
                 return new List<Voznja>();
             }
-            //List<Voznja> listaDrives = xml.ReadDrives(ss);
+           
             List<Voznja> listaDrives = k.Drivess;
             List<Voznja> listaDrives1 = k.Drivess;
 
@@ -404,9 +401,6 @@ namespace WebAPI.Controllers
                 }
 
             }
-
-
-
             return listaDrives1;
         }
 
@@ -465,9 +459,7 @@ namespace WebAPI.Controllers
             }
             if (g)
             {
-                //int cCounter = 0;
-                //int aCounter = 0;
-                //int dCounter = 0;
+               
                 foreach (Musterija u in users)
                 {
                     if (u.KorisnickoIme == k.OldUsername)
@@ -478,7 +470,7 @@ namespace WebAPI.Controllers
                         {
                             u.Lozinka = k.Password;
                         }
-                        u.Lozinka = k.Password;
+                     
                         u.Ime = k.Ime;
                         u.Prezime = k.Prezime;
                         if (k.Pol == "1")
@@ -512,7 +504,7 @@ namespace WebAPI.Controllers
                         {
                             u.Lozinka = k.Password;
                         }
-                        u.Lozinka = k.Password;
+                      
                         u.Ime = k.Ime;
                         u.Prezime = k.Prezime;
                         if (k.Pol == "Zensko" || k.Pol == "1")
@@ -652,12 +644,12 @@ namespace WebAPI.Controllers
         [ActionName("GetFilterUser")]
         public List<Voznja> GetFilterUser([FromBody]KorisnikFilter k)
         {
-            //string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+            
             if (k.Drivess == null)
             {
                 return new List<Voznja>();
             }
-            //List<Voznja> listaDrives = xml.ReadDrives(ss);
+           
             List<Voznja> listaDrives = k.Drivess;
             List<Voznja> listaDrives1 = new List<Voznja>();
             if (k.Status == null || k.Status == "")
@@ -680,12 +672,12 @@ namespace WebAPI.Controllers
         [ActionName("GetFilterUserAll")]
         public List<Voznja> GetFilterUserAll([FromBody]KorisnikFilter k)
         {
-            //string ss = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/Voznje.xml");
+           
             if (k.Drivess == null)
             {
                 return new List<Voznja>();
             }
-            //List<Voznja> listaDrives = xml.ReadDrives(ss);
+           
             List<Voznja> listaDrives = k.Drivess;
             List<Voznja> listaDrives1 = new List<Voznja>();
 
@@ -778,7 +770,7 @@ namespace WebAPI.Controllers
                     v.Kom.Datum = DateTime.Parse(String.Format("{0:F}", DateTime.Now));
                     v.Kom.Opis = k.KomOpis;
                     v.Kom.Ocena = Int32.Parse(k.KomOcena);
-                    v.Kom.KorKomUsername = k.Voz.Kom.KorKomUsername;
+                    v.Kom.KorKomUsername = k.Voz.Mus.KorisnickoIme;
                     ret = true;
                     break;
                 }
@@ -858,7 +850,7 @@ namespace WebAPI.Controllers
             List<Tuple<Point, string>> prosledi = new List<Tuple<Point, string>>();
             foreach (Vozac v in lv)
             {
-                if (!v.Zauzet && v.Auto.TA == k.Voz.TipAuta)
+                if (!v.Zauzet && v.Auto.TA == k.Voz.TipAuta && !v.Blokiran)
                 {
                     Point pos = new Point(Double.Parse(v.Lok.Xkoordinate), Double.Parse(v.Lok.Ykoordinate));
                     prosledi.Add(new Tuple<Point, string>(pos, v.KorisnickoIme));
@@ -878,59 +870,11 @@ namespace WebAPI.Controllers
                 ret = nk.OrderByDistance(prosledi, new Point(Double.Parse(k.Voz.LokacijaZaDolazak.Xkoordinate), Double.Parse(k.Voz.LokacijaZaDolazak.Ykoordinate)));
 
             }
-
-
+            
             return ret;
         }
 
 
-
-        //List<Voznja> retL = k.ListaVoznji;
-
-        //    Dispecer dispe = new Dispecer();
-
-        //    foreach (Dispecer d in dispi)
-        //    {
-        //        if (d.KorisnickoIme == k.Username)
-        //        {
-        //            dispe = d;
-        //        }
-        //    }
-
-
-        //    if (nasao)
-        //    {
-        //        foreach (Voznja v in lista)
-        //        {
-        //            if ((v.Mus.KorisnickoIme == k.Voznj.Mus.KorisnickoIme || v.Disp.KorisnickoIme == k.Voznj.Disp.KorisnickoIme) && DateTime.Parse(v.DatumIVremePorudzbine) == DateTime.Parse(k.Voznj.DatumIVremePorudzbine))
-        //            {
-
-        //                v.Stat = Enums.StatusVoznje.Obradjena;
-
-        //                v.Voz = vozacsl;
-        //                v.Disp = dispe;
-
-        //                break;
-
-        //            }
-        //        }
-
-        //        foreach (Voznja vvv in retL)
-        //        {
-        //            if ((vvv.Mus.KorisnickoIme == k.Voznj.Mus.KorisnickoIme || vvv.Disp.KorisnickoIme == k.Voznj.Disp.KorisnickoIme) && DateTime.Parse(vvv.DatumIVremePorudzbine) == DateTime.Parse(k.Voznj.DatumIVremePorudzbine))
-        //            {
-        //                vvv.Stat = Enums.StatusVoznje.Obradjena;
-        //                vvv.Disp = dispe;
-        //                vvv.Voz = vozacsl;
-        //            }
-        //        }
-        //        xml.WriteDrives(lista, ss);
-        //        xml.WriteDrivers(lv, ss1);
-
-        //    }
-        //    return retL;
-
-        //}
         [HttpPost]
         [ActionName("PreuzmiVoznju")]
         public List<Voznja> PreuzmiVoznju([FromBody]ModelZaObradiVoznju k)
@@ -982,7 +926,6 @@ namespace WebAPI.Controllers
                 xml.WriteDrives(lista, ss);
                 xml.WriteDrivers(lv, ss1);
             }
-
 
             return retL;
         }
@@ -1126,8 +1069,6 @@ namespace WebAPI.Controllers
                 if (DateTime.Parse(u.DatumIVremePorudzbine) == DateTime.Parse(k.Datum) && u.Mus.KorisnickoIme == k.korisnicko)
                 {
 
-                    //Adresa a = new Adresa(k.Street);
-                    //Lokacija l = new Lokacija(k.XCoord, k.YCoord, a);
                     u.LokacijaZaDolazak.Xkoordinate = k.XCoord;
                     u.LokacijaZaDolazak.Ykoordinate = k.YCoord;
                     u.LokacijaZaDolazak.Adr.FormatAdrese = k.Street;

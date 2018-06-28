@@ -3,93 +3,110 @@
 <br />
 <div ng-show="!loggedin || user.role!=2 || !DozvolaZaZavrsenuVoznju"><h3>Nije vam dozvoljena ova akcija</h3></div>
 <div ng-show="loggedin && user.role==2 && DozvolaZaZavrsenuVoznju">
-    <button type="submit" ng-click="UspesnaVoznja()">Uspesna</button>
-    <button type="submit" ng-click="NeuspesnaVoznja()">Nesupesna</button>
+    <table align="center" class="sirinaTabele"> 
+        <tr>
+            <td width="50%">
+                <button class="button-success" type="submit" ng-click="UspesnaVoznja()">Uspesna</button>
+            </td>
+            <td width="50%">
+                <button class="button-success" type="submit" ng-click="NeuspesnaVoznja()">Nesupesna</button>
+            </td>
+        </tr>
+    </table>
+    <div ng-show="Usp || Neusp"class="DodavanjeVoznji">
+        <div class="header"> <h3 ng-show="Usp">Uspesno zavrsena voznja</h3> <h3 ng-show="Neusp">Neuspesno zavrsena voznja</h3></div>
+        <div class="body">
+            <div ng-show="Usp">
+                <div class="form-group">
 
-    <div ng-show="Usp">
-        <div class="form-group">
-            <div class="form-group">
-                <label>Unesite cenu voznje: </label>
-                <input type="number" id="cena" ng-model="drive.Cena" />
+
+                    <div class="form-group">
+                        <label>Unesite cenu voznje: </label>
+                        <input type="number" id="cena" ng-model="drive.Cena" />
+                    </div>
+
+                    <label>Unesite krajnju lokaciju: </label>
+                    <div>
+
+                        <div id="map" class="map"></div>
+
+                        <script>
+                            var map = new ol.Map({
+                                layers: [
+                                    new ol.layer.Tile({
+                                        source: new ol.source.OSM()
+                                    })
+                                ],
+                                target: 'map',
+                                view: new ol.View({
+                                    center: [0, 0],
+                                    zoom: 2
+                                })
+                            });
+                            function simpleReverseGeocoding(lon, lat) {
+                                fetch('https://cors.io/?http://nominatim.openstreetmap.org/reverse?format=json&lon=' + lon + '&lat=' + lat).then(function (response) {
+                                    return response.json();
+                                }).then(function (json) {
+                                    document.getElementById('address').innerHTML = json.display_name;
+                                })
+                            }
+                            map.on('click', function (e) {
+                                var coordinate = ol.proj.toLonLat(e.coordinate).map(function (val) {
+                                    return val.toFixed(6);
+                                });
+                                document.getElementById('lon').innerHTML = coordinate[0];
+                                document.getElementById('lat').innerHTML = coordinate[1];
+                                var lon = document.getElementById('lon').value = coordinate[0];
+                                var lat = document.getElementById('lat').value = coordinate[1];
+                                simpleReverseGeocoding(lon, lat);
+                            });
+                                                                                                                                           
+                        </script>
+
+
+                    </div>
+                    <div class="form-group">
+                        <b>X koordinate:</b> &nbsp; <span id="lon"></span>
+                        <!--<input id="lon" type="number" step="0.000001">-->
+                    </div>
+                    <div class="form-group">
+                        <b>Y koordinate: </b> &nbsp; <span id="lat"></span>
+                        <!--<input id="lat" type="number" step="0.000001">-->
+                    </div>
+                    <div class="form-group">
+                        <b> Adresa: </b>&nbsp;  <span id="address">
+
+                        </span>
+
+                    </div>
+                    <button class="button-success" type="submit" ng-click="DodajKraj(drive)">Zavrsi voznju</button>
+                </div>
             </div>
 
-            <label>Unesite krajnju lokaciju: </label>
-            <div>
+            <div ng-show="Neusp">
 
-                <div id="map" class="map"></div>
-               
-                <script>
-                    var map = new ol.Map({
-                        layers: [
-                            new ol.layer.Tile({
-                                source: new ol.source.OSM()
-                            })
-                        ],
-                        target: 'map',
-                        view: new ol.View({
-                            center: [0, 0],
-                            zoom: 2
-                        })
-                    });
-                    function simpleReverseGeocoding(lon, lat) {
-                        fetch('https://cors.io/?http://nominatim.openstreetmap.org/reverse?format=json&lon=' + lon + '&lat=' + lat).then(function (response) {
-                            return response.json();
-                        }).then(function (json) {
-                            document.getElementById('address').innerHTML = json.display_name;
-                        })
-                    }
-                    map.on('click', function (e) {
-                        var coordinate = ol.proj.toLonLat(e.coordinate).map(function (val) {
-                            return val.toFixed(6);
-                        });
-                        var lon = document.getElementById('lon').value = coordinate[0];
-                        var lat = document.getElementById('lat').value = coordinate[1];
-                        simpleReverseGeocoding(lon, lat);
-                    });
-                                //document.getElementById('reversegeocoding').addEventListener('click', function (e) {
-                                //    if (document.getElementById('lon').value && document.getElementById('lat').value) {
-                                //        simpleReverseGeocoding(document.getElementById('lon').value, document.getElementById('lat').value);
-                                //    }
-                                //});
-                </script>
-
+     
+                <div class="form-group">
+                    <table align="center" class="sirinaTabele">
+                        <tr>
+                            <td colspan="2" align="center"> <h1>Ostavite komentar</h1></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="middle" width="30%"><h3>Opis:</h3></td>
+                            <td width="70%">
+                                <textarea required class="form-control" placeholder="Ostavi komentar.." ng-model="ko.Opis"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button class="button-successBlok" type="submit" ng-click="DodajKomentarVozac(ko)">Dodaj komentar</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
             </div>
-            <div class="form-group">
-                <input id="lon" type="number" step="0.000001">
-            </div>
-            <div class="form-group">
-                <input id="lat" type="number" step="0.000001">
-            </div>
-            <div class="form-group">
-                <span id="address">
 
-                </span>
-
-            </div>
-            <button type="submit" ng-click="DodajKraj(drive)">Zavrsi voznju</button>
         </div>
     </div>
-
-    <div ng-show="Neusp">
-
-        <h1>Ostavite komentar</h1>
-        <div class="form-group">
-            <table>
-                <tr>
-                    <td>Opis:</td>
-                    <td>
-                        <textarea required class="form-control" placeholder="Ostavi komentar.." ng-model="ko.Opis"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button type="submit" ng-click="DodajKomentarVozac(ko)">Dodaj komentar</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-    </div>
-
 </div>

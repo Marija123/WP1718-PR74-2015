@@ -71,16 +71,19 @@
 
                 </div>
                 <div class="form-group">
-                    <select class="t" id="tipVoznje" ng-model="drive.tipAuta" placeholder="TipAuta">
+                    <select class="t" id="tipAuta" ng-model="drive.tipAuta" placeholder="TipAuta">
                         <option value="" disabled>Odaberite tip auta</option>
                         <option value="0"> Putnicko</option>
                         <option value="1">Kombi</option>
                     </select>
+                    <br />
+                    <br/>
+                    <button ng-show="user.role==0 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveCustomer(drive)">Dodaj voznju</button>
+                    <button ng-show="user.role==1 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveDispecer(drive)">Dodaj voznju</button>
                 </div>
                 <br>
 
-                <button ng-show="user.role==0 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveCustomer(drive)">Dodaj voznju</button>
-                <button ng-show="user.role==1 && !najbliziVozaci" type="submit" class="btn button-success" ng-click="AddDriveDispecer(drive)">Dodaj voznju</button>
+               
             </div>
 
             <div class="form-group">

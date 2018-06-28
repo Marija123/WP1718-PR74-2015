@@ -27,7 +27,6 @@
 
             ProfCont.getDrives(sessionStorage.getItem("username")).then(function (response) {
                 $scope.MyDrives = response.data;
-                $rootScope.RegisterSuccessF = "Vase voznje";
                 $scope.listaFlag = 1;
                 $scope.posebanFlag = 2;
                 $scope.filtFlag = 0;
@@ -79,7 +78,6 @@
             ProfCont.getWaitingDrives(sessionStorage.getItem("username")).then(function (response) {
 
                 $scope.WaitingDrives = response.data;
-                $rootScope.RegisterSuccessF = "Voznje sa statusom 'Kreirana_Na Cekanju'";
 
                 $scope.listaFlag = 3;
                 $scope.posebanFlag = 3;
@@ -94,9 +92,7 @@
         ProfCont.getAllDrives(sessionStorage.getItem("username")).then(function (response) {
    
             $scope.AllDrives = response.data;
-            $rootScope.RegisterSuccessF = "Sve voznje";
-
-
+            
             $scope.listaFlag = 2;
             $scope.posebanFlag = 1;
             $scope.filtFlag = 0;
@@ -128,7 +124,7 @@
                 $scope.listaFlag = 5;
                 $scope.filtFlag = 1;
 
-                //$scope.Drives = response.data;
+                
             });
         });
     }
@@ -228,13 +224,12 @@
                 $scope.SearchedDrives = response.data;
 
                 $scope.listaFlag = 6;
-                // $scope.posebanFlag = 1;
                 $scope.filtFlag = 2;
 
-                //$scope.Drives = response.data;
+               
             });
         });
-        }
+    }
 
     $scope.OtkaziVoznju = function (drive) {
         RegILogFactory.GetUserStatusByUsername(sessionStorage.getItem("username")).then(function (response) {
@@ -319,17 +314,14 @@
 
                     if ($scope.listaFlag == 3) {
                         $scope.WaitingDrives = response.data;
-                        //$scope.apply();
                     }
 
                     if ($scope.listaFlag == 4) {
                         $scope.SortedDrives = response.data;
-                        //$scope.apply();
                     }
 
                     if ($scope.listaFlag == 6) {
                         $scope.SearchedDrives = response.data;
-                        // $scope.apply();
                     }
 
                     $scope.apply;

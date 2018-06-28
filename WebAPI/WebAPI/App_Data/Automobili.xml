@@ -2,23 +2,93 @@
 <ArrayOfAutomobil xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Automobil>
     <UsernameVozaca>suza</UsernameVozaca>
-    <GodisteAutomobila>1397</GodisteAutomobila>
-    <BrojRegistarskeOzn>ns201</BrojRegistarskeOzn>
+    <GodisteAutomobila>1999</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns111</BrojRegistarskeOzn>
     <BrojTaksiVozila>1</BrojTaksiVozila>
     <TA>putnicki</TA>
   </Automobil>
   <Automobil>
-    <UsernameVozaca>tami123</UsernameVozaca>
-    <GodisteAutomobila>1920</GodisteAutomobila>
-    <BrojRegistarskeOzn>nss</BrojRegistarskeOzn>
+    <UsernameVozaca>rina</UsernameVozaca>
+    <GodisteAutomobila>2001</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns112</BrojRegistarskeOzn>
     <BrojTaksiVozila>2</BrojTaksiVozila>
     <TA>kombi</TA>
   </Automobil>
   <Automobil>
-    <UsernameVozaca>rina</UsernameVozaca>
-    <GodisteAutomobila>1369</GodisteAutomobila>
-    <BrojRegistarskeOzn>nsjwi</BrojRegistarskeOzn>
+    <UsernameVozaca>luka</UsernameVozaca>
+    <GodisteAutomobila>2010</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns113</BrojRegistarskeOzn>
     <BrojTaksiVozila>3</BrojTaksiVozila>
+    <TA>kombi</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>duda</UsernameVozaca>
+    <GodisteAutomobila>1974</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns114</BrojRegistarskeOzn>
+    <BrojTaksiVozila>4</BrojTaksiVozila>
     <TA>putnicki</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>lola</UsernameVozaca>
+    <GodisteAutomobila>2011</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns115</BrojRegistarskeOzn>
+    <BrojTaksiVozila>5</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>meda</UsernameVozaca>
+    <GodisteAutomobila>1989</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns116</BrojRegistarskeOzn>
+    <BrojTaksiVozila>6</BrojTaksiVozila>
+    <TA>kombi</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>igi123</UsernameVozaca>
+    <GodisteAutomobila>2017</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns117</BrojRegistarskeOzn>
+    <BrojTaksiVozila>7</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>mira94</UsernameVozaca>
+    <GodisteAutomobila>2013</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns118</BrojRegistarskeOzn>
+    <BrojTaksiVozila>8</BrojTaksiVozila>
+    <TA>kombi</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>boki</UsernameVozaca>
+    <GodisteAutomobila>1992</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns119</BrojRegistarskeOzn>
+    <BrojTaksiVozila>9</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>jeca</UsernameVozaca>
+    <GodisteAutomobila>2014</GodisteAutomobila>
+    <BrojRegistarskeOzn>st111</BrojRegistarskeOzn>
+    <BrojTaksiVozila>10</BrojTaksiVozila>
+    <TA>kombi</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>tami</UsernameVozaca>
+    <GodisteAutomobila>2010</GodisteAutomobila>
+    <BrojRegistarskeOzn>bn111</BrojRegistarskeOzn>
+    <BrojTaksiVozila>11</BrojTaksiVozila>
+    <TA>putnicki</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>misa</UsernameVozaca>
+    <GodisteAutomobila>2004</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns120</BrojRegistarskeOzn>
+    <BrojTaksiVozila>12</BrojTaksiVozila>
+    <TA>kombi</TA>
+  </Automobil>
+  <Automobil>
+    <UsernameVozaca>maksa</UsernameVozaca>
+    <GodisteAutomobila>2013</GodisteAutomobila>
+    <BrojRegistarskeOzn>ns121</BrojRegistarskeOzn>
+    <BrojTaksiVozila>13</BrojTaksiVozila>
+    <TA>kombi</TA>
   </Automobil>
 </ArrayOfAutomobil>

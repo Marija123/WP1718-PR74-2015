@@ -3,7 +3,7 @@
 WebAPI.config(function ($routeProvider) {
     $routeProvider.when('/',
         {
-            redirectTo: '/MyHome' //za sad
+            redirectTo: '/MyHome' 
 
         }).when('/MyHome',
         {
@@ -11,7 +11,6 @@ WebAPI.config(function ($routeProvider) {
             templateUrl: 'HTMLovi/MyHome.html',
             activeTab: 'Home'
 
-            //}).
         }).when('/Register',
         {
             controller: 'JSRegILogController',

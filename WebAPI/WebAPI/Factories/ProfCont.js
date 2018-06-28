@@ -146,7 +146,7 @@
     factory.DodajKomentarVozac = function (ko, voz) {
         return $http.post('/api/Prof/KomentarisanjeVozac',
             {
-                Opis: ko.Opis,
+                Kometar: ko.Opis,
                 Voz: voz
             });
     }

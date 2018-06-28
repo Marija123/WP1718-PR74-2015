@@ -6,52 +6,24 @@
     <Ime>Suzana</Ime>
     <Prezime>Jovic</Prezime>
     <Pol>Zensko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>suza@suza</Email>
+    <JMBG>1308996715104</JMBG>
+    <KontaktTelefon>062133244</KontaktTelefon>
+    <Email>suza@gmail.com</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
     <Lok>
-      <Xkoordinate>-66.375004</Xkoordinate>
-      <Ykoordinate>-1.757539</Ykoordinate>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
       <Adr>
-        <FormatAdrese>Japurá, Microrregião de Japurá, Mesorregião Norte Amazonense, AM, Região Norte, Brasil</FormatAdrese>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
       </Adr>
     </Lok>
     <Auto>
       <UsernameVozaca>suza</UsernameVozaca>
-      <GodisteAutomobila>1397</GodisteAutomobila>
-      <BrojRegistarskeOzn>ns201</BrojRegistarskeOzn>
+      <GodisteAutomobila>1999</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns111</BrojRegistarskeOzn>
       <BrojTaksiVozila>1</BrojTaksiVozila>
       <TA>putnicki</TA>
-    </Auto>
-    <Zauzet>true</Zauzet>
-    <Blokiran>true</Blokiran>
-  </Vozac>
-  <Vozac>
-    <KorisnickoIme>tami123</KorisnickoIme>
-    <Lozinka>tami</Lozinka>
-    <Ime>Tamara</Ime>
-    <Prezime>Gengo</Prezime>
-    <Pol>Zensko</Pol>
-    <JMBG>1234567890123</JMBG>
-    <KontaktTelefon>04823875</KontaktTelefon>
-    <Email>gica@tami</Email>
-    <Uloga>Vozac</Uloga>
-    <KorisnikVoznje />
-    <Lok>
-      <Xkoordinate>81.492194</Xkoordinate>
-      <Ykoordinate>54.977606</Ykoordinate>
-      <Adr>
-        <FormatAdrese>Осиновский сельсовет, Чулымский район, Новосибирская область, СФО, РФ</FormatAdrese>
-      </Adr>
-    </Lok>
-    <Auto>
-      <UsernameVozaca>tami123</UsernameVozaca>
-      <GodisteAutomobila>1920</GodisteAutomobila>
-      <BrojRegistarskeOzn>nss</BrojRegistarskeOzn>
-      <BrojTaksiVozila>2</BrojTaksiVozila>
-      <TA>kombi</TA>
     </Auto>
     <Zauzet>false</Zauzet>
     <Blokiran>false</Blokiran>
@@ -62,8 +34,8 @@
     <Ime>Irina</Ime>
     <Prezime>Jovanovic</Prezime>
     <Pol>Zensko</Pol>
-    <JMBG>1234567891234</JMBG>
-    <KontaktTelefon>064789153</KontaktTelefon>
+    <JMBG>1401996715104</JMBG>
+    <KontaktTelefon>069789456</KontaktTelefon>
     <Email>rina@gmail.com</Email>
     <Uloga>Vozac</Uloga>
     <KorisnikVoznje />
@@ -76,12 +48,320 @@
     </Lok>
     <Auto>
       <UsernameVozaca>rina</UsernameVozaca>
-      <GodisteAutomobila>1369</GodisteAutomobila>
-      <BrojRegistarskeOzn>nsjwi</BrojRegistarskeOzn>
+      <GodisteAutomobila>2001</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns112</BrojRegistarskeOzn>
+      <BrojTaksiVozila>2</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>true</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>luka</KorisnickoIme>
+    <Lozinka>luka</Lozinka>
+    <Ime>Luka</Ime>
+    <Prezime>Crnomarkovic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>2211996715104</JMBG>
+    <KontaktTelefon>064782456</KontaktTelefon>
+    <Email>luka@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>luka</UsernameVozaca>
+      <GodisteAutomobila>2010</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns113</BrojRegistarskeOzn>
       <BrojTaksiVozila>3</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>duda</KorisnickoIme>
+    <Lozinka>duda</Lozinka>
+    <Ime>Dubravka</Ime>
+    <Prezime>Karadarevic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>2802994715104</JMBG>
+    <KontaktTelefon>064781365</KontaktTelefon>
+    <Email>duda@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>duda</UsernameVozaca>
+      <GodisteAutomobila>1974</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns114</BrojRegistarskeOzn>
+      <BrojTaksiVozila>4</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>lola</KorisnickoIme>
+    <Lozinka>lola</Lozinka>
+    <Ime>Aleksandra</Ime>
+    <Prezime>Krstic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>3003994872504</JMBG>
+    <KontaktTelefon>063124796</KontaktTelefon>
+    <Email>lola@yahoo.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>20.219204</Xkoordinate>
+      <Ykoordinate>44.939801</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Светозара Марковића, Општина Стара Пазова, Сремски округ, Војводина, 22330, Србија</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>lola</UsernameVozaca>
+      <GodisteAutomobila>2011</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns115</BrojRegistarskeOzn>
+      <BrojTaksiVozila>5</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>meda</KorisnickoIme>
+    <Lozinka>meda</Lozinka>
+    <Ime>Stefan</Ime>
+    <Prezime>Vranic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>0707996352401</JMBG>
+    <KontaktTelefon>067986245</KontaktTelefon>
+    <Email>meda@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>meda</UsernameVozaca>
+      <GodisteAutomobila>1989</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns116</BrojRegistarskeOzn>
+      <BrojTaksiVozila>6</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>true</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>igi123</KorisnickoIme>
+    <Lozinka>igi</Lozinka>
+    <Ime>Igor</Ime>
+    <Prezime>Mitrovic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>1808998353674</JMBG>
+    <KontaktTelefon>064127896</KontaktTelefon>
+    <Email>igor@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>igi123</UsernameVozaca>
+      <GodisteAutomobila>2017</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns117</BrojRegistarskeOzn>
+      <BrojTaksiVozila>7</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>true</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>mira94</KorisnickoIme>
+    <Lozinka>mira</Lozinka>
+    <Ime>Mirjana</Ime>
+    <Prezime>Jekic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>2007994301457</JMBG>
+    <KontaktTelefon>069757151</KontaktTelefon>
+    <Email>mira@hotmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>21.408266</Xkoordinate>
+      <Ykoordinate>41.901668</Ykoordinate>
+      <Adr>
+        <FormatAdrese>R104, Маркова Сушица, Општина Студеничани, Скопски Регион, Македонија</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>mira94</UsernameVozaca>
+      <GodisteAutomobila>2013</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns118</BrojRegistarskeOzn>
+      <BrojTaksiVozila>8</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>boki</KorisnickoIme>
+    <Lozinka>boli</Lozinka>
+    <Ime>Bojan</Ime>
+    <Prezime>Radivojevic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>3003994876532</JMBG>
+    <KontaktTelefon>064789123</KontaktTelefon>
+    <Email>boki@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>boki</UsernameVozaca>
+      <GodisteAutomobila>1992</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns119</BrojRegistarskeOzn>
+      <BrojTaksiVozila>9</BrojTaksiVozila>
       <TA>putnicki</TA>
     </Auto>
     <Zauzet>true</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>jeca</KorisnickoIme>
+    <Lozinka>jeca</Lozinka>
+    <Ime>Jelena</Ime>
+    <Prezime>Djurkovic</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>1703992715104</JMBG>
+    <KontaktTelefon>062711625</KontaktTelefon>
+    <Email>jelena@yahoo.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>jeca</UsernameVozaca>
+      <GodisteAutomobila>2014</GodisteAutomobila>
+      <BrojRegistarskeOzn>st111</BrojRegistarskeOzn>
+      <BrojTaksiVozila>10</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>tami</KorisnickoIme>
+    <Lozinka>tami</Lozinka>
+    <Ime>Tamara</Ime>
+    <Prezime>Gengo</Prezime>
+    <Pol>Zensko</Pol>
+    <JMBG>0501997153575</JMBG>
+    <KontaktTelefon>061986245</KontaktTelefon>
+    <Email>tamigengo@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>tami</UsernameVozaca>
+      <GodisteAutomobila>2010</GodisteAutomobila>
+      <BrojRegistarskeOzn>bn111</BrojRegistarskeOzn>
+      <BrojTaksiVozila>11</BrojTaksiVozila>
+      <TA>putnicki</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>true</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>misa</KorisnickoIme>
+    <Lozinka>misa</Lozinka>
+    <Ime>Milorad</Ime>
+    <Prezime>Marinkovic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>0401982326598</JMBG>
+    <KontaktTelefon>064789245</KontaktTelefon>
+    <Email>misa@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>19.848948</Xkoordinate>
+      <Ykoordinate>45.245165</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Studentski dom 'Slobodan Bajic', Sime Milosevica 10, 21000 Novi Sad</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>misa</UsernameVozaca>
+      <GodisteAutomobila>2004</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns120</BrojRegistarskeOzn>
+      <BrojTaksiVozila>12</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
+    <Blokiran>false</Blokiran>
+  </Vozac>
+  <Vozac>
+    <KorisnickoIme>maksa</KorisnickoIme>
+    <Lozinka>maksa</Lozinka>
+    <Ime>Maksim</Ime>
+    <Prezime>Lalic</Prezime>
+    <Pol>Musko</Pol>
+    <JMBG>3567995124578</JMBG>
+    <KontaktTelefon>063478256</KontaktTelefon>
+    <Email>maksalalic95@gmail.com</Email>
+    <Uloga>Vozac</Uloga>
+    <KorisnikVoznje />
+    <Lok>
+      <Xkoordinate>20.211748</Xkoordinate>
+      <Ykoordinate>44.943456</Ykoordinate>
+      <Adr>
+        <FormatAdrese>Општина Стара Пазова, Сремски округ, Војводина, 22330, Србија</FormatAdrese>
+      </Adr>
+    </Lok>
+    <Auto>
+      <UsernameVozaca>maksa</UsernameVozaca>
+      <GodisteAutomobila>2013</GodisteAutomobila>
+      <BrojRegistarskeOzn>ns121</BrojRegistarskeOzn>
+      <BrojTaksiVozila>13</BrojTaksiVozila>
+      <TA>kombi</TA>
+    </Auto>
+    <Zauzet>false</Zauzet>
     <Blokiran>false</Blokiran>
   </Vozac>
 </ArrayOfVozac>
