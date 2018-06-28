@@ -213,6 +213,9 @@
             <div class="voz rezultat">
                 <p><b> Datum porudzbine:</b>&nbsp;{{drive.DatumIVremePorudzbine}} </p>
                 <p> <b>Adresa za dolazak:</b>&nbsp; {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
+                <p ng-show="drive.Mus.Ime"><b>Musterija:</b> &nbsp; {{drive.Mus.Ime}}&nbsp;{{drive.Mus.Prezime}}</p>
+                <p ng-show="drive.Disp.Ime"><b>Dispecer:</b> &nbsp; {{drive.Disp.Ime}}&nbsp;{{drive.Disp.Prezime}}</p>
+                <p ng-show="drive.Voz.Ime"><b>Vozac:</b> &nbsp; {{drive.Voz.Ime}}&nbsp;{{drive.Voz.Prezime}}</p>
                 <p ng-show="drive.Stat == 0"><b>Status voznje:</b>&nbsp; Kreirana_Na cekanju</p>
                 <p ng-show="drive.Stat == 1"><b>Status voznje:</b>&nbsp; Formirana</p>
                 <p ng-show="drive.Stat == 2"><b>Status voznje:</b>&nbsp; Obradjena</p>
@@ -220,7 +223,7 @@
                 <p ng-show="drive.Stat == 4"><b>Status voznje:</b>&nbsp; Otkazana</p>
                 <p ng-show="drive.Stat == 5"><b>Status voznje:</b>&nbsp; Neuspesna</p>
                 <p ng-show="drive.Stat == 6"><b>Status voznje:</b>&nbsp; Uspesna</p>
-                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Komentar:</b></h5>
+                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b><u>Komentar:</u></b></h5>
                 <p ng-show="drive.Kom.Opis"><b>Opis:</b>&nbsp;{{drive.Kom.Opis}}</p>
                 <p ng-show="drive.Kom.Ocena!=0"><b>Ocena:</b> &nbsp;{{drive.Kom.Ocena}}</p>
                 <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Korisnik:</b>&nbsp;{{drive.Kom.KorKomUsername}}</p>
@@ -240,6 +243,9 @@
             <div class="voz">
                 <p><b> Datum porudzbine:</b>&nbsp;{{drive.DatumIVremePorudzbine}} </p>
                 <p> <b>Adresa za dolazak:</b>&nbsp; {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
+                <p ng-show="drive.Mus.Ime"><b>Musterija:</b> &nbsp; {{drive.Mus.Ime}}&nbsp;{{drive.Mus.Prezime}}</p>
+                <p ng-show="drive.Disp.Ime"><b>Dispecer:</b> &nbsp; {{drive.Disp.Ime}}&nbsp;{{drive.Disp.Prezime}}</p>
+                <p ng-show="drive.Voz.Ime"><b>Vozac:</b> &nbsp; {{drive.Voz.Ime}}&nbsp;{{drive.Voz.Prezime}}</p>
                 <p ng-show="drive.Stat == 0"><b>Status voznje:</b>&nbsp; Kreirana_Na cekanju</p>
                 <p ng-show="drive.Stat == 1"><b>Status voznje:</b>&nbsp; Formirana</p>
                 <p ng-show="drive.Stat == 2"><b>Status voznje:</b>&nbsp; Obradjena</p>
@@ -247,7 +253,7 @@
                 <p ng-show="drive.Stat == 4"><b>Status voznje:</b>&nbsp; Otkazana</p>
                 <p ng-show="drive.Stat == 5"><b>Status voznje:</b>&nbsp; Neuspesna</p>
                 <p ng-show="drive.Stat == 6"><b>Status voznje:</b>&nbsp; Uspesna</p>
-                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Komentar:</b></h5>
+                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b><u>Komentar:</u></b></h5>
                 <p ng-show="drive.Kom.Opis"><b>Opis:</b>&nbsp;{{drive.Kom.Opis}}</p>
                 <p ng-show="drive.Kom.Ocena!=0"><b>Ocena:</b> &nbsp;{{drive.Kom.Ocena}}</p>
                 <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Korisnik:</b>&nbsp;{{drive.Kom.KorKomUsername}}</p>
@@ -264,6 +270,9 @@
             <div class="voz">
                 <p><b> Datum porudzbine:</b>&nbsp;{{drive.DatumIVremePorudzbine}} </p>
                 <p> <b>Adresa za dolazak:</b>&nbsp; {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
+                <p ng-show="drive.Mus.Ime"><b>Musterija:</b> &nbsp; {{drive.Mus.Ime}}&nbsp;{{drive.Mus.Prezime}}</p>
+                <p ng-show="drive.Disp.Ime"><b>Dispecer:</b> &nbsp; {{drive.Disp.Ime}}&nbsp;{{drive.Disp.Prezime}}</p>
+                <p ng-show="drive.Voz.Ime"><b>Vozac:</b> &nbsp; {{drive.Voz.Ime}}&nbsp;{{drive.Voz.Prezime}}</p>
                 <p ng-show="drive.Stat == 0"><b>Status voznje:</b>&nbsp; Kreirana_Na cekanju</p>
                 <p ng-show="drive.Stat == 1"><b>Status voznje:</b>&nbsp; Formirana</p>
                 <p ng-show="drive.Stat == 2"><b>Status voznje:</b>&nbsp; Obradjena</p>
@@ -271,7 +280,7 @@
                 <p ng-show="drive.Stat == 4"><b>Status voznje:</b>&nbsp; Otkazana</p>
                 <p ng-show="drive.Stat == 5"><b>Status voznje:</b>&nbsp; Neuspesna</p>
                 <p ng-show="drive.Stat == 6"><b>Status voznje:</b>&nbsp; Uspesna</p>
-                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Komentar:</b></h5>
+                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b><u>Komentar:</u></b></h5>
                 <p ng-show="drive.Kom.Opis"><b>Opis:</b>&nbsp;{{drive.Kom.Opis}}</p>
                 <p ng-show="drive.Kom.Ocena!=0"><b>Ocena:</b> &nbsp;{{drive.Kom.Ocena}}</p>
                 <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Korisnik:</b>&nbsp;{{drive.Kom.KorKomUsername}}</p>
@@ -288,6 +297,9 @@
             <div class="voz">
                 <p><b> Datum porudzbine:</b>&nbsp;{{drive.DatumIVremePorudzbine}} </p>
                 <p> <b>Adresa za dolazak:</b>&nbsp; {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
+                <p ng-show="drive.Mus.Ime"><b>Musterija:</b> &nbsp; {{drive.Mus.Ime}}&nbsp;{{drive.Mus.Prezime}}</p>
+                <p ng-show="drive.Disp.Ime"><b>Dispecer:</b> &nbsp; {{drive.Disp.Ime}}&nbsp;{{drive.Disp.Prezime}}</p>
+                <p ng-show="drive.Voz.Ime"><b>Vozac:</b> &nbsp; {{drive.Voz.Ime}}&nbsp;{{drive.Voz.Prezime}}</p>
                 <p ng-show="drive.Stat == 0"><b>Status voznje:</b>&nbsp; Kreirana_Na cekanju</p>
                 <p ng-show="drive.Stat == 1"><b>Status voznje:</b>&nbsp; Formirana</p>
                 <p ng-show="drive.Stat == 2"><b>Status voznje:</b>&nbsp; Obradjena</p>
@@ -295,7 +307,7 @@
                 <p ng-show="drive.Stat == 4"><b>Status voznje:</b>&nbsp; Otkazana</p>
                 <p ng-show="drive.Stat == 5"><b>Status voznje:</b>&nbsp; Neuspesna</p>
                 <p ng-show="drive.Stat == 6"><b>Status voznje:</b>&nbsp; Uspesna</p>
-                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Komentar:</b></h5>
+                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b><u>Komentar:</u></b></h5>
                 <p ng-show="drive.Kom.Opis"><b>Opis:</b>&nbsp;{{drive.Kom.Opis}}</p>
                 <p ng-show="drive.Kom.Ocena!=0"><b>Ocena:</b> &nbsp;{{drive.Kom.Ocena}}</p>
                 <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Korisnik:</b>&nbsp;{{drive.Kom.KorKomUsername}}</p>
@@ -316,6 +328,9 @@
             <div class="voz">
                 <p><b> Datum porudzbine:</b>&nbsp;{{drive.DatumIVremePorudzbine}} </p>
                 <p> <b>Adresa za dolazak:</b>&nbsp; {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
+                <p ng-show="drive.Mus.Ime"><b>Musterija:</b> &nbsp; {{drive.Mus.Ime}}&nbsp;{{drive.Mus.Prezime}}</p>
+                <p ng-show="drive.Disp.Ime"><b>Dispecer:</b> &nbsp; {{drive.Disp.Ime}}&nbsp;{{drive.Disp.Prezime}}</p>
+                <p ng-show="drive.Voz.Ime"><b>Vozac:</b> &nbsp; {{drive.Voz.Ime}}&nbsp;{{drive.Voz.Prezime}}</p>
                 <p ng-show="drive.Stat == 0"><b>Status voznje:</b>&nbsp; Kreirana_Na cekanju</p>
                 <p ng-show="drive.Stat == 1"><b>Status voznje:</b>&nbsp; Formirana</p>
                 <p ng-show="drive.Stat == 2"><b>Status voznje:</b>&nbsp; Obradjena</p>
@@ -323,7 +338,7 @@
                 <p ng-show="drive.Stat == 4"><b>Status voznje:</b>&nbsp; Otkazana</p>
                 <p ng-show="drive.Stat == 5"><b>Status voznje:</b>&nbsp; Neuspesna</p>
                 <p ng-show="drive.Stat == 6"><b>Status voznje:</b>&nbsp; Uspesna</p>
-                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Komentar:</b></h5>
+                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b><u>Komentar:</u></b></h5>
                 <p ng-show="drive.Kom.Opis"><b>Opis:</b>&nbsp;{{drive.Kom.Opis}}</p>
                 <p ng-show="drive.Kom.Ocena!=0"><b>Ocena:</b> &nbsp;{{drive.Kom.Ocena}}</p>
                 <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Korisnik:</b>&nbsp;{{drive.Kom.KorKomUsername}}</p>
@@ -344,6 +359,9 @@
             <div class="voz rezultat">
                 <p><b> Datum porudzbine:</b>&nbsp;{{drive.DatumIVremePorudzbine}} </p>
                 <p> <b>Adresa za dolazak:</b>&nbsp; {{drive.LokacijaZaDolazak.Adr.FormatAdrese}} </p>
+                <p ng-show="drive.Mus.Ime"><b>Musterija:</b> &nbsp; {{drive.Mus.Ime}}&nbsp;{{drive.Mus.Prezime}}</p>
+                <p ng-show="drive.Disp.Ime"><b>Dispecer:</b> &nbsp; {{drive.Disp.Ime}}&nbsp;{{drive.Disp.Prezime}}</p>
+                <p ng-show="drive.Voz.Ime"><b>Vozac:</b> &nbsp; {{drive.Voz.Ime}}&nbsp;{{drive.Voz.Prezime}}</p>
                 <p ng-show="drive.Stat == 0"><b>Status voznje:</b>&nbsp; Kreirana_Na cekanju</p>
                 <p ng-show="drive.Stat == 1"><b>Status voznje:</b>&nbsp; Formirana</p>
                 <p ng-show="drive.Stat == 2"><b>Status voznje:</b>&nbsp; Obradjena</p>
@@ -351,7 +369,7 @@
                 <p ng-show="drive.Stat == 4"><b>Status voznje:</b>&nbsp; Otkazana</p>
                 <p ng-show="drive.Stat == 5"><b>Status voznje:</b>&nbsp; Neuspesna</p>
                 <p ng-show="drive.Stat == 6"><b>Status voznje:</b>&nbsp; Uspesna</p>
-                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Komentar:</b></h5>
+                <h5 ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b><u>Komentar:</u></b></h5>
                 <p ng-show="drive.Kom.Opis"><b>Opis:</b>&nbsp;{{drive.Kom.Opis}}</p>
                 <p ng-show="drive.Kom.Ocena!=0"><b>Ocena:</b> &nbsp;{{drive.Kom.Ocena}}</p>
                 <p ng-show="drive.Kom.Ocena!=0 || drive.Kom.Opis"><b>Korisnik:</b>&nbsp;{{drive.Kom.KorKomUsername}}</p>
